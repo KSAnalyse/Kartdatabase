@@ -1,0 +1,6 @@
+C:\Users\8093aha\Documents\GitHub\Kartdata\bin\Kartdatabase.asdatabase
+C:\Users\8093aha\Documents\GitHub\Kartdata\bin\Kartdatabase.deploymenttargets
+C:\Users\8093aha\Documents\GitHub\Kartdata\bin\Kartdatabase.deploymentoptions
+C:\Users\8093aha\Documents\GitHub\Kartdata\obj\Development\Kartdatabase.asdatabase
+C:\Users\8093aha\Documents\GitHub\Kartdata\obj\Development\Kartdatabase.deploymentoptions
+C:\Users\8093aha\Documents\GitHub\Kartdata\obj\Development\Kartdatabase.deploymenttargets
