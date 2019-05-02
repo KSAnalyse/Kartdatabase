@@ -1,15 +1,15 @@
 {
   "name": "Kartdata",
-  "compatibilityLevel": 1200,
+  "compatibilityLevel": 1400,
   "model": {
     "name": "Kartdatabase",
     "culture": "nb-NO",
     "dataSources": [
       {
-        "name": "KS-SQL2018;Reporting",
-        "connectionString": "Provider=SQLNCLI11;Data Source=KS-SQL2018;Integrated Security=SSPI;Persist Security Info=false;Initial Catalog=Reporting",
+        "name": "KS-SQL2018;Reporting_Kart",
+        "connectionString": "Provider=SQLNCLI11;Data Source=KS-SQL2018;Integrated Security=SSPI;Persist Security Info=false;Initial Catalog=Reporting_Kart",
         "impersonationMode": "impersonateAccount",
-        "account": "KSINT\\8093AHA",
+        "account": "KSINT\\3349ltk",
         "annotations": [
           {
             "name": "ConnectionEditUISource",
@@ -19,83 +19,6 @@
       }
     ],
     "tables": [
-      {
-        "name": "Alle Data",
-        "columns": [
-          {
-            "name": "Tabell",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Tabell",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Kommunenummer",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Kommunenummer",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "År",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "År",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Funksjonskode",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Funksjonskode",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Artsgruppekode",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Artsgruppekode",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Variabel",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Variabel",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Verdi",
-            "dataType": "double",
-            "sourceColumn": "Verdi",
-            "sourceProviderType": "Numeric"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Alle Data",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Alle Data"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
       {
         "name": "År",
         "columns": [
@@ -112,7 +35,7 @@
             "dataView": "full",
             "source": {
               "query": " SELECT [dbo].[År].* FROM [dbo].[År] ",
-              "dataSource": "KS-SQL2018;Reporting"
+              "dataSource": "KS-SQL2018;Reporting_Kart"
             }
           }
         ],
@@ -124,618 +47,6 @@
           {
             "name": "_TM_ExtProp_DbTableName",
             "value": "År"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Artsgruppe Kostra",
-        "columns": [
-          {
-            "name": "Artsgruppekode",
-            "dataType": "string",
-            "sourceColumn": "Artsgruppekode",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "ArtsgruppeNavn",
-            "dataType": "string",
-            "sourceColumn": "ArtsgruppeNavn",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "ArtsgruppekodeNavn",
-            "dataType": "string",
-            "sourceColumn": "ArtsgruppekodeNavn",
-            "sourceProviderType": "Char"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Artsgruppe Kostra",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Artsgruppe Kostra].* FROM [dbo].[Artsgruppe Kostra] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Artsgruppe Kostra].* FROM [dbo].[Artsgruppe Kostra] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Artsgruppe Kostra"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Database statistikk",
-        "columns": [
-          {
-            "name": "Område",
-            "dataType": "string",
-            "sourceColumn": "Område",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Tabeller",
-            "dataType": "int64",
-            "sourceColumn": "Tabeller",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Funksjoner",
-            "dataType": "int64",
-            "sourceColumn": "Funksjoner",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Variabler",
-            "dataType": "int64",
-            "sourceColumn": "Variabler",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Rader",
-            "dataType": "int64",
-            "sourceColumn": "Rader",
-            "sourceProviderType": "Integer"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Database statistikk",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Database statistikk].* FROM [dbo].[Database statistikk] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Database statistikk].* FROM [dbo].[Database statistikk] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Database statistikk"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Effektivitet",
-        "columns": [
-          {
-            "name": "Generelle",
-            "dataType": "int64",
-            "sourceColumn": "Generelle",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Beregninger",
-            "dataType": "int64",
-            "sourceColumn": "Beregninger",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Annet",
-            "dataType": "int64",
-            "sourceColumn": "Annet",
-            "sourceProviderType": "Integer"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Effektivitet",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Effektivitet].* FROM [dbo].[Effektivitet] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Effektivitet].* FROM [dbo].[Effektivitet] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Effektivitet"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Funksjon Kostra",
-        "columns": [
-          {
-            "name": "Funksjonskode",
-            "dataType": "string",
-            "sourceColumn": "Funksjonskode",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Funksjon",
-            "dataType": "string",
-            "sourceColumn": "Funksjon",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "FunksjonskodeNavn",
-            "dataType": "string",
-            "sourceColumn": "FunksjonskodeNavn",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Tjenesteområde",
-            "dataType": "string",
-            "sourceColumn": "Tjenesteområde",
-            "sourceProviderType": "Char"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Funksjon Kostra",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Funksjon Kostra].* FROM [dbo].[Funksjon Kostra] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Funksjon Kostra].* FROM [dbo].[Funksjon Kostra] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Funksjon Kostra"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Kommune",
-        "columns": [
-          {
-            "name": "Kommunenummer",
-            "dataType": "string",
-            "sourceColumn": "Kommunenummer",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Kommunenavn",
-            "dataType": "string",
-            "sourceColumn": "Kommunenavn",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "KommuneNummernavn",
-            "dataType": "string",
-            "sourceColumn": "KommuneNummernavn",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "ASSS Kommunegruppe",
-            "dataType": "string",
-            "sourceColumn": "ASSS Kommunegruppe",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Regionnummer",
-            "dataType": "string",
-            "sourceColumn": "Regionnummer",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Kostrakategori",
-            "dataType": "string",
-            "sourceColumn": "Kostrakategori",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "GyldigFraDato",
-            "dataType": "dateTime",
-            "sourceColumn": "GyldigFraDato",
-            "formatString": "General Date",
-            "sourceProviderType": "DBTimeStamp"
-          },
-          {
-            "name": "GyldigTilDato",
-            "dataType": "dateTime",
-            "sourceColumn": "GyldigTilDato",
-            "formatString": "General Date",
-            "sourceProviderType": "DBTimeStamp"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Kommune",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Kommune].* FROM [dbo].[Kommune] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Kommune].* FROM [dbo].[Kommune] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Kommune"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Nøkkeltall tjenester",
-        "columns": [
-          {
-            "name": "Barnehager",
-            "dataType": "int64",
-            "sourceColumn": "Barnehager",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Barnevern",
-            "dataType": "int64",
-            "sourceColumn": "Barnevern",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Grunnskole",
-            "dataType": "int64",
-            "sourceColumn": "Grunnskole",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Kommunehelse",
-            "dataType": "int64",
-            "sourceColumn": "Kommunehelse",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Samferdsel",
-            "dataType": "int64",
-            "sourceColumn": "Samferdsel",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Eiendomsforvaltning",
-            "dataType": "int64",
-            "sourceColumn": "Eiendomsforvaltning",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "SosialeTjenester",
-            "dataType": "int64",
-            "sourceColumn": "SosialeTjenester",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "PleieOgOmsorg",
-            "dataType": "int64",
-            "sourceColumn": "PleieOgOmsorg",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Byggesak",
-            "dataType": "int64",
-            "sourceColumn": "Byggesak",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Andre",
-            "dataType": "int64",
-            "sourceColumn": "Andre",
-            "sourceProviderType": "Integer"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Nøkkeltall tjenester",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Nøkkeltall tjenester].* FROM [dbo].[Nøkkeltall tjenester] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "measures": [
-          {
-            "name": "Test",
-            "expression": [
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),FILTER(ALL(Variabel[Variabel]),[Variabel] = \"KOSinnvbef150000\"))"
-            ]
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Nøkkeltall tjenester].* FROM [dbo].[Nøkkeltall tjenester] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Nøkkeltall tjenester"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Økonomi",
-        "columns": [
-          {
-            "name": "Generelle",
-            "dataType": "int64",
-            "sourceColumn": "Generelle",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Barnehage",
-            "dataType": "int64",
-            "sourceColumn": "Barnehage",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Barnevern",
-            "dataType": "int64",
-            "sourceColumn": "Barnevern",
-            "sourceProviderType": "Integer"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Økonomi",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Økonomi].* FROM [dbo].[Økonomi] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Økonomi].* FROM [dbo].[Økonomi] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Økonomi"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Produksjonsindeks",
-        "columns": [
-          {
-            "name": "Generelle",
-            "dataType": "int64",
-            "sourceColumn": "Generelle",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Beregninger",
-            "dataType": "int64",
-            "sourceColumn": "Beregninger",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Annet",
-            "dataType": "int64",
-            "sourceColumn": "Annet",
-            "sourceProviderType": "Integer"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Produksjonsindeks",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Produksjonsindeks].* FROM [dbo].[Produksjonsindeks] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Produksjonsindeks].* FROM [dbo].[Produksjonsindeks] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Produksjonsindeks"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Region",
-        "columns": [
-          {
-            "name": "Regionnummer",
-            "dataType": "string",
-            "sourceColumn": "Regionnummer",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Region",
-            "dataType": "string",
-            "sourceColumn": "Region",
-            "sourceProviderType": "Char"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Region",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Region].* FROM [dbo].[Region] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Region].* FROM [dbo].[Region] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Region"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Regnskap",
-        "columns": [
-          {
-            "name": "Generelle",
-            "dataType": "int64",
-            "sourceColumn": "Generelle",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Beregninger",
-            "dataType": "int64",
-            "sourceColumn": "Beregninger",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Annet",
-            "dataType": "int64",
-            "sourceColumn": "Annet",
-            "sourceProviderType": "Integer"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Regnskap",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Regnskap].* FROM [dbo].[Regnskap] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Regnskap].* FROM [dbo].[Regnskap] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Regnskap"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
-        "name": "Ressursbruksindikator",
-        "columns": [
-          {
-            "name": "RBBarnehage",
-            "dataType": "int64",
-            "sourceColumn": "RBBarnehage",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "RBKommunehelse",
-            "dataType": "int64",
-            "sourceColumn": "RBKommunehelse",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "RBPleieOgOmsorg",
-            "dataType": "int64",
-            "sourceColumn": "RBPleieOgOmsorg",
-            "sourceProviderType": "Integer"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Ressursbruksindikator",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Ressursbruksindikator].* FROM [dbo].[Ressursbruksindikator] ",
-              "dataSource": "KS-SQL2018;Reporting"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Ressursbruksindikator].* FROM [dbo].[Ressursbruksindikator] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Ressursbruksindikator"
           },
           {
             "name": "_TM_ExtProp_DbSchemaName",
@@ -771,7 +82,7 @@
             "dataView": "full",
             "source": {
               "query": " SELECT [dbo].[Tabeller].* FROM [dbo].[Tabeller] ",
-              "dataSource": "KS-SQL2018;Reporting"
+              "dataSource": "KS-SQL2018;Reporting_Kart"
             }
           }
         ],
@@ -787,6 +98,574 @@
           {
             "name": "_TM_ExtProp_DbSchemaName",
             "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "KS Ung Indikatorer",
+        "columns": [
+          {
+            "name": "Demokrati og politikk",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Demokrati og politikk",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Befolkning og demografi",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Befolkning og demografi",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Økonomi og arbeidsliv",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Økonomi og arbeidsliv",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Annet",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Annet",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "KS Ung Indikatorer",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[KS Ung Indikatorer].[Demokrati og politikk],[dbo].[KS Ung Indikatorer].[Befolkning og demografi],[dbo].[KS Ung Indikatorer].[Økonomi og arbeidsliv],[dbo].[KS Ung Indikatorer].[Annet] FROM [dbo].[KS Ung Indikatorer] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            },
+            "annotations": [
+              {
+                "name": "TableWidgetSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+                  "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+                  "  <ColumnSuggestedType />",
+                  "  <ColumnFormat />",
+                  "  <ColumnAccuracy />",
+                  "  <ColumnCurrencySymbol />",
+                  "  <ColumnPositivePattern />",
+                  "  <ColumnNegativePattern />",
+                  "  <ColumnWidths>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Demokrati og politikk</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>128</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Befolkning og demografi</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>145</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Økonomi og arbeidsliv</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>134</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Domstolene og kriminalitet</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>155</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Annet</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>59</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnWidths>",
+                  "  <ColumnDisplayIndex>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Demokrati og politikk</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>0</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Befolkning og demografi</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>1</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Økonomi og arbeidsliv</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>2</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Domstolene og kriminalitet</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>3</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Annet</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>4</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnDisplayIndex>",
+                  "  <ColumnFrozen />",
+                  "  <ColumnChecked>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Domstolene og kriminalitet</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>false</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnChecked>",
+                  "  <ColumnFilter />",
+                  "  <SelectionFilter />",
+                  "  <FilterParameters />",
+                  "  <IsSortDescending>false</IsSortDescending>",
+                  "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": "Areal (km²)",
+            "expression": [
+              "",
+              "",
+              "var areal = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11342\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Areal (km²)\")",
+              ")",
+              "",
+              "return areal"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Innbyggere 0-15 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in {",
+              "\"0 år\",",
+              "\"1 år\",",
+              "\"2 år\",",
+              "\"3 år\",",
+              "\"4 år\",",
+              "\"5 år\",",
+              "\"6 år\",",
+              "\"7 år\",",
+              "\"8 år\",",
+              "\"9 år\",",
+              "\"10 år\",",
+              "\"11 år\",",
+              "\"12 år\",",
+              "\"13 år\",",
+              "\"14 år\",",
+              "\"15 år\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Innbyggere 16-18 år",
+            "expression": [
+              "",
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in ",
+              "{\"16 år\",",
+              "\"17 år\",",
+              "\"18 år\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Innbyggere 19-34 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in ",
+              "{\"19 år\",",
+              "\"20 år\",",
+              "\"21 år\",",
+              "\"22 år\",",
+              "\"23 år\",",
+              "\"24 år\",",
+              "\"25 år\",",
+              "\"26 år\",",
+              "\"27 år\",",
+              "\"28 år\",",
+              "\"29 år\",",
+              "\"30 år\",",
+              "\"31 år\",",
+              "\"32 år\",",
+              "\"33 år\",",
+              "\"34 år\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Innbyggere 35-66 år",
+            "expression": [
+              "",
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in ",
+              "",
+              "{\"35 år\",",
+              "\"36 år\",",
+              "\"37 år\",",
+              "\"38 år\",",
+              "\"39 år\",",
+              "\"40 år\",",
+              "\"41 år\",",
+              "\"42 år\",",
+              "\"43 år\",",
+              "\"44 år\",",
+              "\"45 år\",",
+              "\"46 år\",",
+              "\"47 år\",",
+              "\"48 år\",",
+              "\"49 år\",",
+              "\"50 år\",",
+              "\"51 år\",",
+              "\"52 år\",",
+              "\"53 år\",",
+              "\"54 år\",",
+              "\"55 år\",",
+              "\"56 år\",",
+              "\"57 år\",",
+              "\"58 år\",",
+              "\"59 år\",",
+              "\"60 år\",",
+              "\"61 år\",",
+              "\"62 år\",",
+              "\"63 år\",",
+              "\"64 år\",",
+              "\"65 år\",",
+              "\"66 år\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Innbyggere 67 år og over",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in ",
+              "",
+              "{\"67 år\",",
+              "\"68 år\",",
+              "\"69 år\",",
+              "\"70 år\",",
+              "\"71 år\",",
+              "\"72 år\",",
+              "\"73 år\",",
+              "\"74 år\",",
+              "\"75 år\",",
+              "\"76 år\",",
+              "\"77 år\",",
+              "\"78 år\",",
+              "\"79 år\",",
+              "\"80 år\",",
+              "\"81 år\",",
+              "\"82 år\",",
+              "\"83 år\",",
+              "\"84 år\",",
+              "\"85 år\",",
+              "\"86 år\",",
+              "\"87 år\",",
+              "\"88 år\",",
+              "\"89 år\",",
+              "\"90 år\",",
+              "\"91 år\",",
+              "\"92 år\",",
+              "\"93 år\",",
+              "\"94 år\",",
+              "\"95 år\",",
+              "\"96 år\",",
+              "\"97 år\",",
+              "\"98 år\",",
+              "\"99 år\",",
+              "\"100 år\",",
+              "\"101 år\",",
+              "\"102 år\",",
+              "\"103 år\",",
+              "\"104 år\",",
+              "\"105 år eller eldre\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Innbyggere i alt",
+            "expression": [
+              "",
+              "",
+              "[Innbyggere 0-15 år]",
+              "+",
+              "[Innbyggere 16-18 år]",
+              "+",
+              "[Innbyggere 19-34 år]",
+              "+",
+              "[Innbyggere 35-66 år]",
+              "+",
+              "[Innbyggere 67 år og over]",
+              ""
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Innbyggere kvinner i alt",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Kjønn'[Dimensjonskode]), 'Kjønn'[Dimensjonskode] = \"2\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Innbyggere menn i alt",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Kjønn'[Dimensjonskode]), 'Kjønn'[Dimensjonskode] = \"1\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Andel kvinner av befolkningen",
+            "expression": [
+              "",
+              "",
+              "([Innbyggere kvinner i alt]",
+              "/",
+              "[Innbyggere i alt])*100",
+              ""
+            ],
+            "formatString": "0.0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Andel menn av befolkningen",
+            "expression": [
+              "",
+              "",
+              "([Innbyggere menn i alt]",
+              "/",
+              "[Innbyggere i alt])*100"
+            ],
+            "formatString": "0.0",
+            "displayFolder": "Befolkning og demografi"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[KS Ung Indikatorer].[Demokrati og politikk],[dbo].[KS Ung Indikatorer].[Befolkning og demografi],[dbo].[KS Ung Indikatorer].[Økonomi og arbeidsliv],[dbo].[KS Ung Indikatorer].[Annet] FROM [dbo].[KS Ung Indikatorer] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "KS Ung Indikatorer"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          },
+          {
+            "name": "TableWidgetSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+              "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+              "  <ColumnSuggestedType />",
+              "  <ColumnFormat />",
+              "  <ColumnAccuracy />",
+              "  <ColumnCurrencySymbol />",
+              "  <ColumnPositivePattern />",
+              "  <ColumnNegativePattern />",
+              "  <ColumnWidths>",
+              "    <item>",
+              "      <key>",
+              "        <string>Demokrati og politikk</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>128</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Befolkning og demografi</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>145</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Økonomi og arbeidsliv</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>134</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Domstolene og kriminalitet</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>155</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Annet</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>59</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnWidths>",
+              "  <ColumnDisplayIndex>",
+              "    <item>",
+              "      <key>",
+              "        <string>Demokrati og politikk</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>0</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Befolkning og demografi</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>1</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Økonomi og arbeidsliv</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>2</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Domstolene og kriminalitet</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>3</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Annet</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>4</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnDisplayIndex>",
+              "  <ColumnFrozen />",
+              "  <ColumnChecked>",
+              "    <item>",
+              "      <key>",
+              "        <string>Domstolene og kriminalitet</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>false</boolean>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnChecked>",
+              "  <ColumnFilter />",
+              "  <SelectionFilter />",
+              "  <FilterParameters />",
+              "  <IsSortDescending>false</IsSortDescending>",
+              "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+            ]
           }
         ]
       },
@@ -818,7 +697,7 @@
             "dataView": "full",
             "source": {
               "query": " SELECT [dbo].[Variabel].* FROM [dbo].[Variabel] ",
-              "dataSource": "KS-SQL2018;Reporting"
+              "dataSource": "KS-SQL2018;Reporting_Kart"
             }
           }
         ],
@@ -836,63 +715,484 @@
             "value": "dbo"
           }
         ]
+      },
+      {
+        "name": "Region",
+        "columns": [
+          {
+            "name": "Kommunenummer",
+            "dataType": "string",
+            "sourceColumn": "Kommunenummer",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Navn",
+            "dataType": "string",
+            "sourceColumn": "Navn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "KommuneNummernavn",
+            "dataType": "string",
+            "sourceColumn": "KommuneNummernavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Regionnummer",
+            "dataType": "string",
+            "sourceColumn": "Regionnummer",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Kategori",
+            "dataType": "string",
+            "sourceColumn": "Kategori",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "GyldigFraDato",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "GyldigFraDato",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "GyldigTilDato",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "GyldigTilDato",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Region",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Region].* FROM [dbo].[Region] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Region].* FROM [dbo].[Region] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Region"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Fylker",
+        "columns": [
+          {
+            "name": "Kommunenummer",
+            "dataType": "string",
+            "sourceColumn": "Kommunenummer",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Navn",
+            "dataType": "string",
+            "sourceColumn": "Navn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "KommuneNummernavn",
+            "dataType": "string",
+            "sourceColumn": "KommuneNummernavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Regionnummer",
+            "dataType": "string",
+            "sourceColumn": "Regionnummer",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Kategori",
+            "dataType": "string",
+            "sourceColumn": "Kategori",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "GyldigFraDato",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "GyldigFraDato",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "GyldigTilDato",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "GyldigTilDato",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fylker",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Fylker].* FROM [dbo].[Fylker] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Fylker].* FROM [dbo].[Fylker] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Fylker"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Alder",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Alder",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Alder].* FROM [dbo].[Alder] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Alder].* FROM [dbo].[Alder] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Alder"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Innvandringskategori",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Innvandringskategori",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Innvandringskategori].* FROM [dbo].[Innvandringskategori] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Innvandringskategori].* FROM [dbo].[Innvandringskategori] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Innvandringskategori"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Landbakgrunn",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Landbakgrunn",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Landbakgrunn].* FROM [dbo].[Landbakgrunn] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Landbakgrunn].* FROM [dbo].[Landbakgrunn] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Landbakgrunn"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Alle Data",
+        "columns": [
+          {
+            "name": "Tabell",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Tabell",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Kommunenummer",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Kommunenummer",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Variabel",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Variabel",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjon 1",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Dimensjon 1",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjon 2",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Dimensjon 2",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "År",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "År",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Verdi",
+            "dataType": "double",
+            "sourceColumn": "Verdi",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Alle Data",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Sum dataverdi",
+            "expression": "SUM('Alle Data'[Verdi])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Alle Data"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Kjønn",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Kjønn",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Kjønn].* FROM [dbo].[Kjønn] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Kjønn].* FROM [dbo].[Kjønn] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Kjønn"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
       }
     ],
     "relationships": [
       {
-        "name": "3336d887-97d5-480d-a212-69b3ec08a32c",
-        "fromTable": "Alle Data",
-        "fromColumn": "Funksjonskode",
-        "toTable": "Funksjon Kostra",
-        "toColumn": "Funksjonskode"
-      },
-      {
-        "name": "9737d71b-ebc8-4813-b7e0-4e0f37b72116",
-        "fromTable": "Alle Data",
-        "fromColumn": "Artsgruppekode",
-        "toTable": "Artsgruppe Kostra",
-        "toColumn": "Artsgruppekode"
-      },
-      {
-        "name": "95f04c42-ca72-4bbb-b387-c406dc50b8b9",
-        "fromTable": "Alle Data",
-        "fromColumn": "Kommunenummer",
-        "toTable": "Kommune",
-        "toColumn": "Kommunenummer"
-      },
-      {
-        "name": "4de5a6a9-a319-4e57-b60a-2b2b957dd258",
-        "fromTable": "Alle Data",
-        "fromColumn": "Tabell",
-        "toTable": "Tabeller",
-        "toColumn": "Tabellnummer"
-      },
-      {
-        "name": "564f8768-e7b2-48eb-92ac-3dec2dd95f93",
-        "fromTable": "Alle Data",
-        "fromColumn": "Variabel",
-        "toTable": "Variabel",
-        "toColumn": "Variabel"
-      },
-      {
-        "name": "b36bdf39-ffd3-46ef-bcc0-a4da39621062",
+        "name": "0f995a34-f3f2-4e3f-97e8-28236b3bbccb",
         "fromTable": "Alle Data",
         "fromColumn": "År",
         "toTable": "År",
         "toColumn": "År"
       },
       {
-        "name": "7f0d668f-c593-45b8-aebb-2452170fc312",
-        "fromTable": "Kommune",
-        "fromColumn": "Regionnummer",
+        "name": "558edd61-efe2-4cdb-9cd2-f2649b0adb2c",
+        "fromTable": "Alle Data",
+        "fromColumn": "Variabel",
+        "toTable": "Variabel",
+        "toColumn": "Variabel"
+      },
+      {
+        "name": "c4b5db7f-9fc5-4317-9334-3daa6e74149c",
+        "fromTable": "Alle Data",
+        "fromColumn": "Kommunenummer",
         "toTable": "Region",
-        "toColumn": "Regionnummer"
+        "toColumn": "Kommunenummer"
+      },
+      {
+        "name": "648aa05b-8bda-4020-983f-076099fd9d29",
+        "fromTable": "Alle Data",
+        "fromColumn": "Tabell",
+        "toTable": "Tabeller",
+        "toColumn": "Tabellnummer"
+      },
+      {
+        "name": "980dd1c1-27f8-4f8a-8359-6f45260a7d90",
+        "fromTable": "Alle Data",
+        "fromColumn": "Kommunenummer",
+        "toTable": "Fylker",
+        "toColumn": "Kommunenummer"
+      },
+      {
+        "name": "c8b2ddbd-92b4-442a-9484-50c2ed0d6c85",
+        "fromTable": "Alle Data",
+        "fromColumn": "Dimensjon 2",
+        "toTable": "Alder",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "f9a192b0-1537-4705-8807-407bff677a79",
+        "fromTable": "Alle Data",
+        "fromColumn": "Dimensjon 1",
+        "toTable": "Kjønn",
+        "toColumn": "Dimensjonskode"
       }
     ],
     "annotations": [
       {
         "name": "ClientCompatibilityLevel",
-        "value": "400"
+        "value": "500"
       }
     ]
   }
