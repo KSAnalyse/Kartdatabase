@@ -539,6 +539,116 @@
             ],
             "formatString": "0.0",
             "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Andel innvandrere og norskfødte med innvandrerforeldre av befolkningen",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"09817\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Innvandringskategori'[Dimensjonsnavn]),'Innvandringskategori'[Dimensjonsnavn] ",
+              "=\"Innvandrere og norskfødte med innvandrerforeldre\")",
+              ")",
+              "",
+              "var b = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"11342\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Befolkning per 1.1. (personer)\")",
+              ")",
+              "",
+              "return (DIVIDE(a,b))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Antall innvandrere",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"09817\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Innvandringskategori'[Dimensjonsnavn]),'Innvandringskategori'[Dimensjonsnavn] ",
+              "=\"Innvandrere\"),",
+              "FILTER(all('Landbakgrunn'[Dimensjonsnavn]),'Landbakgrunn'[Dimensjonsnavn] <> \"Alle land\")",
+              ")",
+              "",
+              "",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Antall personer per privathusholdning",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"09747\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer i privathusholdninger\")",
+              ")",
+              "",
+              "var b = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"09747\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Privathusholdninger\")",
+              ")",
+              "",
+              "return DIVIDE(a,b)"
+            ],
+            "formatString": "#,0.00",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Samlivsform personer 18 år og over - i par, gift*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"06096\"),",
+              "FILTER(all('Samlivsform'[Dimensjonsnavn]), 'Samlivsform'[Dimensjonsnavn] = \"I par, gift\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer (prosent)\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Samlivsform personer 18 år og over - i par, samboende*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"06096\"),",
+              "FILTER(all('Samlivsform'[Dimensjonsnavn]), 'Samlivsform'[Dimensjonsnavn] = \"I par, samboende\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer (prosent)\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "Befolkning og demografi"
+          },
+          {
+            "name": "Samlivsform personer 18 år og over - ikke i par*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"06096\"),",
+              "FILTER(all('Samlivsform'[Dimensjonsnavn]), 'Samlivsform'[Dimensjonsnavn] = \"Ikke i par\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer (prosent)\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "Befolkning og demografi"
           }
         ],
         "annotations": [
@@ -905,89 +1015,6 @@
         ]
       },
       {
-        "name": "Alle Data",
-        "columns": [
-          {
-            "name": "Tabell",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Tabell",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Kode",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Kode",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Variabel",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Variabel",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Dimensjon 1",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Dimensjon 1",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "Dimensjon 2",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Dimensjon 2",
-            "sourceProviderType": "Char"
-          },
-          {
-            "name": "År",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "År",
-            "sourceProviderType": "Integer"
-          },
-          {
-            "name": "Verdi",
-            "dataType": "double",
-            "sourceColumn": "Verdi",
-            "sourceProviderType": "Numeric"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Alle Data 1",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] ",
-              "dataSource": "KS-SQL2018;Reporting_Kart"
-            }
-          }
-        ],
-        "measures": [
-          {
-            "name": "Sum dataverdi",
-            "expression": "SUM('Alle Data'[Verdi])"
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "Alle Data"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "dbo"
-          }
-        ]
-      },
-      {
         "name": "Region",
         "columns": [
           {
@@ -1061,50 +1088,223 @@
             "value": "dbo"
           }
         ]
+      },
+      {
+        "name": "Alle Data",
+        "columns": [
+          {
+            "name": "Tabell",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Tabell",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Kode",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Kode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Variabel",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Variabel",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Alder",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Alder",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Innvandringskategori",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Innvandringskategori",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Kjønn",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Kjønn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Landbakgrunn",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Landbakgrunn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Samlivsform",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Samlivsform",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "År",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "År",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Verdi",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Verdi",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Alle Data",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Sum dataverdi",
+            "expression": "SUM('Alle Data'[Verdi])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Alle Data"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Samlivsform",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Samlivsform",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Samlivsform].* FROM [dbo].[Samlivsform] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Samlivsform].* FROM [dbo].[Samlivsform] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Samlivsform"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
       }
     ],
     "relationships": [
       {
-        "name": "a8d63c81-6ac9-4a22-ba78-bc70fc4c6f38",
+        "name": "6764c131-70d7-4d58-87ec-e1be7e87721f",
         "fromTable": "Alle Data",
         "fromColumn": "Tabell",
         "toTable": "Tabeller",
         "toColumn": "Tabellnummer"
       },
       {
-        "name": "04a83c73-ecc9-4ddf-a4df-0b3dcb68a285",
+        "name": "71e5ce99-7109-4b3e-85ce-575d842bbe34",
         "fromTable": "Alle Data",
         "fromColumn": "Kode",
         "toTable": "Region",
         "toColumn": "Kode"
       },
       {
-        "name": "108fa5b1-b879-41e6-aacc-3e890f95a18d",
-        "fromTable": "Alle Data",
-        "fromColumn": "År",
-        "toTable": "År",
-        "toColumn": "År"
-      },
-      {
-        "name": "ebbf7bdf-0626-418b-8bf1-4111672de41f",
+        "name": "1727a679-fdf9-482d-83d4-8451a729262f",
         "fromTable": "Alle Data",
         "fromColumn": "Variabel",
         "toTable": "Variabel",
         "toColumn": "Variabel"
       },
       {
-        "name": "1fd5d645-d4be-4ba3-8e3c-9208d2828504",
+        "name": "562c529b-40ad-448d-b294-21e1b3cadac0",
         "fromTable": "Alle Data",
-        "fromColumn": "Dimensjon 1",
+        "fromColumn": "Alder",
+        "toTable": "Alder",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "3d4b5eaf-52e7-4e30-9098-a92d9cc94cf9",
+        "fromTable": "Alle Data",
+        "fromColumn": "Innvandringskategori",
+        "toTable": "Innvandringskategori",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "9f18fa73-6ce3-4e25-93d3-468f963d45c4",
+        "fromTable": "Alle Data",
+        "fromColumn": "Kjønn",
         "toTable": "Kjønn",
         "toColumn": "Dimensjonskode"
       },
       {
-        "name": "5288fd8e-96e4-4265-a0aa-4c7677c0824b",
+        "name": "6573154d-3676-4f48-b81d-4f0475fa2b32",
         "fromTable": "Alle Data",
-        "fromColumn": "Dimensjon 2",
-        "toTable": "Alder",
+        "fromColumn": "Landbakgrunn",
+        "toTable": "Landbakgrunn",
         "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "402eb682-7e33-4464-a1e5-80daaacf08d7",
+        "fromTable": "Alle Data",
+        "fromColumn": "Samlivsform",
+        "toTable": "Samlivsform",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "18bbd2aa-4900-4509-910a-02c976f5c4de",
+        "fromTable": "Alle Data",
+        "fromColumn": "År",
+        "toTable": "År",
+        "toColumn": "År"
       }
     ],
     "annotations": [
