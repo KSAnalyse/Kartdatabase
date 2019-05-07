@@ -271,10 +271,11 @@
               "return areal"
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
           },
           {
-            "name": "Innbyggere 0-15 år",
+            "name": "0-15 år",
+            "description": "Antall innbyggere 0-15 år",
             "expression": [
               "",
               "",
@@ -303,10 +304,11 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Innbyggere etter alder"
           },
           {
-            "name": "Innbyggere 16-18 år",
+            "name": "16-18 år",
+            "description": "Innbyggere 16-18 år",
             "expression": [
               "",
               "",
@@ -323,10 +325,11 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Innbyggere etter alder"
           },
           {
-            "name": "Innbyggere 19-34 år",
+            "name": "19-34 år",
+            "description": "Innbyggere 19-34 år",
             "expression": [
               "",
               "",
@@ -355,10 +358,11 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Innbyggere etter alder"
           },
           {
-            "name": "Innbyggere 35-66 år",
+            "name": "35-66 år",
+            "description": "Innbyggere 35-66 år",
             "expression": [
               "",
               "",
@@ -404,10 +408,11 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Innbyggere etter alder"
           },
           {
-            "name": "Innbyggere 67 år og over",
+            "name": "67 år og over",
+            "description": "Innbyggere 67 år og over",
             "expression": [
               "",
               "",
@@ -460,29 +465,30 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Innbyggere etter alder"
           },
           {
             "name": "Innbyggere i alt",
             "expression": [
               "",
               "",
-              "[Innbyggere 0-15 år]",
+              "[0-15 år]",
               "+",
-              "[Innbyggere 16-18 år]",
+              "[16-18 år]",
               "+",
-              "[Innbyggere 19-34 år]",
+              "[19-34 år]",
               "+",
-              "[Innbyggere 35-66 år]",
+              "[35-66 år]",
               "+",
-              "[Innbyggere 67 år og over]",
+              "[67 år og over]",
               ""
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
           },
           {
-            "name": "Innbyggere kvinner i alt",
+            "name": "Kvinner i alt",
+            "description": "Innbyggere kvinner i alt",
             "expression": [
               "",
               "",
@@ -495,10 +501,11 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Innbyggere etter kjønn"
           },
           {
-            "name": "Innbyggere menn i alt",
+            "name": "Menn i alt",
+            "description": "Innbyggere menn i alt",
             "expression": [
               "",
               "",
@@ -512,32 +519,34 @@
               ""
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Innbyggere etter kjønn"
           },
           {
-            "name": "Andel kvinner av befolkningen",
+            "name": "Andel kvinner",
+            "description": "Andel kvinner av befolkningen",
             "expression": [
               "",
               "",
-              "([Innbyggere kvinner i alt]",
+              "([Kvinner i alt]",
               "/",
               "[Innbyggere i alt])*100",
               ""
             ],
             "formatString": "0.0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Innbyggere etter kjønn"
           },
           {
-            "name": "Andel menn av befolkningen",
+            "name": "Andel menn",
+            "description": "Andel menn av befolkningen",
             "expression": [
               "",
               "",
-              "([Innbyggere menn i alt]",
+              "([Menn i alt]",
               "/",
               "[Innbyggere i alt])*100"
             ],
             "formatString": "0.0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Innbyggere etter kjønn"
           },
           {
             "name": "Andel innvandrere og norskfødte med innvandrerforeldre av befolkningen",
@@ -559,10 +568,10 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
           },
           {
-            "name": "Antall innvandrere",
+            "name": "Innvandrere",
             "expression": [
               "",
               "",
@@ -579,10 +588,10 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
           },
           {
-            "name": "Antall personer per privathusholdning",
+            "name": "Personer per privathusholdning",
             "expression": [
               "",
               "",
@@ -599,10 +608,11 @@
               "return DIVIDE(a,b)"
             ],
             "formatString": "#,0.00",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
           },
           {
-            "name": "Samlivsform personer 18 år og over - i par, gift*",
+            "name": "Andel i par, gift*",
+            "description": "Samlivsform personer 18 år og over - i par, gift",
             "expression": [
               "",
               "",
@@ -615,10 +625,11 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Samlivsform"
           },
           {
-            "name": "Samlivsform personer 18 år og over - i par, samboende*",
+            "name": "Andel i par, samboende*",
+            "description": "Samlivsform personer 18 år og over - i par, samboende",
             "expression": [
               "",
               "",
@@ -631,10 +642,11 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Samlivsform"
           },
           {
-            "name": "Samlivsform personer 18 år og over - ikke i par*",
+            "name": "Andel ikke i par*",
+            "description": "Samlivsform personer 18 år og over - ikke i par",
             "expression": [
               "",
               "",
@@ -647,7 +659,7 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "Samlivsform"
           },
           {
             "name": "Nettoinnflytting",
@@ -662,7 +674,382 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Befolkning og demografi"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Andel primærnæring",
+            "description": "Andel virksomheter: Primærnæring",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] in ",
+              "{\"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\"})",
+              ")",
+              "",
+              "var b = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] = \"Alle næringer\")",
+              "",
+              "",
+              ")",
+              "",
+              "return (DIVIDE(a,b))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "Virksomheter"
+          },
+          {
+            "name": "Andel sekundærnæring",
+            "description": "Andel virksomheter: Sekundærnæring",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] in ",
+              "{\"Industri\", \"Bygge- og anleggsvirksomhet\"})",
+              ")",
+              "",
+              "var b = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] = \"Alle næringer\")",
+              "",
+              "",
+              ")",
+              "",
+              "return (DIVIDE(a,b))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "Virksomheter"
+          },
+          {
+            "name": "Andel uoppgitt næring",
+            "description": "Andel virksomheter: Uoppgitt",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] = \"Uoppgitt\")",
+              ")",
+              "",
+              "var b = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] = \"Alle næringer\")",
+              "",
+              "",
+              ")",
+              "",
+              "return (DIVIDE(a,b))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "Virksomheter"
+          },
+          {
+            "name": "Andel tertiærnæring",
+            "description": "Andel virksomheter: Tertiærnæring",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] in ",
+              "{\"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\", ",
+              "\"Industri\", \"Bygge- og anleggsvirksomhet\",",
+              "\"Uoppgitt\"})",
+              ")",
+              "",
+              "var b = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] = \"Alle næringer\")",
+              "",
+              "",
+              ")",
+              "",
+              "return (DIVIDE((b-a),b))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "Virksomheter"
+          },
+          {
+            "name": "Antall innbyggere 0-15 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in {",
+              "\"0 år\",",
+              "\"1 år\",",
+              "\"2 år\",",
+              "\"3 år\",",
+              "\"4 år\",",
+              "\"5 år\",",
+              "\"6 år\",",
+              "\"7 år\",",
+              "\"8 år\",",
+              "\"9 år\",",
+              "\"10 år\",",
+              "\"11 år\",",
+              "\"12 år\",",
+              "\"13 år\",",
+              "\"14 år\",",
+              "\"15 år\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Antall innbyggere 16-18 år",
+            "expression": [
+              "",
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in ",
+              "{\"16 år\",",
+              "\"17 år\",",
+              "\"18 år\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Antall innbyggere 19-34 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in ",
+              "{\"19 år\",",
+              "\"20 år\",",
+              "\"21 år\",",
+              "\"22 år\",",
+              "\"23 år\",",
+              "\"24 år\",",
+              "\"25 år\",",
+              "\"26 år\",",
+              "\"27 år\",",
+              "\"28 år\",",
+              "\"29 år\",",
+              "\"30 år\",",
+              "\"31 år\",",
+              "\"32 år\",",
+              "\"33 år\",",
+              "\"34 år\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Antall innbyggere 35-66 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in ",
+              "",
+              "{\"35 år\",",
+              "\"36 år\",",
+              "\"37 år\",",
+              "\"38 år\",",
+              "\"39 år\",",
+              "\"40 år\",",
+              "\"41 år\",",
+              "\"42 år\",",
+              "\"43 år\",",
+              "\"44 år\",",
+              "\"45 år\",",
+              "\"46 år\",",
+              "\"47 år\",",
+              "\"48 år\",",
+              "\"49 år\",",
+              "\"50 år\",",
+              "\"51 år\",",
+              "\"52 år\",",
+              "\"53 år\",",
+              "\"54 år\",",
+              "\"55 år\",",
+              "\"56 år\",",
+              "\"57 år\",",
+              "\"58 år\",",
+              "\"59 år\",",
+              "\"60 år\",",
+              "\"61 år\",",
+              "\"62 år\",",
+              "\"63 år\",",
+              "\"64 år\",",
+              "\"65 år\",",
+              "\"66 år\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Antall innbyggere 67 år og over",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\"),",
+              "filter(all('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] in ",
+              "",
+              "{\"67 år\",",
+              "\"68 år\",",
+              "\"69 år\",",
+              "\"70 år\",",
+              "\"71 år\",",
+              "\"72 år\",",
+              "\"73 år\",",
+              "\"74 år\",",
+              "\"75 år\",",
+              "\"76 år\",",
+              "\"77 år\",",
+              "\"78 år\",",
+              "\"79 år\",",
+              "\"80 år\",",
+              "\"81 år\",",
+              "\"82 år\",",
+              "\"83 år\",",
+              "\"84 år\",",
+              "\"85 år\",",
+              "\"86 år\",",
+              "\"87 år\",",
+              "\"88 år\",",
+              "\"89 år\",",
+              "\"90 år\",",
+              "\"91 år\",",
+              "\"92 år\",",
+              "\"93 år\",",
+              "\"94 år\",",
+              "\"95 år\",",
+              "\"96 år\",",
+              "\"97 år\",",
+              "\"98 år\",",
+              "\"99 år\",",
+              "\"100 år\",",
+              "\"101 år\",",
+              "\"102 år\",",
+              "\"103 år\",",
+              "\"104 år\",",
+              "\"105 år eller eldre\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Andel kvinner av befolkningen",
+            "expression": [
+              "",
+              "",
+              "([Kvinner i alt]",
+              "/",
+              "[Innbyggere i alt])*100",
+              ""
+            ],
+            "formatString": "0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Andel menn av befolkningen",
+            "expression": [
+              "",
+              "",
+              "([Menn i alt]",
+              "/",
+              "[Innbyggere i alt])*100"
+            ],
+            "formatString": "0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Samlivsform andel personer 18 år og over - i par, gift*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"06096\"),",
+              "FILTER(all('Samlivsform'[Dimensjonsnavn]), 'Samlivsform'[Dimensjonsnavn] = \"I par, gift\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer (prosent)\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Samlivsform andel personer 18 år og over - i par, samboende*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"06096\"),",
+              "FILTER(all('Samlivsform'[Dimensjonsnavn]), 'Samlivsform'[Dimensjonsnavn] = \"I par, samboende\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer (prosent)\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Samlivsform andel personer 18 år og over - ikke i par*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"06096\"),",
+              "FILTER(all('Samlivsform'[Dimensjonsnavn]), 'Samlivsform'[Dimensjonsnavn] = \"Ikke i par\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer (prosent)\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
           },
           {
             "name": "Andel virksomheter: Primærnæring",
@@ -689,7 +1076,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Økonomi og arbeidsliv"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
             "name": "Andel virksomheter: Sekundærnæring",
@@ -716,33 +1103,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Økonomi og arbeidsliv"
-          },
-          {
-            "name": "Andel virksomheter: Uoppgitt",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
-              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] = \"Uoppgitt\")",
-              ")",
-              "",
-              "var b = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
-              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] = \"Alle næringer\")",
-              "",
-              "",
-              ")",
-              "",
-              "return (DIVIDE(a,b))*100"
-            ],
-            "formatString": "#,0.0",
-            "displayFolder": "Økonomi og arbeidsliv"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
             "name": "Andel virksomheter: Tertiærnæring",
@@ -771,7 +1132,33 @@
               "return (DIVIDE((b-a),b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Økonomi og arbeidsliv"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Andel virksomheter: Uoppgitt",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] = \"Uoppgitt\")",
+              ")",
+              "",
+              "var b = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] = \"Alle næringer\")",
+              "",
+              "",
+              ")",
+              "",
+              "return (DIVIDE(a,b))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           }
         ],
         "annotations": [
