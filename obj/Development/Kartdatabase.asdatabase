@@ -114,6 +114,7 @@
           {
             "name": "Befolkning og demografi",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "Befolkning og demografi",
             "sourceProviderType": "Integer"
           },
@@ -522,7 +523,7 @@
             "displayFolder": "Innbyggere etter kjønn"
           },
           {
-            "name": "Kvinner",
+            "name": "Andel kvinner",
             "description": "Andel kvinner av befolkningen",
             "expression": [
               "",
@@ -536,7 +537,7 @@
             "displayFolder": "Innbyggere etter kjønn"
           },
           {
-            "name": "Menn",
+            "name": "Andel menn",
             "description": "Andel menn av befolkningen",
             "expression": [
               "",
@@ -1633,23 +1634,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Innbyggere 16 år og over",
-            "expression": [
-              "",
-              "",
-              "[Innbyggere 16-18 år]",
-              "+",
-              "[Innbyggere 19-34 år]",
-              "+",
-              "[Innbyggere 35-66 år]",
-              "+",
-              "[Innbyggere 67 år og over]"
-            ],
-            "formatString": "#,0",
-            "isHidden": true
-          },
-          {
-            "name": "Høyeste fullførte utdanningsnivå personer 16 år og over - grunnskolenivå",
+            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - grunnskolenivå",
             "expression": [
               "",
               "",
@@ -1659,14 +1644,13 @@
               "FILTER(ALL('Nivå'[DimensjonsNavn]), 'Nivå'[DimensjonsNavn] = \"Grunnskolenivå\")",
               ")",
               "",
-              "",
-              "return a"
+              "return (divide(a, [Personer med utdanningsnivå]))*100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Høyeste fullførte utdanningsnivå personer 16 år og over - fagskolenivå",
+            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - fagskolenivå",
             "expression": [
               "",
               "",
@@ -1676,14 +1660,14 @@
               "FILTER(ALL('Nivå'[DimensjonsNavn]), 'Nivå'[DimensjonsNavn] = \"Fagskolenivå\")",
               ")",
               "",
-              "",
-              "return a"
+              "return (divide(a, [Personer med utdanningsnivå]))*100",
+              ""
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Høyeste fullførte utdanningsnivå personer 16 år og over - universitets- og høgskolenivå, kort",
+            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - universitets- og høgskolenivå, kort",
             "expression": [
               "",
               "",
@@ -1693,14 +1677,13 @@
               "FILTER(ALL('Nivå'[DimensjonsNavn]), 'Nivå'[DimensjonsNavn] = \"Universitets- og høgskolenivå, kort\")",
               ")",
               "",
-              "",
-              "return a"
+              "return (divide(a, [Personer med utdanningsnivå]))*100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Høyeste fullførte utdanningsnivå personer 16 år og over - universitets- og høgskolenivå, lang",
+            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - universitets- og høgskolenivå, lang",
             "expression": [
               "",
               "",
@@ -1710,8 +1693,7 @@
               "FILTER(ALL('Nivå'[DimensjonsNavn]), 'Nivå'[DimensjonsNavn] = \"Universitets- og høgskolenivå, lang\")",
               ")",
               "",
-              "",
-              "return a"
+              "return (divide(a, [Personer med utdanningsnivå]))*100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
@@ -1731,10 +1713,11 @@
               "return a"
             ],
             "formatString": "#,0.0",
+            "isHidden": true,
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Høyeste fullførte utdanningsnivå personer 16 år og over - videregående skolenivå",
+            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - videregående skolenivå",
             "expression": [
               "",
               "",
@@ -1744,42 +1727,352 @@
               "FILTER(ALL('Nivå'[DimensjonsNavn]), 'Nivå'[DimensjonsNavn] = \"Videregående skolenivå\")",
               ")",
               "",
-              "",
-              "return a"
+              "return (divide(a, [Personer med utdanningsnivå]))*100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Andel av befolkningen som bor i tettbygd strøk",
+            "name": "Andel som bor i tettbygd strøk",
             "expression": [
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"05212\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Areal (km²)\")",
+              "filter(ALL('Tettbygdspredtbygd strøk'[Dimensjonsnavn]), 'Tettbygdspredtbygd strøk'[Dimensjonsnavn] = \"Tettbygd strøk\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Folkemengde\")",
+              ")",
+              "",
+              "return (divide (a,[Folketall]))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Andel personer med eierstatus selveier",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11038\"),",
+              "filter(all('Eierstatus'[Dimensjonsnavn]), 'Eierstatus'[Dimensjonsnavn] = \"Selveier\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall personer\")",
+              ")",
+              "",
+              "return (divide (a,[Personer med eierstatus]))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Andel personer med eierstatus andels- / aksjeeier",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11038\"),",
+              "filter(all('Eierstatus'[Dimensjonsnavn]), 'Eierstatus'[Dimensjonsnavn] = \"Andels- / aksjeeier\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall personer\")",
+              ")",
+              "",
+              "return (divide (a,[Personer med eierstatus]))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Andel personer med eierstatus leier",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11038\"),",
+              "filter(all('Eierstatus'[Dimensjonsnavn]), 'Eierstatus'[Dimensjonsnavn] = \"Leier\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall personer\")",
+              ")",
+              "",
+              "return (divide (a,[Personer med eierstatus]))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Personer med utdanningsnivå",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"09429\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer 16 år og over\"),",
+              "FILTER(ALL('Nivå'[DimensjonsNavn]), 'Nivå'[DimensjonsNavn] = \"Utdanningsnivå i alt\")",
+              ")",
+              "",
+              "var b = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"09429\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer 16 år og over\"),",
+              "FILTER(ALL('Nivå'[DimensjonsNavn]), 'Nivå'[DimensjonsNavn] = \"Uoppgitt eller ingen fullført utdanning\")",
+              ")",
+              "",
+              "return a-b"
+            ],
+            "formatString": "#,0",
+            "isHidden": true
+          },
+          {
+            "name": "Personer med eierstatus",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11038\"),",
+              "filter(all('Eierstatus'[Dimensjonsnavn]), 'Eierstatus'[Dimensjonsnavn] =\"I alt\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall personer\")",
               ")",
               "",
               "return a"
             ],
             "formatString": "#,0",
+            "isHidden": true
+          },
+          {
+            "name": "Andel av befolkningen som er under 15 år",
+            "expression": [
+              "",
+              "",
+              "([Innbyggere 0-15 år]",
+              "/",
+              "[Folketall])*100",
+              ""
+            ],
+            "formatString": "0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Valgdeltakelse Stortingsvalg - prosent*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08243\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgdeltakelse\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "DEMOKRATI OG POLITIKK"
+          },
+          {
+            "name": "Andel medlemmer i tros- og livssynssamfunn utenfor Den norske kirke (per 1.1)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"12026\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke (antall)\")",
+              ")",
+              "",
+              "return (divide (a,[Folketall]))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Andel medlemmer og tilhørige i Den norske kirke (per 1.1)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"12026\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer og tilhørige i Dnk (antall)\")",
+              ")",
+              "",
+              "return (divide (a,[Folketall]))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Andel som ikke er medlem i DnK eller tros- og livssynssamfunn utenfor DnK (per 1.1)",
+            "expression": [
+              "",
+              "",
+              "100-",
+              "([Andel medlemmer og tilhørige i Den norske kirke (per 1.1)]+",
+              "[Andel medlemmer i tros- og livssynssamfunn utenfor Den norske kirke (per 1.1)])",
+              "",
+              ""
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Andel medlemmer og tilhørige i DnK og tros- og livssynssamfunn utenfor (per 1.1)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"12026\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] in {\"Medlemmer og tilhørige i Dnk (antall)\",",
+              "\"Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke (antall)\"})",
+              ")",
+              "",
+              "return (divide (a,[Folketall]))*100"
+            ],
+            "formatString": "#,0.0",
             "isHidden": true,
             "displayFolder": "BEFOLKNING OG DEMOGRAFI"
           },
           {
-            "name": "Copy of Areal (km²)",
+            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke i alt",
             "expression": [
               "",
               "",
-              "var areal = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11342\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Areal (km²)\")",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08531\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\"),",
+              "filter(all('Religionlivssyn'[Dimensjonsnavn]), 'Religionlivssyn'[Dimensjonsnavn] = \"Medlemmer i alt\")",
+              "",
               ")",
               "",
-              "return areal"
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke annen religion",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08531\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\"),",
+              "filter(all('Religionlivssyn'[Dimensjonsnavn]), 'Religionlivssyn'[Dimensjonsnavn] = \"Annan religion\")",
+              "",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke buddhisme",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08531\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\"),",
+              "filter(all('Religionlivssyn'[Dimensjonsnavn]), 'Religionlivssyn'[Dimensjonsnavn] = \"Buddhisme\")",
+              "",
+              ")",
+              "",
+              "return a",
+              ""
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke islam",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08531\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\"),",
+              "filter(all('Religionlivssyn'[Dimensjonsnavn]), 'Religionlivssyn'[Dimensjonsnavn] = \"Islam\")",
+              "",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke kristendom",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08531\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\"),",
+              "filter(all('Religionlivssyn'[Dimensjonsnavn]), 'Religionlivssyn'[Dimensjonsnavn] = \"Kristendom\")",
+              "",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke livssyn",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08531\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\"),",
+              "filter(all('Religionlivssyn'[Dimensjonsnavn]), 'Religionlivssyn'[Dimensjonsnavn] = \"Livssyn\")",
+              "",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+          },
+          {
+            "name": "Kvadratmeterpris (kr) brukte eneboliger*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"03364\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Kvadratmeterpris (kr)\"),",
+              "FILTER(ALL('Type'[Dimensjonsnavn]), 'Type'[Dimensjonsnavn] = \"Brukte eneboliger\")",
+              ")",
+              "",
+              "return a"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Kvadratmeterpris (kr) nye eneboliger*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"03364\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Kvadratmeterpris (kr)\"),",
+              "FILTER(ALL('Type'[Dimensjonsnavn]), 'Type'[Dimensjonsnavn] = \"Nye eneboliger\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Lovbrudd anmeldt (årlig gjennomsnitt)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08487\"),",
+              "FILTER(ALL('Lovbruddtype'[Dimensjonsnavn]), 'Lovbruddtype'[Dimensjonsnavn] = \"Alle lovbruddsgrupper\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Lovbrudd anmeldt (årlig gjennomsnitt)\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
           }
         ],
         "annotations": [
@@ -2345,17 +2638,8 @@
           {
             "name": "Lovbruddstype",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Lovbruddstype"
-          },
-          {
-            "name": "Politisk part",
-            "dataType": "string",
-            "sourceColumn": "Politisk part"
-          },
-          {
-            "name": "Religion",
-            "dataType": "string",
-            "sourceColumn": "Religion"
           },
           {
             "name": "Regnskapsomfang",
@@ -2365,12 +2649,25 @@
           {
             "name": "Tettbygd/spredtbygd",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Tettbygd/spredtbygd"
           },
           {
             "name": "Type enebolig",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Type enebolig"
+          },
+          {
+            "name": "Politisk parti",
+            "dataType": "string",
+            "sourceColumn": "Politisk parti"
+          },
+          {
+            "name": "Religion/livssyn",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Religion/livssyn"
           }
         ],
         "partitions": [
@@ -2556,18 +2853,18 @@
                   "    </item>",
                   "    <item>",
                   "      <key>",
-                  "        <string>Politisk part</string>",
+                  "        <string>Religion/livssyn</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>85</int>",
+                  "        <int>103</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
                   "      <key>",
-                  "        <string>Religion</string>",
+                  "        <string>Politisk parti</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>67</int>",
+                  "        <int>87</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -2758,31 +3055,15 @@
                   "    </item>",
                   "    <item>",
                   "      <key>",
-                  "        <string>Politisk part</string>",
+                  "        <string>Religion/livssyn</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>20</int>",
+                  "        <int>24</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
                   "      <key>",
-                  "        <string>Religion</string>",
-                  "      </key>",
-                  "      <value>",
-                  "        <int>21</int>",
-                  "      </value>",
-                  "    </item>",
-                  "    <item>",
-                  "      <key>",
-                  "        <string>Regnskapsomfang</string>",
-                  "      </key>",
-                  "      <value>",
-                  "        <int>22</int>",
-                  "      </value>",
-                  "    </item>",
-                  "    <item>",
-                  "      <key>",
-                  "        <string>Tettbygd/spredtbygd</string>",
+                  "        <string>Politisk parti</string>",
                   "      </key>",
                   "      <value>",
                   "        <int>23</int>",
@@ -2790,10 +3071,26 @@
                   "    </item>",
                   "    <item>",
                   "      <key>",
+                  "        <string>Regnskapsomfang</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>20</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Tettbygd/spredtbygd</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>21</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
                   "        <string>Type enebolig</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>24</int>",
+                  "        <int>22</int>",
                   "      </value>",
                   "    </item>",
                   "  </ColumnDisplayIndex>",
@@ -2881,7 +3178,7 @@
                   "    </item>",
                   "    <item>",
                   "      <key>",
-                  "        <string>Politisk part</string>",
+                  "        <string>Religion/livssyn</string>",
                   "      </key>",
                   "      <value>",
                   "        <boolean>true</boolean>",
@@ -2889,7 +3186,7 @@
                   "    </item>",
                   "    <item>",
                   "      <key>",
-                  "        <string>Religion</string>",
+                  "        <string>Politisk parti</string>",
                   "      </key>",
                   "      <value>",
                   "        <boolean>true</boolean>",
@@ -3123,18 +3420,18 @@
               "    </item>",
               "    <item>",
               "      <key>",
-              "        <string>Politisk part</string>",
+              "        <string>Religion/livssyn</string>",
               "      </key>",
               "      <value>",
-              "        <int>85</int>",
+              "        <int>103</int>",
               "      </value>",
               "    </item>",
               "    <item>",
               "      <key>",
-              "        <string>Religion</string>",
+              "        <string>Politisk parti</string>",
               "      </key>",
               "      <value>",
-              "        <int>67</int>",
+              "        <int>87</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -3325,31 +3622,15 @@
               "    </item>",
               "    <item>",
               "      <key>",
-              "        <string>Politisk part</string>",
+              "        <string>Religion/livssyn</string>",
               "      </key>",
               "      <value>",
-              "        <int>20</int>",
+              "        <int>24</int>",
               "      </value>",
               "    </item>",
               "    <item>",
               "      <key>",
-              "        <string>Religion</string>",
-              "      </key>",
-              "      <value>",
-              "        <int>21</int>",
-              "      </value>",
-              "    </item>",
-              "    <item>",
-              "      <key>",
-              "        <string>Regnskapsomfang</string>",
-              "      </key>",
-              "      <value>",
-              "        <int>22</int>",
-              "      </value>",
-              "    </item>",
-              "    <item>",
-              "      <key>",
-              "        <string>Tettbygd/spredtbygd</string>",
+              "        <string>Politisk parti</string>",
               "      </key>",
               "      <value>",
               "        <int>23</int>",
@@ -3357,10 +3638,26 @@
               "    </item>",
               "    <item>",
               "      <key>",
+              "        <string>Regnskapsomfang</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>20</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Tettbygd/spredtbygd</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>21</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
               "        <string>Type enebolig</string>",
               "      </key>",
               "      <value>",
-              "        <int>24</int>",
+              "        <int>22</int>",
               "      </value>",
               "    </item>",
               "  </ColumnDisplayIndex>",
@@ -3448,7 +3745,7 @@
               "    </item>",
               "    <item>",
               "      <key>",
-              "        <string>Politisk part</string>",
+              "        <string>Religion/livssyn</string>",
               "      </key>",
               "      <value>",
               "        <boolean>true</boolean>",
@@ -3456,7 +3753,7 @@
               "    </item>",
               "    <item>",
               "      <key>",
-              "        <string>Religion</string>",
+              "        <string>Politisk parti</string>",
               "      </key>",
               "      <value>",
               "        <boolean>true</boolean>",
@@ -3730,6 +4027,194 @@
             "value": "dbo"
           }
         ]
+      },
+      {
+        "name": "Lovbruddtype",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Lovbruddtype",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Lovbruddtype].* FROM [dbo].[Lovbruddtype] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Lovbruddtype].* FROM [dbo].[Lovbruddtype] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Lovbruddtype"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Religionlivssyn",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Religionlivssyn",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Religion/livssyn].* FROM [dbo].[Religion/livssyn] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Religion/livssyn].* FROM [dbo].[Religion/livssyn] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Religion/livssyn"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Tettbygdspredtbygd strøk",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Tettbygdspredtbygd strøk",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Tettbygd/spredtbygd strøk].* FROM [dbo].[Tettbygd/spredtbygd strøk] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Tettbygd/spredtbygd strøk].* FROM [dbo].[Tettbygd/spredtbygd strøk] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Tettbygd/spredtbygd strøk"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Type",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Type",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Type].* FROM [dbo].[Type] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Type].* FROM [dbo].[Type] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Type"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
       }
     ],
     "relationships": [
@@ -3822,6 +4307,34 @@
         "fromTable": "Alle Data",
         "fromColumn": "Eierstatus",
         "toTable": "Eierstatus",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "cff1f54c-2aed-4e71-9908-c2efb18fe322",
+        "fromTable": "Alle Data",
+        "fromColumn": "Religion/livssyn",
+        "toTable": "Religionlivssyn",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "ce88a1d2-a620-4b5d-8927-a1aac3af336e",
+        "fromTable": "Alle Data",
+        "fromColumn": "Tettbygd/spredtbygd",
+        "toTable": "Tettbygdspredtbygd strøk",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "b3219bb5-1efd-4319-ba17-6206e4a00997",
+        "fromTable": "Alle Data",
+        "fromColumn": "Type enebolig",
+        "toTable": "Type",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "c6a56284-b0f3-48bb-ab38-78ab6d78f297",
+        "fromTable": "Alle Data",
+        "fromColumn": "Lovbruddstype",
+        "toTable": "Lovbruddtype",
         "toColumn": "Dimensjonskode"
       }
     ],
