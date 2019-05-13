@@ -271,7 +271,7 @@
               "return areal"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Areal"
           },
           {
             "name": "0-15 år",
@@ -304,7 +304,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Innbyggere etter alder"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "16-18 år",
@@ -325,7 +325,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Innbyggere etter alder"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "19-34 år",
@@ -358,7 +358,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Innbyggere etter alder"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "35-66 år",
@@ -408,7 +408,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Innbyggere etter alder"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "67 år og over",
@@ -465,7 +465,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Innbyggere etter alder"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Folketall",
@@ -484,7 +484,7 @@
               ""
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Folketall"
           },
           {
             "name": "Kvinner i alt",
@@ -501,7 +501,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Innbyggere etter kjønn"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
             "name": "Menn i alt",
@@ -519,7 +519,7 @@
               ""
             ],
             "formatString": "#,0",
-            "displayFolder": "Innbyggere etter kjønn"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
             "name": "Andel kvinner",
@@ -533,7 +533,7 @@
               ""
             ],
             "formatString": "0.0",
-            "displayFolder": "Innbyggere etter kjønn"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
             "name": "Andel menn",
@@ -546,7 +546,7 @@
               "[Folketall])*100"
             ],
             "formatString": "0.0",
-            "displayFolder": "Innbyggere etter kjønn"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
             "name": "Andel innvandrere og norskfødte med innvandrerforeldre av befolkningen",
@@ -569,7 +569,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
             "name": "Innvandrere i alt",
@@ -589,7 +589,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
             "name": "Personer per privathusholdning",
@@ -609,7 +609,7 @@
               "return DIVIDE(a,b)"
             ],
             "formatString": "#,0.00",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Husholdninger"
           },
           {
             "name": "Andel i par, gift*",
@@ -626,7 +626,7 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Samlivsform"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
             "name": "Andel i par, samboende*",
@@ -643,7 +643,7 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Samlivsform"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
             "name": "Andel ikke i par*",
@@ -660,7 +660,7 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Samlivsform"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
             "name": "Nettoinnflytting",
@@ -675,7 +675,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Flytting"
           },
           {
             "name": "Andel primærnæring",
@@ -703,7 +703,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Virksomheter"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Andel sekundærnæring",
@@ -731,7 +731,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Virksomheter"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Andel uoppgitt næring",
@@ -758,7 +758,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Virksomheter"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Andel tertiærnæring",
@@ -788,7 +788,7 @@
               "return (DIVIDE((b-a),b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Virksomheter"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Innbyggere 0-15 år",
@@ -820,7 +820,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Innbyggere 16-18 år",
@@ -840,7 +840,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Innbyggere 19-34 år",
@@ -872,7 +872,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Innbyggere 35-66 år",
@@ -921,7 +921,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Innbyggere 67 år og over",
@@ -977,7 +977,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Andel kvinner av befolkningen",
@@ -990,7 +990,7 @@
               ""
             ],
             "formatString": "0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
             "name": "Andel menn av befolkningen",
@@ -1002,7 +1002,7 @@
               "[Folketall])*100"
             ],
             "formatString": "0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
             "name": "Samlivsform andel personer 18 år og over - i par, gift*",
@@ -1018,7 +1018,7 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
             "name": "Samlivsform andel personer 18 år og over - i par, samboende*",
@@ -1034,7 +1034,7 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
             "name": "Samlivsform andel personer 18 år og over - ikke i par*",
@@ -1050,7 +1050,7 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
             "name": "Andel virksomheter: Primærnæring",
@@ -1077,7 +1077,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Andel virksomheter: Sekundærnæring",
@@ -1104,7 +1104,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Andel virksomheter: Tertiærnæring",
@@ -1133,7 +1133,7 @@
               "return (DIVIDE((b-a),b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Andel virksomheter: Uoppgitt",
@@ -1159,7 +1159,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Sykefraværsprosent 4. kvartal*",
@@ -1174,7 +1174,7 @@
               "return areal"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sykefravær"
           },
           {
             "name": "Andel husholdninger med inntekt etter skatt 150 000 - 249 999 kr*",
@@ -1407,7 +1407,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
             "name": "Andel norskfødte med innvandrerforeldre av befolkningen",
@@ -1429,7 +1429,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
             "name": "Andel av befolkningen som ikke er innvandrere og norskfødte med innvandrerforeldre",
@@ -1451,7 +1451,7 @@
               "return (DIVIDE((b-a),b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
             "name": "Innvandrere",
@@ -1474,7 +1474,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Innvandringskategori"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
             "name": "Norskfødte med innvandrerforeldre",
@@ -1496,7 +1496,7 @@
               "return (DIVIDE(a,b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Innvandringskategori"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
             "name": "Øvrige befolkning",
@@ -1518,7 +1518,7 @@
               "return (DIVIDE((b-a),b))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Innvandringskategori"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
             "name": "Sysselsatte 4. kvartal etter bosted 15-19 år",
@@ -1745,7 +1745,7 @@
               "return (divide (a,[Folketall]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tettbygd"
           },
           {
             "name": "Andel personer med eierstatus selveier",
@@ -1844,7 +1844,7 @@
               ""
             ],
             "formatString": "0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Valgdeltakelse Stortingsvalg - prosent*",
@@ -1859,7 +1859,7 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "DEMOKRATI OG POLITIKK"
+            "displayFolder": "DEMOKRATI OG POLITIKK;Valgdeltakelse"
           },
           {
             "name": "Andel medlemmer i tros- og livssynssamfunn utenfor Den norske kirke (per 1.1)",
@@ -1874,7 +1874,7 @@
               "return (divide (a,[Folketall]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Andel medlemmer og tilhørige i Den norske kirke (per 1.1)",
@@ -1889,7 +1889,7 @@
               "return (divide (a,[Folketall]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Andel som ikke er medlem i DnK eller tros- og livssynssamfunn utenfor DnK (per 1.1)",
@@ -1903,7 +1903,7 @@
               ""
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Andel medlemmer og tilhørige i DnK og tros- og livssynssamfunn utenfor (per 1.1)",
@@ -1920,7 +1920,7 @@
             ],
             "formatString": "#,0.0",
             "isHidden": true,
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke i alt",
@@ -1937,7 +1937,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke annen religion",
@@ -1954,7 +1954,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke buddhisme",
@@ -1972,7 +1972,7 @@
               ""
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke islam",
@@ -1989,7 +1989,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke kristendom",
@@ -2006,7 +2006,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke livssyn",
@@ -2023,7 +2023,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
             "name": "Kvadratmeterpris (kr) brukte eneboliger*",
@@ -2058,133 +2058,924 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Lovbrudd anmeldt (årlig gjennomsnitt)",
+            "name": "Alle lovbruddsgrupper per 1 000 innbyggere (årlig gjennomsnitt)*",
             "expression": [
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08487\"),",
               "FILTER(ALL('Lovbruddtype'[Dimensjonsnavn]), 'Lovbruddtype'[Dimensjonsnavn] = \"Alle lovbruddsgrupper\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Lovbrudd anmeldt (årlig gjennomsnitt)\")",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Lovbrudd anmeldt per 1 000 innbyggere (årlig gjennomsnitt)\")",
               ")",
               "",
               "return A"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI"
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
           },
           {
-            "name": "Andel netto driftsutgifter til sosialsektoren*",
+            "name": "Andel netto driftsutgifter til sosialsektoren",
             "expression": [
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel av totale utgifter (prosent)\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
               "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Sosialsektoren samlet\"),",
               "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
               ")",
               "",
-              "return a"
+              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Andel netto driftsutgifter til barnevern*",
+            "name": "Andel netto driftsutgifter til barnevern",
             "expression": [
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel av totale utgifter (prosent)\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
               "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Barnevern\"),",
               "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
               ")",
               "",
-              "return a"
+              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Andel netto driftsutgifter til administrasjon*",
+            "name": "Andel netto driftsutgifter til administrasjon",
             "expression": [
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel av totale utgifter (prosent)\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
               "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Administrasjon, kommune\"),",
               "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
               ")",
               "",
-              "return a"
+              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Andel netto driftsutgifter til eiendomsforvaltning*",
+            "name": "Andel netto driftsutgifter til eiendomsforvaltning",
             "expression": [
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel av totale utgifter (prosent)\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
               "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Eiendomsforvaltning, kommune\"),",
               "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
               ")",
               "",
-              "return a"
+              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Andel netto driftsutgifter til barnehage*",
+            "name": "Andel netto driftsutgifter til barnehage",
             "expression": [
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel av totale utgifter (prosent)\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
               "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Barnehage\"),",
               "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
               ")",
               "",
-              "return a"
+              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV"
           },
           {
-            "name": "Andel netto driftsutgifter til grunnskole*",
+            "name": "Andel netto driftsutgifter til grunnskole",
             "expression": [
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel av totale utgifter (prosent)\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
               "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Grunnskole\"),",
               "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Andel netto driftsutgifter til helse og omsorg",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Helse- og omsorg\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Har kommunen innført eiendomsskatt*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12503\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Har kommunen innført eiendomsskatt? (ja=1, nei=0)\"),",
+              "FILTER(ALL('Region'[Kategori]), 'Region'[Kategori] = \"Kommune\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Hvor mange kommuner i fylket har innført eiendomsskatt*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12503\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Har kommunen innført eiendomsskatt? (ja=1, nei=0)\"),",
+              "FILTER(ALL('Region'[Kategori]), 'Region'[Kategori] = \"Fylke\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Hvor mange kommuner i landet har innført eiendomsskatt*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12503\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Har kommunen innført eiendomsskatt? (ja=1, nei=0)\"),",
+              "FILTER(ALL('Region'[Kategori]), 'Region'[Kategori] = \"Landet\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+          },
+          {
+            "name": "Annet lovbrudd per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08487\"),",
+              "FILTER(ALL('Lovbruddtype'[Dimensjonsnavn]), 'Lovbruddtype'[Dimensjonsnavn] = \"Annet lovbrudd (inkl. Annet vinningslovbrudd, Eiendomsskade og Seksuallovbrudd)\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Lovbrudd anmeldt per 1 000 innbyggere (årlig gjennomsnitt)\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
+          },
+          {
+            "name": "Eiendomstyveri per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08487\"),",
+              "FILTER(ALL('Lovbruddtype'[Dimensjonsnavn]), 'Lovbruddtype'[Dimensjonsnavn] = \"Eiendomstyveri\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Lovbrudd anmeldt per 1 000 innbyggere (årlig gjennomsnitt)\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
+          },
+          {
+            "name": "Ordens- og integritetskrenkelse per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08487\"),",
+              "FILTER(ALL('Lovbruddtype'[Dimensjonsnavn]), 'Lovbruddtype'[Dimensjonsnavn] = \"Ordens- og integritetskrenkelse\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Lovbrudd anmeldt per 1 000 innbyggere (årlig gjennomsnitt)\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
+          },
+          {
+            "name": "Rusmiddellovbrudd per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08487\"),",
+              "FILTER(ALL('Lovbruddtype'[Dimensjonsnavn]), 'Lovbruddtype'[Dimensjonsnavn] = \"Rusmiddellovbrudd\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Lovbrudd anmeldt per 1 000 innbyggere (årlig gjennomsnitt)\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
+          },
+          {
+            "name": "Trafikkovertredelse per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08487\"),",
+              "FILTER(ALL('Lovbruddtype'[Dimensjonsnavn]), 'Lovbruddtype'[Dimensjonsnavn] = \"Trafikkovertredelse\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Lovbrudd anmeldt per 1 000 innbyggere (årlig gjennomsnitt)\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
+          },
+          {
+            "name": "Vold og mishandling per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08487\"),",
+              "FILTER(ALL('Lovbruddtype'[Dimensjonsnavn]), 'Lovbruddtype'[Dimensjonsnavn] = \"Vold og mishandling\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Lovbrudd anmeldt per 1 000 innbyggere (årlig gjennomsnitt)\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
+          },
+          {
+            "name": "Antall virksomheter innen primærnæring",
+            "description": "Andel virksomheter: Primærnæring",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] in ",
+              "{\"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\"})",
               ")",
               "",
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "Virksomheter"
           },
           {
-            "name": "Andel netto driftsutgifter til helse og omsorg*",
+            "name": "Antall virksomheter innen sekundærnæring",
+            "description": "Andel virksomheter: Sekundærnæring",
             "expression": [
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel av totale utgifter (prosent)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Helse- og omsorg\"),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] in ",
+              "{\"Industri\", \"Bygge- og anleggsvirksomhet\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Virksomheter"
+          },
+          {
+            "name": "Antall virksomheter tertiærnæring",
+            "description": "Andel virksomheter: Tertiærnæring",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
+              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
+              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] in ",
+              "{\"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\", ",
+              "\"Industri\", \"Bygge- og anleggsvirksomhet\",",
+              "\"Uoppgitt\"})",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Virksomheter"
+          },
+          {
+            "name": "Siktede personer",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Valgdeltakelse kommunestyre- og fylkestingsvalg - prosent*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09475\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgdeltakelse i prosent\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Valgdeltakelse"
+          },
+          {
+            "name": "Valgte repesentanter Arbeiderpartiet*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
+              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Arbeiderpartiet\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Valgte repesentanter Fremskrittspartiet*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
+              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Fremskrittspartiet\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Valgte repesentanter Høyre*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
+              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Høyre\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Valgte repesentanter Senterpartiet*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
+              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Senterpartiet\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Valgte repesentanter Sosialistisk Venstreparti*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
+              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Sosialistisk Venstreparti\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Valgte repesentanter Venstre*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
+              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Venstre\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Valgte repesentanter andre*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              ")",
+              "",
+              "return a-[Sum partirepresentanter]"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Sum partirepresentanter",
+            "expression": [
+              "",
+              "",
+              "([Valgte repesentanter Arbeiderpartiet*]",
+              "+",
+              "[Valgte repesentanter Fremskrittspartiet*]",
+              "+",
+              "[Valgte repesentanter Høyre*]",
+              "+",
+              "[Valgte repesentanter Senterpartiet*]",
+              "+",
+              "[Valgte repesentanter Sosialistisk Venstreparti*]",
+              "+",
+              "[Valgte repesentanter Venstre*]",
+              "+",
+              "[Valgte repesentanter Kristelig Folkeparti*])"
+            ],
+            "formatString": "#,0",
+            "isHidden": true,
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Valgte repesentanter Kristelig Folkeparti*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
+              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Kristelig Folkeparti\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Blokkleiligheter gjennomsnittlig kvadratmeterpris (kr)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\"),",
+              "FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Blokkleiligheter\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Selveierboliger"
+          },
+          {
+            "name": "Eneboliger gjennomsnittlig kvadratmeterpris (kr)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\"),",
+              "FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Eneboliger\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Selveierboliger"
+          },
+          {
+            "name": "Småhus gjennomsnittlig kvadratmeterpris (kr)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\"),",
+              "FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Småhus\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Selveierboliger"
+          },
+          {
+            "name": "Kommunestyremedlemmer 18-29 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"18-29 år\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Kommunestyremedlemmer 30-39 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"30-39 år\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Kommunestyremedlemmer 40-49 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"40-49 år\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Kommunestyremedlemmer 50-59 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"50-59 år\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Kommunestyremedlemmer 60 år eller eldre",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"60 år eller eldre\"), ",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Netto driftsutgifter politisk styring og kontrollvirksomhet (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Politisk styring og kontrollvirksomhet, fylkeskommune\"),",
               "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Netto driftsutgifter administrasjon (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Administrasjon, fylkeskommune\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Netto driftsutgifter eiendomsforvaltning (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Eiendomsforvaltning, fylkeskommune\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Netto driftsutgifter Fellesutgifter (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Fellesutgifter, fylkeskommune\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Netto driftsutgifter fysisk planlegging, kulturminner, natur, nærmiljø, fylkeskommune (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Fysisk planlegging, kulturminner, natur, nærmiljø, fylkeskommune\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Netto driftsutgifter kultur (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Kultur, fylkeskommune\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Netto driftsutgifter næringsforvaltning (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Næringsforvaltning, fylkeskommune\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Netto driftsutgifter samferdsel (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Samferdsel, fylkeskommune\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Netto driftsutgifter tannhelse (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Tannhelse\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Netto driftsutgifter videregående opplæring samlet (FK)",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Videregående opplæring samlet\"),",
+              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Regnskap fylkeskommune"
+          },
+          {
+            "name": "Inntekt etter skatt - alle husholdninger, median (kr)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
+              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Alle husholdninger\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Inntekt etter skatt"
+          },
+          {
+            "name": "Inntekt etter skatt - aleneboende, median (kr)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
+              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Aleneboende\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Inntekt etter skatt"
+          },
+          {
+            "name": "Inntekt etter skatt - enslig mor/far med barn 0-17 år, median (kr)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
+              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Enslig mor/far med barn 0-17 år\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Inntekt etter skatt"
+          },
+          {
+            "name": "Inntekt etter skatt - par med barn 0-17 år, median (kr)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
+              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Par med barn 0-17 år\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Inntekt etter skatt"
+          },
+          {
+            "name": "Inntekt etter skatt - par uten barn, median (kr)*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
+              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Par uten barn\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Inntekt etter skatt"
+          },
+          {
+            "name": "Samlede netto driftsutgifter",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12364\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0",
+            "isHidden": true
+          },
+          {
+            "name": "Andel uføretrygdede av befolkningen 18-67 år*",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"NAV01\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel uføretrygdede av befolkningen 18-67 år\")",
               ")",
               "",
               "return a"
@@ -2737,6 +3528,7 @@
           {
             "name": "Boligtype",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Boligtype"
           },
           {
@@ -2746,13 +3538,9 @@
             "sourceColumn": "Funksjon"
           },
           {
-            "name": "Hovedlovbruddtype",
-            "dataType": "string",
-            "sourceColumn": "Hovedlovbruddtype"
-          },
-          {
             "name": "Husholdningtype",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Husholdningtype"
           },
           {
@@ -2760,11 +3548,6 @@
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "Lovbruddstype"
-          },
-          {
-            "name": "Regnskapsomfang",
-            "dataType": "string",
-            "sourceColumn": "Regnskapsomfang"
           },
           {
             "name": "Tettbygd/spredtbygd",
@@ -2781,6 +3564,7 @@
           {
             "name": "Politisk parti",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Politisk parti"
           },
           {
@@ -2795,7 +3579,7 @@
             "name": "Alle Data",
             "dataView": "full",
             "source": {
-              "query": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] ",
+              "query": " SELECT [dbo].[Alle Data].[Tabell],[dbo].[Alle Data].[Kode],[dbo].[Alle Data].[Variabel],[dbo].[Alle Data].[Alder],[dbo].[Alle Data].[Antall],[dbo].[Alle Data].[Art],[dbo].[Alle Data].[Boligtype],[dbo].[Alle Data].[Eierstatus],[dbo].[Alle Data].[Funksjon],[dbo].[Alle Data].[Husholdningtype],[dbo].[Alle Data].[Innvandringskategori],[dbo].[Alle Data].[Kjønn],[dbo].[Alle Data].[Landbakgrunn],[dbo].[Alle Data].[Lovbruddstype],[dbo].[Alle Data].[Nivå],[dbo].[Alle Data].[Næring],[dbo].[Alle Data].[Politisk parti],[dbo].[Alle Data].[Religion/livssyn],[dbo].[Alle Data].[Samlivsform],[dbo].[Alle Data].[Tettbygd/spredtbygd],[dbo].[Alle Data].[Type enebolig],[dbo].[Alle Data].[År],[dbo].[Alle Data].[Verdi] FROM [dbo].[Alle Data] ",
               "dataSource": "KS-SQL2018;Reporting_Kart"
             },
             "annotations": [
@@ -3277,7 +4061,7 @@
                   "        <string>Hovedlovbruddtype</string>",
                   "      </key>",
                   "      <value>",
-                  "        <boolean>true</boolean>",
+                  "        <boolean>false</boolean>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -3317,7 +4101,7 @@
                   "        <string>Regnskapsomfang</string>",
                   "      </key>",
                   "      <value>",
-                  "        <boolean>true</boolean>",
+                  "        <boolean>false</boolean>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -3356,7 +4140,7 @@
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[Alle Data].* FROM [dbo].[Alle Data] "
+            "value": " SELECT [dbo].[Alle Data].[Tabell],[dbo].[Alle Data].[Kode],[dbo].[Alle Data].[Variabel],[dbo].[Alle Data].[Alder],[dbo].[Alle Data].[Antall],[dbo].[Alle Data].[Art],[dbo].[Alle Data].[Boligtype],[dbo].[Alle Data].[Eierstatus],[dbo].[Alle Data].[Funksjon],[dbo].[Alle Data].[Husholdningtype],[dbo].[Alle Data].[Innvandringskategori],[dbo].[Alle Data].[Kjønn],[dbo].[Alle Data].[Landbakgrunn],[dbo].[Alle Data].[Lovbruddstype],[dbo].[Alle Data].[Nivå],[dbo].[Alle Data].[Næring],[dbo].[Alle Data].[Politisk parti],[dbo].[Alle Data].[Religion/livssyn],[dbo].[Alle Data].[Samlivsform],[dbo].[Alle Data].[Tettbygd/spredtbygd],[dbo].[Alle Data].[Type enebolig],[dbo].[Alle Data].[År],[dbo].[Alle Data].[Verdi] FROM [dbo].[Alle Data] "
           },
           {
             "name": "_TM_ExtProp_DbTableName",
@@ -3844,7 +4628,7 @@
               "        <string>Hovedlovbruddtype</string>",
               "      </key>",
               "      <value>",
-              "        <boolean>true</boolean>",
+              "        <boolean>false</boolean>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -3884,7 +4668,7 @@
               "        <string>Regnskapsomfang</string>",
               "      </key>",
               "      <value>",
-              "        <boolean>true</boolean>",
+              "        <boolean>false</boolean>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -4429,6 +5213,147 @@
             "value": "dbo"
           }
         ]
+      },
+      {
+        "name": "Politisk parti",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Politisk parti",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Politisk parti].* FROM [dbo].[Politisk parti] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Politisk parti].* FROM [dbo].[Politisk parti] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Politisk parti"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Boligtype",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Boligtype",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Boligtype].* FROM [dbo].[Boligtype] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Boligtype].* FROM [dbo].[Boligtype] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Boligtype"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Husholdningstype",
+        "columns": [
+          {
+            "name": "Dimensjonskode",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonskode",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "Dimensjonsnavn",
+            "dataType": "string",
+            "sourceColumn": "Dimensjonsnavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "DimensjonskodeNavn",
+            "dataType": "string",
+            "sourceColumn": "DimensjonskodeNavn",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Husholdningstype",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Husholdningstype].* FROM [dbo].[Husholdningstype] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Husholdningstype].* FROM [dbo].[Husholdningstype] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Husholdningstype"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
       }
     ],
     "relationships": [
@@ -4563,6 +5488,27 @@
         "fromTable": "Alle Data",
         "fromColumn": "Funksjon",
         "toTable": "Funksjon",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "b2b0ecdc-39d0-49bd-a715-5dc7c3c137d0",
+        "fromTable": "Alle Data",
+        "fromColumn": "Politisk parti",
+        "toTable": "Politisk parti",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "d8a23017-8390-4f32-8e8a-97ab382f411a",
+        "fromTable": "Alle Data",
+        "fromColumn": "Boligtype",
+        "toTable": "Boligtype",
+        "toColumn": "Dimensjonskode"
+      },
+      {
+        "name": "929faa59-070f-4de2-9581-4a0bf7211730",
+        "fromTable": "Alle Data",
+        "fromColumn": "Husholdningtype",
+        "toTable": "Husholdningstype",
         "toColumn": "Dimensjonskode"
       }
     ],
