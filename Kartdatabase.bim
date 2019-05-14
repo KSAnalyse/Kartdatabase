@@ -1189,7 +1189,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Andel husholdninger med inntekt etter skatt 250 000 - 349 999 kr*",
@@ -1204,7 +1204,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Andel husholdninger med inntekt etter skatt 350 000 - 449 999 kr*",
@@ -1219,7 +1219,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Andel husholdninger med inntekt etter skatt 450 000 - 549 999 kr*",
@@ -1234,7 +1234,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Andel husholdninger med inntekt etter skatt 550 000 - 749 999 kr*",
@@ -1249,7 +1249,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Andel husholdninger med inntekt etter skatt 750 000 kr og over*",
@@ -1264,7 +1264,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Andel husholdninger med inntekt etter skatt under 150 000 kr*",
@@ -1279,7 +1279,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "150 000 - 249 999 kr*",
@@ -1294,7 +1294,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "250 000 - 349 999 kr*",
@@ -1309,7 +1309,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "350 000 - 449 999 kr*",
@@ -1324,7 +1324,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "450 000 - 549 999 kr*",
@@ -1339,7 +1339,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "550 000 - 749 999 kr*",
@@ -1354,7 +1354,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "750 000 kr og over*",
@@ -1369,7 +1369,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Under 150 000 kr*",
@@ -1384,7 +1384,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Andel innvandrere av befolkningen",
@@ -1534,7 +1534,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
             "name": "Sysselsatte 4. kvartal etter bosted 20-24 år",
@@ -1550,7 +1550,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
             "name": "Sysselsatte 4. kvartal etter bosted 25-39 år",
@@ -1566,7 +1566,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
             "name": "Sysselsatte 4. kvartal etter bosted 40-54 år",
@@ -1582,7 +1582,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
             "name": "Sysselsatte 4. kvartal etter bosted 55-66 år",
@@ -1598,7 +1598,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
             "name": "Sysselsatte 4. kvartal etter bosted 67-74 år",
@@ -1614,7 +1614,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
             "name": "Sysselsatte 4. kvartal etter bosted 15-74 år",
@@ -1630,7 +1630,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
             "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - grunnskolenivå",
@@ -1646,7 +1646,7 @@
               "return (divide(a, [Personer med utdanningsnivå]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
             "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - fagskolenivå",
@@ -1663,7 +1663,7 @@
               ""
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
             "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - universitets- og høgskolenivå, kort",
@@ -1679,7 +1679,7 @@
               "return (divide(a, [Personer med utdanningsnivå]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
             "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - universitets- og høgskolenivå, lang",
@@ -1695,7 +1695,7 @@
               "return (divide(a, [Personer med utdanningsnivå]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
             "name": "Høyeste fullførte utdanningsnivå personer 16 år og over - uoppgitt/ingen fullført utdanning",
@@ -1713,7 +1713,7 @@
             ],
             "formatString": "#,0.0",
             "isHidden": true,
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
             "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - videregående skolenivå",
@@ -1729,7 +1729,7 @@
               "return (divide(a, [Personer med utdanningsnivå]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
             "name": "Andel som bor i tettbygd strøk",
@@ -1761,7 +1761,7 @@
               "return (divide (a,[Personer med eierstatus]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
             "name": "Andel personer med eierstatus andels- / aksjeeier",
@@ -1777,7 +1777,7 @@
               "return (divide (a,[Personer med eierstatus]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
             "name": "Andel personer med eierstatus leier",
@@ -1793,7 +1793,7 @@
               "return (divide (a,[Personer med eierstatus]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
             "name": "Personer med utdanningsnivå",
@@ -2039,7 +2039,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
             "name": "Kvadratmeterpris (kr) nye eneboliger*",
@@ -2055,7 +2055,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
             "name": "Alle lovbruddsgrupper per 1 000 innbyggere (årlig gjennomsnitt)*",
@@ -2088,7 +2088,7 @@
               "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
             "name": "Andel netto driftsutgifter til barnevern",
@@ -2105,7 +2105,7 @@
               "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
             "name": "Andel netto driftsutgifter til administrasjon",
@@ -2122,7 +2122,7 @@
               "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
             "name": "Andel netto driftsutgifter til eiendomsforvaltning",
@@ -2139,7 +2139,7 @@
               "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
             "name": "Andel netto driftsutgifter til barnehage",
@@ -2156,7 +2156,7 @@
               "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
             "name": "Andel netto driftsutgifter til grunnskole",
@@ -2173,7 +2173,7 @@
               "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
             "name": "Andel netto driftsutgifter til helse og omsorg",
@@ -2190,7 +2190,7 @@
               "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
             "name": "Har kommunen innført eiendomsskatt*",
@@ -2206,7 +2206,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Eiendomsskatt"
           },
           {
             "name": "Hvor mange kommuner i fylket har innført eiendomsskatt*",
@@ -2222,7 +2222,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Eiendomsskatt"
           },
           {
             "name": "Hvor mange kommuner i landet har innført eiendomsskatt*",
@@ -2238,7 +2238,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Eiendomsskatt"
           },
           {
             "name": "Annet lovbrudd per 1 000 innbyggere (årlig gjennomsnitt)*",
@@ -2353,7 +2353,7 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "Virksomheter"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Antall virksomheter innen sekundærnæring",
@@ -2372,7 +2372,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Virksomheter"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Antall virksomheter tertiærnæring",
@@ -2393,7 +2393,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Virksomheter"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Siktede personer",
@@ -2589,7 +2589,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Selveierboliger"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
             "name": "Eneboliger gjennomsnittlig kvadratmeterpris (kr)*",
@@ -2605,7 +2605,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Selveierboliger"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
             "name": "Småhus gjennomsnittlig kvadratmeterpris (kr)*",
@@ -2621,7 +2621,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Selveierboliger"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
             "name": "Kommunestyremedlemmer 18-29 år",
@@ -2718,7 +2718,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Netto driftsutgifter administrasjon (FK)",
@@ -2735,7 +2735,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Netto driftsutgifter eiendomsforvaltning (FK)",
@@ -2752,7 +2752,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Netto driftsutgifter Fellesutgifter (FK)",
@@ -2769,7 +2769,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Netto driftsutgifter fysisk planlegging, kulturminner, natur, nærmiljø, fylkeskommune (FK)",
@@ -2786,7 +2786,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Netto driftsutgifter kultur (FK)",
@@ -2803,7 +2803,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Netto driftsutgifter næringsforvaltning (FK)",
@@ -2820,7 +2820,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Netto driftsutgifter samferdsel (FK)",
@@ -2837,7 +2837,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Netto driftsutgifter tannhelse (FK)",
@@ -2854,7 +2854,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Netto driftsutgifter videregående opplæring samlet (FK)",
@@ -2871,7 +2871,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Regnskap fylkeskommune"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
             "name": "Inntekt etter skatt - alle husholdninger, median (kr)*",
@@ -2887,7 +2887,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Inntekt etter skatt - aleneboende, median (kr)*",
@@ -2903,7 +2903,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Inntekt etter skatt - enslig mor/far med barn 0-17 år, median (kr)*",
@@ -2919,7 +2919,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Inntekt etter skatt - par med barn 0-17 år, median (kr)*",
@@ -2935,7 +2935,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Inntekt etter skatt - par uten barn, median (kr)*",
@@ -2951,7 +2951,7 @@
               "return a"
             ],
             "formatString": "#,0",
-            "displayFolder": "Inntekt etter skatt"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
             "name": "Samlede netto driftsutgifter",
@@ -2966,7 +2966,8 @@
               "return a"
             ],
             "formatString": "#,0",
-            "isHidden": true
+            "isHidden": true,
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
             "name": "Andel uføretrygdede av befolkningen 18-67 år*",
@@ -2981,7 +2982,31 @@
               "return a"
             ],
             "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV"
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Uføretrygdede"
+          },
+          {
+            "name": "Netto driftsutgifter øvrige sektorer",
+            "expression": [
+              "",
+              "",
+              "100-",
+              "([Andel netto driftsutgifter til administrasjon]",
+              "+",
+              "[Andel netto driftsutgifter til barnehage]",
+              "+",
+              "[Andel netto driftsutgifter til barnevern]",
+              "+",
+              "[Andel netto driftsutgifter til eiendomsforvaltning]",
+              "+",
+              "[Andel netto driftsutgifter til grunnskole]",
+              "+",
+              "[Andel netto driftsutgifter til helse og omsorg]",
+              "+",
+              "[Andel netto driftsutgifter til sosialsektoren])"
+            ],
+            "formatString": "#,0.0",
+            "isHidden": true,
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           }
         ],
         "annotations": [
