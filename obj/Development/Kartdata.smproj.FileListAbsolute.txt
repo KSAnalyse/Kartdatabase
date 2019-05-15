@@ -10,3 +10,9 @@ C:\Users\3349ltk\Documents\GitHub\Kartdata\bin\Kartdatabase.deploymentoptions
 C:\Users\3349ltk\Documents\GitHub\Kartdata\obj\Development\Kartdatabase.asdatabase
 C:\Users\3349ltk\Documents\GitHub\Kartdata\obj\Development\Kartdatabase.deploymentoptions
 C:\Users\3349ltk\Documents\GitHub\Kartdata\obj\Development\Kartdatabase.deploymenttargets
+C:\Users\3349ltk\Documents\GitHub\Kartdatabase\bin\Kartdatabase.asdatabase
+C:\Users\3349ltk\Documents\GitHub\Kartdatabase\bin\Kartdatabase.deploymenttargets
+C:\Users\3349ltk\Documents\GitHub\Kartdatabase\bin\Kartdatabase.deploymentoptions
+C:\Users\3349ltk\Documents\GitHub\Kartdatabase\obj\Development\Kartdatabase.asdatabase
+C:\Users\3349ltk\Documents\GitHub\Kartdatabase\obj\Development\Kartdatabase.deploymentoptions
+C:\Users\3349ltk\Documents\GitHub\Kartdatabase\obj\Development\Kartdatabase.deploymenttargets
