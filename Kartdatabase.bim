@@ -1739,6 +1739,7 @@
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"05212\"),",
               "filter(ALL('Tettbygdspredtbygd strøk'[Dimensjonsnavn]), 'Tettbygdspredtbygd strøk'[Dimensjonsnavn] = \"Tettbygd strøk\"),",
+              "FILTER(ALL('Kjønn'[Dimensjonsnavn]), 'Kjønn'[Dimensjonsnavn] in {\"Kvinner\", \"Menn\"}),",
               "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Folkemengde\")",
               ")",
               "",
@@ -1923,7 +1924,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke i alt",
+            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke i alt",
             "expression": [
               "",
               "",
@@ -1940,7 +1941,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke annen religion",
+            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke annen religion",
             "expression": [
               "",
               "",
@@ -1957,7 +1958,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke buddhisme",
+            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke buddhisme",
             "expression": [
               "",
               "",
@@ -1975,7 +1976,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke islam",
+            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke islam",
             "expression": [
               "",
               "",
@@ -1992,7 +1993,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke kristendom",
+            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke kristendom",
             "expression": [
               "",
               "",
@@ -2009,7 +2010,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utanfor Den norske kirke livssyn",
+            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke livssyn",
             "expression": [
               "",
               "",
@@ -2576,7 +2577,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Blokkleiligheter gjennomsnittlig kvadratmeterpris (kr)*",
+            "name": "Gjennomsnittlig kvadratmeterpris blokkleiligheter (kr)*",
             "expression": [
               "",
               "",
@@ -2592,7 +2593,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Eneboliger gjennomsnittlig kvadratmeterpris (kr)*",
+            "name": "Gjennomsnittlig kvadratmeterpris eneboliger (kr)*",
             "expression": [
               "",
               "",
@@ -2608,7 +2609,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Småhus gjennomsnittlig kvadratmeterpris (kr)*",
+            "name": "Gjennomsnittlig kvadratmeterpris småhus (kr)*",
             "expression": [
               "",
               "",
@@ -2975,7 +2976,7 @@
               "",
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"NAV01\"),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"ØOA01\"),",
               "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel uføretrygdede av befolkningen 18-67 år\")",
               ")",
               "",
@@ -3007,6 +3008,65 @@
             "formatString": "#,0.0",
             "isHidden": true,
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
+          },
+          {
+            "name": "Antall kommunestyremedlemmer 18-29 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer] = \"DOP01\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall kommunestyrerepresentanter 18-29 år\")",
+              ")",
+              "",
+              "return a"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Andel kommunestyremedlemmer 18-29 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              ")",
+              "",
+              "return (DIVIDE([Antall kommunestyremedlemmer 18-29 år],a))*100",
+              ""
+            ],
+            "formatString": "0.0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Andel kommunestyremedlemmer 30 år og over",
+            "expression": [
+              "",
+              "",
+              "100-[Andel kommunestyremedlemmer 18-29 år]"
+            ],
+            "formatString": "0.0",
+            "isHidden": true,
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Copy of Antall kommunestyremedlemmer 18-29 år",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer] = \"DOP01\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall kommunestyrerepresentanter 18-29 år\")",
+              ")",
+              "",
+              "return a",
+              "",
+              "/*Hvordan lage en samlevariabel med kommune + fylke og landet?*/"
+            ],
+            "formatString": "#,0.0",
+            "isHidden": true
           }
         ],
         "annotations": [
