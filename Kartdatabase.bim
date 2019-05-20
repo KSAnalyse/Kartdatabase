@@ -8,7 +8,7 @@
         "name": "KS-SQL2018;Reporting_Kart",
         "connectionString": "Provider=SQLNCLI11;Data Source=KS-SQL2018;Integrated Security=SSPI;Persist Security Info=false;Initial Catalog=Reporting_Kart",
         "impersonationMode": "impersonateAccount",
-        "account": "KSINT\\3349ltk",
+        "account": "KSINT\\8093AHA",
         "annotations": [
           {
             "name": "ConnectionEditUISource",
@@ -2397,21 +2397,6 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
-            "name": "Siktede personer",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
-              ")",
-              "",
-              "return A"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
-          },
-          {
             "name": "Valgdeltakelse kommunestyre- og fylkestingsvalg - prosent*",
             "expression": [
               "",
@@ -3067,6 +3052,214 @@
             ],
             "formatString": "#,0.0",
             "isHidden": true
+          },
+          {
+            "name": "Siktede personer",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Siktede personer 5 år+",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-151\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 5-14 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-14\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 15-17 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"15-17\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 18-20 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"18-20\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 21-24 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"21-24\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 25-29 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"25-29\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 30-39 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"30-39\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 40-49 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"40-49\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 50-59 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"50-59\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 60-150 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"60-150\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer uoppgitt alder",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"160-991\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer i alt",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"0-991\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Rammetilskudd fra staten",
+            "expression": [
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A800\")",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
+          },
+          {
+            "name": "Skatteinntekter (fra personer)",
+            "expression": [
+              "",
+              "",
+              "var skatt_inntekt_formue =",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A870\")",
+              ")",
+              "",
+              "var andre_skatter = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"877\")",
+              ")",
+              "",
+              "Return (",
+              "    skatt_inntekt_formue + andre_skatter",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
+          },
+          {
+            "name": "Eiendomsskatt",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AG10\")",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
+          },
+          {
+            "name": "Brukerbetaling (Gebyrer og egenandeler*)",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A600\")",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
+          },
+          {
+            "name": "Andre inntekter, øremerkede tilskudd fra staten mv.",
+            "expression": [
+              "",
+              "",
+              "var andre_overforinger =",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD17\")",
+              ")",
+              "",
+              "var andre_statlige_overforinger = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A810\")",
+              ")",
+              "",
+              "var andre_salg_leieinntekter = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD34\")",
+              ")",
+              "",
+              "var overforingsinntekter_motytelse_drift = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD48\")",
+              ")",
+              "",
+              "Return (",
+              "    andre_overforinger + andre_statlige_overforinger + andre_salg_leieinntekter",
+              "    + overforingsinntekter_motytelse_drift",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
           }
         ],
         "annotations": [
