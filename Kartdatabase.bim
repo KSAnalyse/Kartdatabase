@@ -3175,6 +3175,91 @@
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"0-991\")",
               ")"
             ]
+          },
+          {
+            "name": "Rammetilskudd fra staten",
+            "expression": [
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A800\")",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
+          },
+          {
+            "name": "Skatteinntekter (fra personer)",
+            "expression": [
+              "",
+              "",
+              "var skatt_inntekt_formue =",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A870\")",
+              ")",
+              "",
+              "var andre_skatter = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"877\")",
+              ")",
+              "",
+              "Return (",
+              "    skatt_inntekt_formue + andre_skatter",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
+          },
+          {
+            "name": "Eiendomsskatt",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AG10\")",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
+          },
+          {
+            "name": "Brukerbetaling (Gebyrer og egenandeler*)",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A600\")",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
+          },
+          {
+            "name": "Andre inntekter, øremerkede tilskudd fra staten mv.",
+            "expression": [
+              "",
+              "",
+              "var andre_overforinger =",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD17\")",
+              ")",
+              "",
+              "var andre_statlige_overforinger = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A810\")",
+              ")",
+              "",
+              "var andre_salg_leieinntekter = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD34\")",
+              ")",
+              "",
+              "var overforingsinntekter_motytelse_drift = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD48\")",
+              ")",
+              "",
+              "Return (",
+              "    andre_overforinger + andre_statlige_overforinger + andre_salg_leieinntekter",
+              "    + overforingsinntekter_motytelse_drift",
+              ")"
+            ],
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
           }
         ],
         "annotations": [
