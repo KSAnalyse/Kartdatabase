@@ -3075,7 +3075,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-151\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 5-14 år",
@@ -3084,7 +3085,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-14\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 15-17 år",
@@ -3093,7 +3095,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"15-17\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 18-20 år",
@@ -3102,7 +3105,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"18-20\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 21-24 år",
@@ -3111,7 +3115,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"21-24\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 25-29 år",
@@ -3120,7 +3125,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"25-29\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 30-39 år",
@@ -3129,7 +3135,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"30-39\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 40-49 år",
@@ -3138,7 +3145,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"40-49\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 50-59 år",
@@ -3147,7 +3155,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"50-59\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 60-150 år",
@@ -3156,7 +3165,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"60-150\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer uoppgitt alder",
@@ -3165,7 +3175,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"160-991\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer i alt",
@@ -3174,7 +3185,8 @@
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"0-991\")",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Rammetilskudd fra staten",
