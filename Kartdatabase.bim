@@ -2397,21 +2397,6 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
-            "name": "Siktede personer",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
-              ")",
-              "",
-              "return A"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
-          },
-          {
             "name": "Valgdeltakelse kommunestyre- og fylkestingsvalg - prosent*",
             "expression": [
               "",
@@ -3067,6 +3052,129 @@
             ],
             "formatString": "#,0.0",
             "isHidden": true
+          },
+          {
+            "name": "Siktede personer",
+            "expression": [
+              "",
+              "",
+              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
+              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
+              ")",
+              "",
+              "return A"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Siktede personer 5 år+",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-151\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 5-14 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-14\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 15-17 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"15-17\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 18-20 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"18-20\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 21-24 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"21-24\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 25-29 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"25-29\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 30-39 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"30-39\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 40-49 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"40-49\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 50-59 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"50-59\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer 60-150 år",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"60-150\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer uoppgitt alder",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"160-991\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer i alt",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"0-991\")",
+              ")"
+            ]
           }
         ],
         "annotations": [
