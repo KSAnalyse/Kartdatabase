@@ -8,7 +8,7 @@
         "name": "KS-SQL2018;Reporting_Kart",
         "connectionString": "Provider=SQLNCLI11;Data Source=KS-SQL2018;Integrated Security=SSPI;Persist Security Info=false;Initial Catalog=Reporting_Kart",
         "impersonationMode": "impersonateAccount",
-        "account": "KSINT\\3349ltk",
+        "account": "KSINT\\8093AHA",
         "annotations": [
           {
             "name": "ConnectionEditUISource",
