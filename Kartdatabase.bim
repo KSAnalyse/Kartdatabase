@@ -3060,7 +3060,7 @@
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer per 1 000 innbyggere, bosted\")",
               ")",
               "",
               "return A"
@@ -3099,21 +3099,22 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
-            "name": "Siktede personer 18-20 år",
+            "name": "Siktede personer 18-24 år",
             "expression": [
               "",
+              "",
+              "var atten_tjue =",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"18-20\")",
-              ")"
-            ],
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
-          },
-          {
-            "name": "Siktede personer 21-24 år",
-            "expression": [
+              ")",
               "",
+              "var tjueen_tjuefire =",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"21-24\")",
+              ")",
+              "",
+              "Return (",
+              "    atten_tjue + tjueen_tjuefire",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3139,21 +3140,22 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
-            "name": "Siktede personer 40-49 år",
+            "name": "Siktede personer 40-59 år",
             "expression": [
               "",
+              "",
+              "var forti_fortini =",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"40-49\")",
-              ")"
-            ],
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
-          },
-          {
-            "name": "Siktede personer 50-59 år",
-            "expression": [
+              ")",
               "",
+              "var femti_femtini =",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"50-59\")",
+              ")",
+              "",
+              "Return (",
+              "    forti_fortini + femti_femtini",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
