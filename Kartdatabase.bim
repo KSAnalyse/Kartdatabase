@@ -3270,7 +3270,8 @@
               "    befolkning",
               ")",
               ""
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Siktede personer per tusen 18-24",
@@ -3394,7 +3395,8 @@
               "Return (",
               "    DIVIDE([Siktede personer 30-39 år], befolkning) * 1000",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer per tusen 40-59",
@@ -3418,7 +3420,8 @@
               "Return (",
               "    DIVIDE([Siktede personer 40-59 år], befolkning) * 1000",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer per tusen 60-150",
@@ -3442,7 +3445,8 @@
               "Return (",
               "    DIVIDE([Siktede personer 60-150 år], befolkning) * 1000",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer per tusen i alt",
@@ -3466,7 +3470,8 @@
               "Return (",
               "    DIVIDE([Siktede personer i alt], befolkning) * 1000",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer per tusen 5 år+",
@@ -3490,7 +3495,8 @@
               "Return (",
               "    DIVIDE([Siktede personer 5 år+], befolkning) * 1000",
               ")"
-            ]
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           }
         ],
         "annotations": [
