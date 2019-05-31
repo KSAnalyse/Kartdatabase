@@ -468,25 +468,6 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Folketall",
-            "expression": [
-              "",
-              "",
-              "[0-15 år]",
-              "+",
-              "[16-18 år]",
-              "+",
-              "[19-34 år]",
-              "+",
-              "[35-66 år]",
-              "+",
-              "[67 år og over]",
-              ""
-            ],
-            "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Folketall"
-          },
-          {
             "name": "Kvinner i alt",
             "description": "Innbyggere kvinner i alt",
             "expression": [
@@ -3060,22 +3041,12 @@
               "",
               "var a = CALCULATE(sum('Alle Data'[Verdi]),",
               "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer per 1 000 innbyggere, bosted\")",
+              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
               ")",
               "",
               "return A"
             ],
             "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
-          },
-          {
-            "name": "Siktede personer 5 år+",
-            "expression": [
-              "",
-              "CALCULATE([Siktede personer], ",
-              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-151\")",
-              ")"
-            ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
@@ -3099,27 +3070,6 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
-            "name": "Siktede personer 18-24 år",
-            "expression": [
-              "",
-              "",
-              "var atten_tjue =",
-              "CALCULATE([Siktede personer], ",
-              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"18-20\")",
-              ")",
-              "",
-              "var tjueen_tjuefire =",
-              "CALCULATE([Siktede personer], ",
-              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"21-24\")",
-              ")",
-              "",
-              "Return (",
-              "    atten_tjue + tjueen_tjuefire",
-              ")"
-            ],
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
-          },
-          {
             "name": "Siktede personer 25-29 år",
             "expression": [
               "",
@@ -3135,27 +3085,6 @@
               "",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"30-39\")",
-              ")"
-            ],
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
-          },
-          {
-            "name": "Siktede personer 40-59 år",
-            "expression": [
-              "",
-              "",
-              "var forti_fortini =",
-              "CALCULATE([Siktede personer], ",
-              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"40-49\")",
-              ")",
-              "",
-              "var femti_femtini =",
-              "CALCULATE([Siktede personer], ",
-              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"50-59\")",
-              ")",
-              "",
-              "Return (",
-              "    forti_fortini + femti_femtini",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3274,6 +3203,294 @@
               ")"
             ],
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
+          },
+          {
+            "name": "Siktede personer 5 år+",
+            "expression": [
+              "",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-151\")",
+              ")"
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Siktede personer 18-24 år",
+            "expression": [
+              "",
+              "",
+              "var atten_tjue =",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"18-20\")",
+              ")",
+              "",
+              "var tjueen_tjuefire =",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"21-24\")",
+              ")",
+              "",
+              "Return (",
+              "    atten_tjue + tjueen_tjuefire",
+              ")"
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Siktede personer 40-59 år",
+            "expression": [
+              "",
+              "",
+              "var forti_fortini =",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"40-49\")",
+              ")",
+              "",
+              "var femti_femtini =",
+              "CALCULATE([Siktede personer], ",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"50-59\")",
+              ")",
+              "",
+              "Return (",
+              "    forti_fortini + femti_femtini",
+              ")"
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Folketall",
+            "expression": [
+              "",
+              "",
+              "var befolkning = CALCULATE(sum('Alle Data'[Verdi]),",
+              "    filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"07459\"),",
+              "    filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer\")",
+              ")",
+              "",
+              "Return (",
+              "    befolkning",
+              ")",
+              ""
+            ]
+          },
+          {
+            "name": "Siktede personer per tusen 18-24",
+            "expression": [
+              "",
+              "",
+              "/* Er blank, men får verdier når man spesifiserer År */",
+              "",
+              "/* Må se på 1.1 neste år for å få riktige tall */",
+              "var aar = SELECTEDVALUE('År'[År]) + 1",
+              "",
+              "/* Befolkning/folketall */",
+              "var befolkning = CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), ",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 18 && VALUE([Dimensjonskode]) <= 24)),",
+              "    FILTER(ALL('År'[År]), 'År'[År] = aar)",
+              ")",
+              "",
+              "Return (",
+              "    DIVIDE([Siktede personer 18-24 år], befolkning) * 1000",
+              ")"
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Siktede personer per tusen 5-14",
+            "expression": [
+              "",
+              "",
+              "/* Er blank, men får verdier når man spesifiserer År */",
+              "",
+              "/* Må se på 1.1 neste år for å få riktige tall */",
+              "var aar = SELECTEDVALUE('År'[År]) + 1",
+              "",
+              "/* Befolkning/folketall */",
+              "var befolkning = CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), ",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 5 && VALUE([Dimensjonskode]) <= 14)),",
+              "    FILTER(ALL('År'[År]), 'År'[År] = aar)",
+              ")",
+              "",
+              "Return (",
+              "    DIVIDE([Siktede personer 5-14 år], befolkning) * 1000",
+              ")"
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Siktede personer per tusen 15-17",
+            "expression": [
+              "",
+              "",
+              "/* Er blank, men får verdier når man spesifiserer År */",
+              "",
+              "/* Må se på 1.1 neste år for å få riktige tall */",
+              "var aar = SELECTEDVALUE('År'[År]) + 1",
+              "",
+              "/* Befolkning/folketall */",
+              "var befolkning = CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), ",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 15 && VALUE([Dimensjonskode]) <= 17)),",
+              "    FILTER(ALL('År'[År]), 'År'[År] = aar)",
+              ")",
+              "",
+              "Return (",
+              "    DIVIDE([Siktede personer 15-17 år], befolkning) * 1000",
+              ")"
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Siktede personer per tusen 25-29",
+            "expression": [
+              "",
+              "",
+              "/* Er blank, men får verdier når man spesifiserer År */",
+              "",
+              "/* Må se på 1.1 neste år for å få riktige tall */",
+              "var aar = SELECTEDVALUE('År'[År]) + 1",
+              "",
+              "/* Befolkning/folketall */",
+              "var befolkning = CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]),",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 25 && VALUE([Dimensjonskode]) <= 29)),",
+              "    FILTER(ALL('År'[År]), 'År'[År] = aar)",
+              ")",
+              "",
+              "Return (",
+              "    DIVIDE([Siktede personer 25-29 år], befolkning) * 1000",
+              ")"
+            ],
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Siktede personer per tusen 30-39",
+            "expression": [
+              "",
+              "",
+              "/* Er blank, men får verdier når man spesifiserer År */",
+              "",
+              "/* Må se på 1.1 neste år for å få riktige tall */",
+              "var aar = SELECTEDVALUE('År'[År]) + 1",
+              "",
+              "/* Befolkning/folketall */",
+              "var befolkning = CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]),",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 30 && VALUE([Dimensjonskode]) <= 39)),",
+              "    FILTER(ALL('År'[År]), 'År'[År] = aar)",
+              ")",
+              "",
+              "Return (",
+              "    DIVIDE([Siktede personer 30-39 år], befolkning) * 1000",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer per tusen 40-59",
+            "expression": [
+              "",
+              "",
+              "/* Er blank, men får verdier når man spesifiserer År */",
+              "",
+              "/* Må se på 1.1 neste år for å få riktige tall */",
+              "var aar = SELECTEDVALUE('År'[År]) + 1",
+              "",
+              "/* Befolkning/folketall */",
+              "var befolkning = CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]),",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 40 && VALUE([Dimensjonskode]) <= 59)),",
+              "    FILTER(ALL('År'[År]), 'År'[År] = aar)",
+              ")",
+              "",
+              "Return (",
+              "    DIVIDE([Siktede personer 40-59 år], befolkning) * 1000",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer per tusen 60-150",
+            "expression": [
+              "",
+              "",
+              "/* Er blank, men får verdier når man spesifiserer År */",
+              "",
+              "/* Må se på 1.1 neste år for å få riktige tall */",
+              "var aar = SELECTEDVALUE('År'[År]) + 1",
+              "",
+              "/* Befolkning/folketall */",
+              "var befolkning = CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]),",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 60 && VALUE([Dimensjonskode]) <= 150)),",
+              "    FILTER(ALL('År'[År]), 'År'[År] = aar)",
+              ")",
+              "",
+              "Return (",
+              "    DIVIDE([Siktede personer 60-150 år], befolkning) * 1000",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer per tusen i alt",
+            "expression": [
+              "",
+              "",
+              "/* Er blank, men får verdier når man spesifiserer År */",
+              "",
+              "/* Må se på 1.1 neste år for å få riktige tall */",
+              "var aar = SELECTEDVALUE('År'[År]) + 1",
+              "",
+              "/* Befolkning/folketall */",
+              "var befolkning = CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), ",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 5 && VALUE([Dimensjonskode]) <= 150)),",
+              "    FILTER(ALL('År'[År]), 'År'[År] = aar)",
+              ")",
+              "",
+              "Return (",
+              "    DIVIDE([Siktede personer i alt], befolkning) * 1000",
+              ")"
+            ]
+          },
+          {
+            "name": "Siktede personer per tusen 5 år+",
+            "expression": [
+              "",
+              "",
+              "/* Er blank, men får verdier når man spesifiserer År */",
+              "",
+              "/* Må se på 1.1 neste år for å få riktige tall */",
+              "var aar = SELECTEDVALUE('År'[År]) + 1",
+              "",
+              "/* Befolkning/folketall */",
+              "var befolkning = CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), ",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 5 && VALUE([Dimensjonskode]) <= 150)),",
+              "    FILTER(ALL('År'[År]), 'År'[År] = aar)",
+              ")",
+              "",
+              "Return (",
+              "    DIVIDE([Siktede personer 5 år+], befolkning) * 1000",
+              ")"
+            ]
           }
         ],
         "annotations": [
