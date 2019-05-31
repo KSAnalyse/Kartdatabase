@@ -2591,83 +2591,98 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Kommunestyremedlemmer 18-29 år",
+            "name": "Andel kommunestyremedlemmer 18-29 år",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"18-29 år\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"18-29 år\"), ",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
               ")",
               "",
-              "return a"
+              "return (",
+              "    a",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Kommunestyremedlemmer 30-39 år",
+            "name": "Andel kommunestyremedlemmer 30-39 år",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"30-39 år\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"30-39 år\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
               ")",
               "",
-              "return a"
+              "return ( ",
+              "    a",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Kommunestyremedlemmer 40-49 år",
+            "name": "Andel kommunestyremedlemmer 40-49 år",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"40-49 år\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"40-49 år\"), ",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
               ")",
               "",
-              "return a"
+              "return (",
+              "    a",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Kommunestyremedlemmer 50-59 år",
+            "name": "Andel kommunestyremedlemmer 50-59 år",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"50-59 år\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"50-59 år\"), ",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
               ")",
               "",
-              "return a"
+              "return (",
+              "    a",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Kommunestyremedlemmer 60 år eller eldre",
+            "name": "Andel kommunestyremedlemmer 60 år eller eldre",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"60 år eller eldre\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"60 år eller eldre\"), ",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
               ")",
               "",
-              "return a"
+              "return (",
+              "    a",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
@@ -2976,75 +2991,19 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
-            "name": "Antall kommunestyremedlemmer 18-29 år",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer] = \"DOP01\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall kommunestyrerepresentanter 18-29 år\")",
-              ")",
-              "",
-              "return a"
-            ],
-            "formatString": "#,0.0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Andel kommunestyremedlemmer 18-29 år",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
-              ")",
-              "",
-              "return (DIVIDE([Antall kommunestyremedlemmer 18-29 år],a))*100",
-              ""
-            ],
-            "formatString": "0.0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Andel kommunestyremedlemmer 30 år og over",
-            "expression": [
-              "",
-              "",
-              "100-[Andel kommunestyremedlemmer 18-29 år]"
-            ],
-            "formatString": "0.0",
-            "isHidden": true,
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Copy of Antall kommunestyremedlemmer 18-29 år",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer] = \"DOP01\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall kommunestyrerepresentanter 18-29 år\")",
-              ")",
-              "",
-              "return a",
-              "",
-              "/*Hvordan lage en samlevariabel med kommune + fylke og landet?*/"
-            ],
-            "formatString": "#,0.0",
-            "isHidden": true
-          },
-          {
             "name": "Siktede personer",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
               ")",
               "",
-              "return A"
+              "return (",
+              "    A",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
