@@ -2595,15 +2595,13 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"18-29 år\"), ",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
+              "var med_atten_tjueni =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"18-29 år\")",
               ")",
               "",
               "return (",
-              "    a",
+              "    DIVIDE(med_atten_tjueni, [Antall kommunestyremedlemmer]) * 100",
               ")"
             ],
             "formatString": "#,0.00",
@@ -2614,15 +2612,13 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"30-39 år\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
+              "var med_tretti_trettini =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"30-39 år\")",
               ")",
               "",
-              "return ( ",
-              "    a",
+              "return (",
+              "    DIVIDE(med_tretti_trettini, [Antall kommunestyremedlemmer]) * 100",
               ")"
             ],
             "formatString": "#,0.00",
@@ -2633,15 +2629,13 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"40-49 år\"), ",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
+              "var med_forti_fortini =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"40-49 år\")",
               ")",
               "",
               "return (",
-              "    a",
+              "    DIVIDE(med_forti_fortini, [Antall kommunestyremedlemmer]) * 100",
               ")"
             ],
             "formatString": "#,0.00",
@@ -2652,15 +2646,13 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"50-59 år\"), ",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
+              "var med_femti_femtini =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"50-59 år\")",
               ")",
               "",
               "return (",
-              "    a",
+              "    DIVIDE(med_femti_femtini, [Antall kommunestyremedlemmer]) * 100",
               ")"
             ],
             "formatString": "#,0.00",
@@ -2671,15 +2663,13 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "    FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"60 år eller eldre\"), ",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer (prosent)\")",
+              "var med_seksti_pluss =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"60 år eller eldre\")",
               ")",
               "",
               "return (",
-              "    a",
+              "    DIVIDE(med_seksti_pluss, [Antall kommunestyremedlemmer]) * 100",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3456,6 +3446,16 @@
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Antall kommunestyremedlemmer",
+            "expression": [
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              ")"
+            ]
           }
         ],
         "annotations": [
