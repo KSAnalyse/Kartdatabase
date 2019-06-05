@@ -1834,12 +1834,10 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"08243\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgdeltakelse\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"08243\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Valgdeltakelse\")",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Valgdeltakelse"
@@ -2383,162 +2381,113 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09475\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgdeltakelse i prosent\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"09475\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Valgdeltakelse i prosent\")",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Valgdeltakelse"
           },
           {
-            "name": "Valgte repesentanter Arbeiderpartiet*",
+            "name": "Valgte representanter Arbeiderpartiet*",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Arbeiderpartiet\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Arbeiderpartiet\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Valgte repesentanter Fremskrittspartiet*",
+            "name": "Valgte representanter Fremskrittspartiet*",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Fremskrittspartiet\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Fremskrittspartiet\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Valgte repesentanter Høyre*",
+            "name": "Valgte representanter Høyre*",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Høyre\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Høyre\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Valgte repesentanter Senterpartiet*",
+            "name": "Valgte representanter Senterpartiet*",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Senterpartiet\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Senterpartiet\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Valgte repesentanter Sosialistisk Venstreparti*",
+            "name": "Valgte representanter Sosialistisk Venstreparti*",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Sosialistisk Venstreparti\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Sosialistisk Venstreparti\")",
               ")",
-              "",
-              "return a"
+              ""
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Valgte repesentanter Venstre*",
+            "name": "Valgte representanter Venstre*",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Venstre\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Venstre\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Valgte repesentanter andre*",
+            "name": "Valgte representanter andre*",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
-              ")",
+              "var utvalgte_partier =",
+              "[Valgte representanter Venstre*] + [Valgte representanter Arbeiderpartiet*] +",
+              "[Valgte representanter Fremskrittspartiet*] + [Valgte representanter Høyre*] + ",
+              "[Valgte representanter Kristelig Folkeparti*] + [Valgte representanter Senterpartiet*] + ",
+              "[Valgte representanter Sosialistisk Venstreparti*]",
               "",
-              "return a-[Sum partirepresentanter]"
+              "return (",
+              "    [Valgte representanter*] - utvalgte_partier",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Sum partirepresentanter",
+            "name": "Valgte representanter Kristelig Folkeparti*",
             "expression": [
               "",
               "",
-              "([Valgte repesentanter Arbeiderpartiet*]",
-              "+",
-              "[Valgte repesentanter Fremskrittspartiet*]",
-              "+",
-              "[Valgte repesentanter Høyre*]",
-              "+",
-              "[Valgte repesentanter Senterpartiet*]",
-              "+",
-              "[Valgte repesentanter Sosialistisk Venstreparti*]",
-              "+",
-              "[Valgte repesentanter Venstre*]",
-              "+",
-              "[Valgte repesentanter Kristelig Folkeparti*])"
-            ],
-            "formatString": "#,0",
-            "isHidden": true,
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Valgte repesentanter Kristelig Folkeparti*",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "FILTER(ALL('Politisk parti'[Dimensjonsnavn]), 'Politisk parti'[Dimensjonsnavn] = \"Kristelig Folkeparti\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Kristelig Folkeparti\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
@@ -2592,83 +2541,88 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Kommunestyremedlemmer 18-29 år",
+            "name": "Andel kommunestyremedlemmer 18-29 år",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"18-29 år\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var med_atten_tjueni =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"18-29 år\")",
               ")",
               "",
-              "return a"
+              "return (",
+              "    DIVIDE(med_atten_tjueni, [Antall kommunestyremedlemmer]) * 100",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Kommunestyremedlemmer 30-39 år",
+            "name": "Andel kommunestyremedlemmer 30-39 år",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"30-39 år\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var med_tretti_trettini =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"30-39 år\")",
               ")",
               "",
-              "return a"
+              "return (",
+              "    DIVIDE(med_tretti_trettini, [Antall kommunestyremedlemmer]) * 100",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Kommunestyremedlemmer 40-49 år",
+            "name": "Andel kommunestyremedlemmer 40-49 år",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"40-49 år\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var med_forti_fortini =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"40-49 år\")",
               ")",
               "",
-              "return a"
+              "return (",
+              "    DIVIDE(med_forti_fortini, [Antall kommunestyremedlemmer]) * 100",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Kommunestyremedlemmer 50-59 år",
+            "name": "Andel kommunestyremedlemmer 50-59 år",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"50-59 år\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var med_femti_femtini =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"50-59 år\")",
               ")",
               "",
-              "return a"
+              "return (",
+              "    DIVIDE(med_femti_femtini, [Antall kommunestyremedlemmer]) * 100",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Kommunestyremedlemmer 60 år eller eldre",
+            "name": "Andel kommunestyremedlemmer 60 år eller eldre",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"60 år eller eldre\"), ",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              "var med_seksti_pluss =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"60 år eller eldre\")",
               ")",
               "",
-              "return a"
+              "return (",
+              "    DIVIDE(med_seksti_pluss, [Antall kommunestyremedlemmer]) * 100",
+              ")"
             ],
-            "formatString": "#,0",
+            "formatString": "#,0.00",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
@@ -2977,75 +2931,19 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
-            "name": "Antall kommunestyremedlemmer 18-29 år",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer] = \"DOP01\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall kommunestyrerepresentanter 18-29 år\")",
-              ")",
-              "",
-              "return a"
-            ],
-            "formatString": "#,0.0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Andel kommunestyremedlemmer 18-29 år",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"01182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Valgte representanter\")",
-              ")",
-              "",
-              "return (DIVIDE([Antall kommunestyremedlemmer 18-29 år],a))*100",
-              ""
-            ],
-            "formatString": "0.0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Andel kommunestyremedlemmer 30 år og over",
-            "expression": [
-              "",
-              "",
-              "100-[Andel kommunestyremedlemmer 18-29 år]"
-            ],
-            "formatString": "0.0",
-            "isHidden": true,
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Copy of Antall kommunestyremedlemmer 18-29 år",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer] = \"DOP01\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall kommunestyrerepresentanter 18-29 år\")",
-              ")",
-              "",
-              "return a",
-              "",
-              "/*Hvordan lage en samlevariabel med kommune + fylke og landet?*/"
-            ],
-            "formatString": "#,0.0",
-            "isHidden": true
-          },
-          {
             "name": "Siktede personer",
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
               ")",
               "",
-              "return A"
+              "return (",
+              "    A",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3498,6 +3396,28 @@
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Antall kommunestyremedlemmer",
+            "expression": [
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"04966\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Medlemmer\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Valgte representanter*",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"01182\"), ",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Valgte representanter\")",
+              ")"
+            ],
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           }
         ],
         "annotations": [
