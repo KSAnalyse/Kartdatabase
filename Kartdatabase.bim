@@ -3470,15 +3470,7 @@
             "expression": [
               "",
               "",
-              "var utvalgte_partier =",
-              "[Valgte representanter Venstre*] + [Valgte representanter Arbeiderpartiet*] +",
-              "[Valgte representanter Fremskrittspartiet*] + [Valgte representanter Høyre*] + ",
-              "[Valgte representanter Kristelig Folkeparti*] + [Valgte representanter Senterpartiet*] + ",
-              "[Valgte representanter Sosialistisk Venstreparti*]",
-              "",
-              "return (",
-              "    [Valgte representanter*] - utvalgte_partier",
-              ")"
+              "[Valgte representanter*] - [Valgte representanter sum utvalgte*]"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
@@ -4406,7 +4398,8 @@
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"04966\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Medlemmer\")",
               ")"
-            ]
+            ],
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
             "name": "Valgte representanter*",
@@ -4429,7 +4422,8 @@
               "",
               ""
             ],
-            "formatString": "#,0.00"
+            "formatString": "#,0.00",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Andel av befolkningen 19-34 år",
@@ -4440,7 +4434,8 @@
               "",
               ""
             ],
-            "formatString": "#,0.00"
+            "formatString": "#,0.00",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Innbyggere per 1.1",
@@ -4451,7 +4446,44 @@
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Befolkning per 1.1. (personer)\")",
               ")"
             ],
-            "formatString": "#,0"
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere"
+          },
+          {
+            "name": "Valgte representanter sum utvalgte*",
+            "expression": [
+              "",
+              "",
+              "[Valgte representanter Venstre*] + [Valgte representanter Arbeiderpartiet*] +",
+              "[Valgte representanter Fremskrittspartiet*] + [Valgte representanter Høyre*] + ",
+              "[Valgte representanter Kristelig Folkeparti*] + [Valgte representanter Senterpartiet*] + ",
+              "[Valgte representanter Sosialistisk Venstreparti*]"
+            ],
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Andel av befolkningen 35-66 år",
+            "expression": [
+              "",
+              "",
+              "DIVIDE([Innbyggere 35-66 år], [Folketall]) * 100",
+              "",
+              ""
+            ],
+            "formatString": "#,0.00",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
+          },
+          {
+            "name": "Andel av befolkningen 67 år og over",
+            "expression": [
+              "",
+              "",
+              "DIVIDE([Innbyggere 67 år og over], [Folketall]) * 100",
+              "",
+              ""
+            ],
+            "formatString": "#,0.00",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           }
         ],
         "annotations": [
