@@ -2217,12 +2217,10 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt 150 000 - 249 999 kr, prosent\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 150 000 - 249 999 kr, prosent\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -2232,12 +2230,10 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt 250 000 - 349 999 kr, prosent\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07182\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt 250 000 - 349 999 kr, prosent\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -2247,12 +2243,10 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt 350 000 - 449 999 kr, prosent\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 350 000 - 449 999 kr, prosent\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -2262,12 +2256,10 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt 450 000 - 549 999 kr, prosent\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 450 000 - 549 999 kr, prosent\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -2277,12 +2269,10 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt 550 000 - 749 999 kr, prosent\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 550 000 - 749 999 kr, prosent\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -2292,12 +2282,10 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt 750 000 kr og over, prosent\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 750 000 kr og over, prosent\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -2307,12 +2295,10 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07182\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt under 150 000 kr, prosent\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt under 150 000 kr, prosent\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -2382,13 +2368,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07984\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"15-19 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"15-19 år\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
@@ -2398,13 +2382,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07984\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"20-24 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"20-24 år\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
@@ -2414,13 +2396,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07984\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"25-39 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"25-39 år\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
@@ -2430,13 +2410,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07984\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"40-54 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"40-54 år\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
@@ -2446,13 +2424,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07984\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"55-66 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"55-66 år\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
@@ -2462,13 +2438,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07984\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"67-74 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(sum('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"67-74 år\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
@@ -2478,13 +2452,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07984\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
-              "FILTER(ALL('Alder'[Dimensjonsnavn]), 'Alder'[Dimensjonsnavn] = \"15-74 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"15-74 år\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
@@ -4360,6 +4332,17 @@
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Virksomheter\"),",
               "    FILTER(ALL('Antall'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
               "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle næringer\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Sysselsatte 4. kvartal etter bosted",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\")",
               ")"
             ]
           }
