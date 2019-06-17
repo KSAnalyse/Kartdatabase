@@ -2213,97 +2213,6 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "150 000 - 249 999 kr*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 150 000 - 249 999 kr, prosent\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
-          },
-          {
-            "name": "250 000 - 349 999 kr*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"07182\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt 250 000 - 349 999 kr, prosent\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
-          },
-          {
-            "name": "350 000 - 449 999 kr*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 350 000 - 449 999 kr, prosent\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
-          },
-          {
-            "name": "450 000 - 549 999 kr*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 450 000 - 549 999 kr, prosent\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
-          },
-          {
-            "name": "550 000 - 749 999 kr*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 550 000 - 749 999 kr, prosent\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
-          },
-          {
-            "name": "750 000 kr og over*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt 750 000 kr og over, prosent\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
-          },
-          {
-            "name": "Under 150 000 kr*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07182\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt under 150 000 kr, prosent\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
-          },
-          {
             "name": "Andel innvandrere av befolkningen",
             "expression": [
               "",
@@ -2368,9 +2277,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"15-19 år\")",
               ")"
             ],
@@ -2382,9 +2289,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"20-24 år\")",
               ")"
             ],
@@ -2396,9 +2301,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"25-39 år\")",
               ")"
             ],
@@ -2410,9 +2313,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"40-54 år\")",
               ")"
             ],
@@ -2424,9 +2325,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"55-66 år\")",
               ")"
             ],
@@ -2438,9 +2337,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE(sum('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"67-74 år\")",
               ")"
             ],
@@ -2452,9 +2349,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"07984\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\"),",
+              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"15-74 år\")",
               ")"
             ],
