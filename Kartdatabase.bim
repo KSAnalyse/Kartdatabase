@@ -2362,16 +2362,10 @@
               "",
               "",
               "var a = ",
-              "CALCULATE([Antall personer 16 år og over med og uten utdanning],",
+              "CALCULATE([Antall personer 16 år og over med grunnskoleutdanning eller høyere],",
               "    FILTER(ALL('Nivå'[DimensjonsNavn]), [DimensjonsNavn] = \"Grunnskolenivå\")",
               ")",
-              "/*",
-              "CALCULATE(SUM('Alle Data'[Verdi]);",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]); [Tabellnummer]= \"09429\");",
-              "    FILTER(ALL('Variabel'[Variabelnavn]); [Variabelnavn] = \"Personer 16 år og over\");",
-              "    FILTER(ALL('Nivå'[DimensjonsNavn]); [DimensjonsNavn] = \"Grunnskolenivå\")",
-              ")",
-              "*/",
+              "",
               "return (",
               "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
               ")"
@@ -2384,19 +2378,11 @@
             "expression": [
               "",
               "",
-              "",
               "var a = ",
-              "CALCULATE([Antall personer 16 år og over med og uten utdanning],",
+              "CALCULATE([Antall personer 16 år og over med grunnskoleutdanning eller høyere],",
               "    FILTER(ALL('Nivå'[DimensjonsNavn]), [DimensjonsNavn] = \"Fagskolenivå\")",
               ")",
-              "/*",
-              "var a = ",
-              "CALCULATE(sum('Alle Data'[Verdi]);",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]); [Tabellnummer]= \"09429\");",
-              "    FILTER(ALL('Variabel'[Variabelnavn]); [Variabelnavn] = \"Personer 16 år og over\");",
-              "    FILTER(ALL('Nivå'[DimensjonsNavn]); [DimensjonsNavn] = \"Fagskolenivå\")",
-              ")",
-              "*/",
+              "",
               "return (",
               "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
               ")",
@@ -2411,12 +2397,11 @@
               "",
               "",
               "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"09429\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer 16 år og over\"),",
+              "CALCULATE([Antall personer 16 år og over med grunnskoleutdanning eller høyere],",
               "    FILTER(ALL('Nivå'[DimensjonsNavn]), [DimensjonsNavn] = ",
-              "        \"Universitets- og høgskolenivå, kort\")",
-              ")",
+              "        \"Universitets- og høgskolenivå, kort\"",
+              "    )",
+              ")    ",
               "",
               "return (",
               "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
@@ -2431,12 +2416,11 @@
               "",
               "",
               "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"09429\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer 16 år og over\"),",
+              "CALCULATE([Antall personer 16 år og over med grunnskoleutdanning eller høyere],",
               "    FILTER(ALL('Nivå'[DimensjonsNavn]), [DimensjonsNavn] = ",
-              "        \"Universitets- og høgskolenivå, lang\")",
-              ")",
+              "        \"Universitets- og høgskolenivå, lang\"",
+              "    )",
+              ")    ",
               "",
               "return (",
               "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
@@ -2450,13 +2434,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"09429\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Personer 16 år og over\"),",
-              "FILTER(ALL('Nivå'[DimensjonsNavn]), 'Nivå'[DimensjonsNavn] = \"Videregående skolenivå\")",
+              "var a = ",
+              "CALCULATE([Antall personer 16 år og over med grunnskoleutdanning eller høyere],",
+              "    FILTER(ALL('Nivå'[DimensjonsNavn]), [DimensjonsNavn] = \"Videregående skolenivå\")",
               ")",
               "",
-              "return (divide(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]))*100"
+              "return (",
+              "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
@@ -2528,25 +2513,6 @@
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
-          },
-          {
-            "name": "Antall personer 16 år og over med grunnskoleutdanning eller høyere",
-            "expression": [
-              "",
-              "",
-              "/* Alternativt kan man legge sammen alle de forskjellige utdanningstypene */",
-              "",
-              "var a = ",
-              "CALCULATE([Antall personer 16 år og over med og uten utdanning],",
-              "    FILTER(ALL('Nivå'[DimensjonsNavn]), [DimensjonsNavn] = \"Utdanningsnivå i alt\")",
-              ")",
-              "",
-              "return (",
-              "    a - [Antall personer 16 år og over med uoppgitt eller ingen fullført utdanning]",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;UtdanningsnivåØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
             "name": "Personer med eierstatus",
@@ -4246,19 +4212,7 @@
             "formatString": "#,0"
           },
           {
-            "name": "Antall personer 16 år og over med uoppgitt eller ingen fullført utdanning",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Antall personer 16 år og over med og uten utdanning],",
-              "    FILTER(ALL('Nivå'[DimensjonsNavn]), [DimensjonsNavn] = ",
-              "        \"Uoppgitt eller ingen fullført utdanning\")",
-              ")"
-            ],
-            "formatString": "#,0"
-          },
-          {
-            "name": "Antall personer 16 år og over med og uten utdanning",
+            "name": "Antall personer 16 år og over med grunnskoleutdanning eller høyere",
             "expression": [
               "",
               "",
@@ -4267,39 +4221,7 @@
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer 16 år og over\")",
               ")"
             ],
-            "formatString": "#,0",
-            "isHidden": true
-          },
-          {
-            "name": "Andel personer 16 år og over med uoppgitt eller ingen fullført utdanning",
-            "expression": [
-              "",
-              "",
-              "var total = ",
-              "[Antall personer 16 år og over med grunnskoleutdanning eller høyere] +",
-              "[Antall personer 16 år og over med uoppgitt eller ingen fullført utdanning]",
-              "",
-              "return (",
-              "    DIVIDE([Antall personer 16 år og over med uoppgitt eller ingen fullført utdanning],",
-              "        total",
-              "    ) * 100",
-              ")"
-            ]
-          },
-          {
-            "name": "Andel personer med grunnskoleutdanning eller høyere",
-            "expression": [
-              "",
-              "",
-              "var total = ",
-              "[Antall personer 16 år og over med grunnskoleutdanning eller høyere] +",
-              "[Antall personer 16 år og over med uoppgitt eller ingen fullført utdanning]",
-              "",
-              "return (",
-              "    DIVIDE([Antall personer 16 år og over med grunnskoleutdanning eller høyere],",
-              "            total) * 100",
-              ")"
-            ]
+            "formatString": "#,0"
           }
         ],
         "annotations": [
