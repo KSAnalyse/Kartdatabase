@@ -1864,7 +1864,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, b)",
+              "    ROUND(DIVIDE(a, b), 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -1876,15 +1876,10 @@
             "expression": [
               "",
               "",
-              "var a = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"06096\"),",
               "    FILTER(ALL('Samlivsform'[Dimensjonsnavn]), [Dimensjonsnavn] = \"I par, gift\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer (prosent)\")",
-              ")",
-              "",
-              "return (",
-              "    a",
               ")"
             ],
             "formatString": "#,0.0",
@@ -1896,15 +1891,10 @@
             "expression": [
               "",
               "",
-              "var a = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"06096\"),",
               "    FILTER(ALL('Samlivsform'[Dimensjonsnavn]), [Dimensjonsnavn] = \"I par, samboende\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer (prosent)\")",
-              ")",
-              "",
-              "return (",
-              "    a",
               ")"
             ],
             "formatString": "#,0.0",
@@ -1915,16 +1905,11 @@
             "description": "Samlivsform personer 18 år og over - ikke i par",
             "expression": [
               "",
-              "",
-              "var a = ",
+              " ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"06096\"),",
               "    FILTER(ALL('Samlivsform'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Ikke i par\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer (prosent)\")",
-              ")",
-              "",
-              "return (",
-              "    a",
               ")"
             ],
             "formatString": "#,0.0",
@@ -1935,14 +1920,9 @@
             "expression": [
               "",
               "",
-              "var a = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"09588\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Nettoinnflytting\")",
-              ")",
-              "",
-              "return (",
-              "    a",
               ")"
             ],
             "formatString": "#,0",
@@ -1953,15 +1933,10 @@
             "expression": [
               "",
               "",
-              "var a = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"06096\"),",
               "    FILTER(ALL('Samlivsform'[Dimensjonsnavn]), [Dimensjonsnavn] = \"I par, gift\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer (prosent)\")",
-              ")",
-              "",
-              "return (",
-              "    a",
               ")"
             ],
             "formatString": "#,0.0",
@@ -1972,15 +1947,10 @@
             "expression": [
               "",
               "",
-              "var a = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"06096\"),",
               "    FILTER(ALL('Samlivsform'[Dimensjonsnavn]), [Dimensjonsnavn] = \"I par, samboende\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer (prosent)\")",
-              ")",
-              "",
-              "return (",
-              "    a",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2010,21 +1980,8 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"10309\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Virksomheter\"),",
-              "    FILTER(ALL('Antall'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] IN ",
-              "        {",
-              "            \"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\"",
-              "        }",
-              "    )",
-              ")",
-              "",
-              "return (",
-              "    DIVIDE(a, [Antall virksomheter]) * 100",
-              ")"
+              "DIVIDE([Antall virksomheter: Primærnæring], [Antall virksomheter]) * 100",
+              ""
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
@@ -2034,21 +1991,8 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"10309\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Virksomheter\"),",
-              "    FILTER(ALL('Antall'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] IN ",
-              "        {",
-              "            \"Industri\", \"Bygge- og anleggsvirksomhet\"",
-              "        }",
-              "    )",
-              ")",
-              "",
-              "return (",
-              "    DIVIDE(a, [Antall virksomheter]) * 100",
-              ")"
+              "DIVIDE([Antall virksomheter: Sekundærnæring], [Antall virksomheter]) * 100",
+              ""
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
@@ -2058,23 +2002,7 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(sum('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"10309\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Virksomheter\"),",
-              "    FILTER(ALL('Antall'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] IN ",
-              "        {",
-              "            \"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\", ",
-              "            \"Industri\", \"Bygge- og anleggsvirksomhet\",",
-              "            \"Uoppgitt\"",
-              "        }",
-              "    )",
-              ")",
-              "",
-              "return (",
-              "    DIVIDE(([Antall virksomheter] - a), [Antall virksomheter]) * 100",
-              ")"
+              "DIVIDE([Antall virksomheter: Tertiærnæring], [Antall virksomheter]) * 100"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
@@ -2084,17 +2012,8 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"10309\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Virksomheter\"),",
-              "    FILTER(ALL('Antall'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Uoppgitt\")",
-              ")",
-              "",
-              "return (",
-              "    DIVIDE(a, [Antall virksomheter]) * 100",
-              ")"
+              "DIVIDE([Antall virksomheter: Uoppgitt], [Antall virksomheter]) * 100",
+              ""
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
@@ -2471,13 +2390,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11038\"),",
-              "filter(all('Eierstatus'[Dimensjonsnavn]), 'Eierstatus'[Dimensjonsnavn] = \"Selveier\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall personer\")",
+              "var a = ",
+              "CALCULATE([Personer med eierstatus],",
+              "    FILTER(ALL('Eierstatus'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Selveier\")",
               ")",
               "",
-              "return (divide (a,[Personer med eierstatus]))*100"
+              "return (",
+              "    DIVIDE(a, [Personer med eierstatus]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
@@ -2487,13 +2407,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11038\"),",
-              "filter(all('Eierstatus'[Dimensjonsnavn]), 'Eierstatus'[Dimensjonsnavn] = \"Andels- / aksjeeier\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall personer\")",
+              "var a = ",
+              "CALCULATE([Personer med eierstatus],",
+              "    FILTER(ALL('Eierstatus'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Andels- / aksjeeier\")",
               ")",
               "",
-              "return (divide (a,[Personer med eierstatus]))*100"
+              "return (",
+              "    DIVIDE(a, [Personer med eierstatus]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
@@ -2503,13 +2424,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11038\"),",
-              "filter(all('Eierstatus'[Dimensjonsnavn]), 'Eierstatus'[Dimensjonsnavn] = \"Leier\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall personer\")",
+              "var a = ",
+              "CALCULATE([Personer med eierstatus],",
+              "    FILTER(ALL('Eierstatus'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Leier\")",
               ")",
               "",
-              "return (divide (a,[Personer med eierstatus]))*100"
+              "return (",
+              "    DIVIDE(a, [Personer med eierstatus]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
@@ -2519,16 +2441,13 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"11038\"),",
-              "filter(all('Eierstatus'[Dimensjonsnavn]), 'Eierstatus'[Dimensjonsnavn] =\"I alt\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Antall personer\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"11038\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Antall personer\")",
+              ")"
             ],
             "formatString": "#,0",
-            "isHidden": true
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
             "name": "Andel av befolkningen 15 år eller yngre",
@@ -2720,13 +2639,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"03364\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Kvadratmeterpris (kr)\"),",
-              "FILTER(ALL('Type'[Dimensjonsnavn]), 'Type'[Dimensjonsnavn] = \"Brukte eneboliger\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"03364\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Kvadratmeterpris (kr)\"),",
+              "    FILTER(ALL('Type'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Brukte eneboliger\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
@@ -2736,13 +2653,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"03364\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Kvadratmeterpris (kr)\"),",
-              "FILTER(ALL('Type'[Dimensjonsnavn]), 'Type'[Dimensjonsnavn] = \"Nye eneboliger\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"03364\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Kvadratmeterpris (kr)\"),",
+              "    FILTER(ALL('Type'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Nye eneboliger\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
@@ -2767,14 +2682,19 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Sosialsektoren samlet\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12362\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Sosialsektoren samlet\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
               ")",
               "",
-              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
+              "return (",
+              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
@@ -2784,14 +2704,19 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Barnevern\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12362\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Barnevern\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
               ")",
               "",
-              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
+              "return (",
+              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
@@ -2801,14 +2726,19 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Administrasjon, kommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12362\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Administrasjon, kommune\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
               ")",
               "",
-              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
+              "return (",
+              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
@@ -2818,14 +2748,19 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Eiendomsforvaltning, kommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12362\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Eiendomsforvaltning, kommune\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
               ")",
               "",
-              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
+              "return (",
+              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
@@ -2835,14 +2770,19 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Barnehage\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12362\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Barnehage\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
               ")",
               "",
-              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
+              "return (",
+              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
@@ -2852,14 +2792,20 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Grunnskole\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              "var a = ",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12362\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Grunnskole\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
               ")",
               "",
-              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
+              "return (",
+              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
@@ -2869,65 +2815,22 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12362\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Helse- og omsorg\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              "var a = ",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12362\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\"),",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Helse- og omsorg\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
               ")",
               "",
-              "return (DIVIDE(a,[Samlede netto driftsutgifter]))*100"
+              "return (",
+              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
-          },
-          {
-            "name": "Har kommunen innført eiendomsskatt*",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12503\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Har kommunen innført eiendomsskatt? (ja=1, nei=0)\"),",
-              "FILTER(ALL('Region'[Kategori]), 'Region'[Kategori] = \"Kommune\")",
-              ")",
-              "",
-              "return a"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Eiendomsskatt"
-          },
-          {
-            "name": "Hvor mange kommuner i fylket har innført eiendomsskatt*",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12503\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Har kommunen innført eiendomsskatt? (ja=1, nei=0)\"),",
-              "FILTER(ALL('Region'[Kategori]), 'Region'[Kategori] = \"Fylke\")",
-              ")",
-              "",
-              "return a"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Eiendomsskatt"
-          },
-          {
-            "name": "Hvor mange kommuner i landet har innført eiendomsskatt*",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12503\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Har kommunen innført eiendomsskatt? (ja=1, nei=0)\"),",
-              "FILTER(ALL('Region'[Kategori]), 'Region'[Kategori] = \"Landet\")",
-              ")",
-              "",
-              "return a"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Eiendomsskatt"
           },
           {
             "name": "Annet lovbrudd per 1 000 innbyggere (årlig gjennomsnitt)*",
@@ -3020,65 +2923,6 @@
             ],
             "formatString": "#,0",
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
-          },
-          {
-            "name": "Antall virksomheter innen primærnæring",
-            "description": "Andel virksomheter: Primærnæring",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
-              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] in ",
-              "{\"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\"})",
-              ")",
-              "",
-              "return a"
-            ],
-            "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
-          },
-          {
-            "name": "Antall virksomheter innen sekundærnæring",
-            "description": "Andel virksomheter: Sekundærnæring",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
-              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] in ",
-              "{\"Industri\", \"Bygge- og anleggsvirksomhet\"})",
-              ")",
-              "",
-              "return a"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
-          },
-          {
-            "name": "Antall virksomheter tertiærnæring",
-            "description": "Andel virksomheter: Tertiærnæring",
-            "expression": [
-              "",
-              "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"10309\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Virksomheter\"),",
-              "FILTER(ALL('Antall'[Dimensjonsnavn]), 'Antall'[Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "filter(all('Næring'[Dimensjonsnavn]), 'Næring'[Dimensjonsnavn] in ",
-              "{\"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\", ",
-              "\"Industri\", \"Bygge- og anleggsvirksomhet\",",
-              "\"Uoppgitt\"})",
-              ")",
-              "",
-              "return a"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Valgdeltakelse kommunestyre- og fylkestingsvalg - prosent*",
@@ -3193,13 +3037,9 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\"),",
-              "FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Blokkleiligheter\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Gjennomsnittlig kvadratmeterpris (kr)],",
+              "    FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Blokkleiligheter\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
@@ -3209,13 +3049,9 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\"),",
-              "FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Eneboliger\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Gjennomsnittlig kvadratmeterpris (kr)],",
+              "    FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Eneboliger\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
@@ -3225,13 +3061,9 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\"),",
-              "FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Småhus\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Gjennomsnittlig kvadratmeterpris (kr)],",
+              "    FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Småhus\")",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
@@ -3326,14 +3158,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Politisk styring og kontrollvirksomhet, fylkeskommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Politisk styring og kontrollvirksomhet, fylkeskommune\"",
+              "    ),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3343,14 +3175,12 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Administrasjon, fylkeskommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Administrasjon, fylkeskommune\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3360,14 +3190,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Eiendomsforvaltning, fylkeskommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Eiendomsforvaltning, fylkeskommune\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
               ")",
               "",
-              "return a"
+              ""
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3377,14 +3207,12 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Fellesutgifter, fylkeskommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Fellesutgifter, fylkeskommune\"),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3394,14 +3222,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Fysisk planlegging, kulturminner, natur, nærmiljø, fylkeskommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Fysisk planlegging, kulturminner, natur, nærmiljø, fylkeskommune\"",
+              "    ),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3411,14 +3239,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Kultur, fylkeskommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Kultur, fylkeskommune\"",
+              "    ),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3428,14 +3256,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Næringsforvaltning, fylkeskommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Næringsforvaltning, fylkeskommune\"",
+              "    ),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3445,14 +3273,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Samferdsel, fylkeskommune\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Samferdsel, fylkeskommune\"",
+              "    ),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3462,14 +3290,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Tannhelse\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Tannhelse\"",
+              "    ),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3479,14 +3307,14 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12368\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\"),",
-              "FILTER(ALL('Funksjon'[Dimensjonsnavn]), 'Funksjon'[Dimensjonsnavn] = \"Videregående opplæring samlet\"),",
-              "FILTER(ALL('Art'[Dimensjonsnavn]), 'Art'[Dimensjonsnavn] = \"Netto driftsutgifter på funksjon/tjenesteområde\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Samlede netto driftsutgifter FK],",
+              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Videregående opplæring samlet\"",
+              "    ),",
+              "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3496,13 +3324,9 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
-              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Alle husholdninger\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle husholdninger\")    ",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -3512,13 +3336,9 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
-              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Aleneboende\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Aleneboende\")    ",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -3528,13 +3348,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
-              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Enslig mor/far med barn 0-17 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Enslig mor/far med barn 0-17 år\"",
+              "    )    ",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -3544,13 +3362,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
-              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Par med barn 0-17 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Par med barn 0-17 år\"",
+              "    )    ",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -3560,13 +3376,11 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06944\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Inntekt etter skatt, median (kr)\"),",
-              "FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), 'Husholdningstype'[Dimensjonsnavn] = \"Par uten barn\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
+              "        \"Par uten barn\"",
+              "    )    ",
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
@@ -3576,15 +3390,12 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"12364\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Beløp (1000 kr)\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12364\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\")",
+              ")"
             ],
             "formatString": "#,0",
-            "isHidden": true,
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
@@ -3592,12 +3403,12 @@
             "expression": [
               "",
               "",
-              "var a = CALCULATE(sum('Alle Data'[Verdi]),",
-              "filter(all('Tabeller'[Tabellnummer]), Tabeller[Tabellnummer]= \"ØOA01\"),",
-              "filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Andel uføretrygdede av befolkningen 18-67 år\")",
-              ")",
-              "",
-              "return a"
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"ØOA01\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
+              "        \"Andel uføretrygdede av befolkningen 18-67 år\"",
+              "    )",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Uføretrygdede"
@@ -3623,7 +3434,6 @@
               "[Andel netto driftsutgifter til sosialsektoren])"
             ],
             "formatString": "#,0.0",
-            "isHidden": true,
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
@@ -3720,9 +3530,11 @@
             "expression": [
               "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A800\")",
               ")"
             ],
+            "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
           },
           {
@@ -3732,11 +3544,13 @@
               "",
               "var skatt_inntekt_formue =",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A870\")",
               ")",
               "",
               "var andre_skatter = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"877\")",
               ")",
               "",
@@ -3744,6 +3558,7 @@
               "    skatt_inntekt_formue + andre_skatter",
               ")"
             ],
+            "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
           },
           {
@@ -3752,9 +3567,11 @@
               "",
               "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AG10\")",
               ")"
             ],
+            "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
           },
           {
@@ -3763,9 +3580,11 @@
               "",
               "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A600\")",
               ")"
             ],
+            "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
           },
           {
@@ -3775,21 +3594,25 @@
               "",
               "var andre_overforinger =",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD17\")",
               ")",
               "",
               "var andre_statlige_overforinger = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A810\")",
               ")",
               "",
               "var andre_salg_leieinntekter = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD34\")",
               ")",
               "",
               "var overforingsinntekter_motytelse_drift = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD48\")",
               ")",
               "",
@@ -3798,6 +3621,7 @@
               "    + overforingsinntekter_motytelse_drift",
               ")"
             ],
+            "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
           },
           {
@@ -4142,6 +3966,7 @@
             "name": "Innbyggere per 1.1",
             "expression": [
               "",
+              "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"11342\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Befolkning per 1.1. (personer)\")",
@@ -4193,11 +4018,11 @@
               "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"10309\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Virksomheter\"),",
-              "    FILTER(ALL('Antall'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle størrelsesgrupper\"),",
-              "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle næringer\")",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Virksomheter\")",
               ")"
-            ]
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
             "name": "Sysselsatte 4. kvartal etter bosted",
@@ -4209,7 +4034,8 @@
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Sysselsatte personer etter bosted\")",
               ")"
             ],
-            "formatString": "#,0"
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
             "name": "Antall personer 16 år og over med grunnskoleutdanning eller høyere",
@@ -4221,7 +4047,134 @@
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer 16 år og over\")",
               ")"
             ],
-            "formatString": "#,0"
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
+          },
+          {
+            "name": "Antall virksomheter: Primærnæring",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Antall virksomheter],",
+              "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] IN ",
+              "        {",
+              "            \"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\"",
+              "        }",
+              "    )",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
+          },
+          {
+            "name": "Antall virksomheter: Sekundærnæring",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Antall virksomheter],",
+              "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] IN ",
+              "        {",
+              "            \"Industri\", \"Bygge- og anleggsvirksomhet\"",
+              "        }",
+              "    )",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
+          },
+          {
+            "name": "Antall virksomheter: Tertiærnæring",
+            "expression": [
+              "",
+              "",
+              "/* All næring som ikke er primær- eller sekundærnæringer, eller uoppgitt */",
+              "var a =",
+              "CALCULATE([Antall virksomheter],",
+              "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] IN ",
+              "        {",
+              "            \"Jordbruk, skogbruk og fiske\", \"Bergverksdrift og utvinning\", ",
+              "            \"Industri\", \"Bygge- og anleggsvirksomhet\",",
+              "            \"Uoppgitt\"",
+              "        }",
+              "    )",
+              ")",
+              "",
+              "return (",
+              "    [Antall virksomheter] - a",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
+          },
+          {
+            "name": "Antall virksomheter: Uoppgitt",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Antall virksomheter],",
+              "    FILTER(ALL('Næring'[Dimensjonsnavn]), [Dimensjonsnavn] IN ",
+              "        {",
+              "            \"Uoppgitt\"",
+              "        }",
+              "    )",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
+          },
+          {
+            "name": "Samlede netto driftsutgifter FK",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12368\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
+          },
+          {
+            "name": "Gjennomsnittlig kvadratmeterpris (kr)",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(sum('Alle Data'[Verdi]),",
+              "    filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
+              "    filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
+          },
+          {
+            "name": "Inntekt etter skatt median (kr)",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"06944\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Inntekt etter skatt, median (kr)\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
+          },
+          {
+            "name": "Har regionen innført eiendomsskatt",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12503\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
+              "        \"Har kommunen innført eiendomsskatt? (ja=1, nei=0)\"",
+              "    )",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Eiendomsskatt"
           }
         ],
         "annotations": [
