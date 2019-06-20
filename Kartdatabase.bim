@@ -1660,7 +1660,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE(sum('Alle Data'[Verdi]),",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"11342\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Areal (km²)\")",
               ")"
@@ -1785,7 +1785,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall kvinner av befolkningen], [Folketall]) * 100",
+              "ROUND(DIVIDE([Antall kvinner av befolkningen], [Folketall]) * 100, 2)",
               ""
             ],
             "formatString": "0.0",
@@ -1797,7 +1797,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall menn av befolkningen], [Folketall]) * 100",
+              "ROUND(DIVIDE([Antall menn av befolkningen], [Folketall]) * 100, 2)",
               ""
             ],
             "formatString": "0.0",
