@@ -2420,7 +2420,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Personer med eierstatus]) * 100",
+              "    ROUND(DIVIDE(a, [Personer med eierstatus]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2437,7 +2437,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Personer med eierstatus]) * 100",
+              "    ROUND(DIVIDE(a, [Personer med eierstatus]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2454,7 +2454,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Personer med eierstatus]) * 100",
+              "    ROUND(DIVIDE(a, [Personer med eierstatus]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
