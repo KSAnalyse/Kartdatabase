@@ -1977,7 +1977,10 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall virksomheter: Primærnæring], [Antall virksomheter]) * 100",
+              "ROUND(",
+              "    DIVIDE([Antall virksomheter: Primærnæring], [Antall virksomheter]) * 100,",
+              "    2",
+              ")",
               ""
             ],
             "formatString": "#,0.0",
@@ -1988,7 +1991,10 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall virksomheter: Sekundærnæring], [Antall virksomheter]) * 100",
+              "ROUND(",
+              "    DIVIDE([Antall virksomheter: Sekundærnæring], [Antall virksomheter]) * 100,",
+              "    2",
+              ")",
               ""
             ],
             "formatString": "#,0.0",
@@ -1999,7 +2005,10 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall virksomheter: Tertiærnæring], [Antall virksomheter]) * 100"
+              "ROUND(",
+              "    DIVIDE([Antall virksomheter: Tertiærnæring], [Antall virksomheter]) * 100,",
+              "    2",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
@@ -2009,7 +2018,10 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall virksomheter: Uoppgitt], [Antall virksomheter]) * 100",
+              "ROUND(",
+              "    DIVIDE([Antall virksomheter: Uoppgitt], [Antall virksomheter]) * 100,",
+              "    2",
+              ")",
               ""
             ],
             "formatString": "#,0.0",
