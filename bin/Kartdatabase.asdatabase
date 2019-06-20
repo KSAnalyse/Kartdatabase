@@ -1661,7 +1661,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE(sum('Alle Data'[Verdi]),",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"11342\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Areal (km²)\")",
               ")"
@@ -1786,7 +1786,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall kvinner av befolkningen], [Folketall]) * 100",
+              "ROUND(DIVIDE([Antall kvinner av befolkningen], [Folketall]) * 100, 2)",
               ""
             ],
             "formatString": "0.0",
@@ -1798,7 +1798,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall menn av befolkningen], [Folketall]) * 100",
+              "ROUND(DIVIDE([Antall menn av befolkningen], [Folketall]) * 100, 2)",
               ""
             ],
             "formatString": "0.0",
@@ -1819,7 +1819,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Innbyggere per 1.1]) * 100",
+              "    ROUND(DIVIDE(a, [Innbyggere per 1.1]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -1830,18 +1830,15 @@
             "expression": [
               "",
               "",
-              "var a = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"09817\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer\"),",
-              "    FILTER(ALL('Innvandringskategori'[Dimensjonsnavn]), [Dimensjonsnavn] =\"Innvandrere\"),",
-              "    FILTER(ALL('Landbakgrunn'[Dimensjonsnavn]), [Dimensjonsnavn] <> \"Alle land\")",
-              ")",
-              "",
-              "",
-              "",
-              "return (",
-              "    a",
+              "    FILTER(ALL('Innvandringskategori'[Dimensjonsnavn]), [Dimensjonsnavn] =",
+              "        \"Innvandrere\"",
+              "    ),",
+              "    FILTER(ALL('Landbakgrunn'[Dimensjonsnavn]), [Dimensjonsnavn] <> ",
+              "        \"Alle land\"",
+              "    )",
               ")"
             ],
             "formatString": "#,0",
@@ -1981,7 +1978,10 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall virksomheter: Primærnæring], [Antall virksomheter]) * 100",
+              "ROUND(",
+              "    DIVIDE([Antall virksomheter: Primærnæring], [Antall virksomheter]) * 100,",
+              "    2",
+              ")",
               ""
             ],
             "formatString": "#,0.0",
@@ -1992,7 +1992,10 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall virksomheter: Sekundærnæring], [Antall virksomheter]) * 100",
+              "ROUND(",
+              "    DIVIDE([Antall virksomheter: Sekundærnæring], [Antall virksomheter]) * 100,",
+              "    2",
+              ")",
               ""
             ],
             "formatString": "#,0.0",
@@ -2003,7 +2006,10 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall virksomheter: Tertiærnæring], [Antall virksomheter]) * 100"
+              "ROUND(",
+              "    DIVIDE([Antall virksomheter: Tertiærnæring], [Antall virksomheter]) * 100,",
+              "    2",
+              ")"
             ],
             "formatString": "#,0.0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
@@ -2013,7 +2019,10 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Antall virksomheter: Uoppgitt], [Antall virksomheter]) * 100",
+              "ROUND(",
+              "    DIVIDE([Antall virksomheter: Uoppgitt], [Antall virksomheter]) * 100,",
+              "    2",
+              ")",
               ""
             ],
             "formatString": "#,0.0",
@@ -2146,7 +2155,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Innbyggere per 1.1]) * 100",
+              "    ROUND(DIVIDE(a, [Innbyggere per 1.1]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2166,7 +2175,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Innbyggere per 1.1]) * 100",
+              "    ROUND(DIVIDE(a, [Innbyggere per 1.1]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2186,7 +2195,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(([Innbyggere per 1.1] - a), [Innbyggere per 1.1]) * 100",
+              "    ROUND(DIVIDE(([Innbyggere per 1.1] - a), [Innbyggere per 1.1]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2287,7 +2296,10 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
+              "    ROUND(",
+              "        DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100,",
+              "        2",
+              "    )",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2304,7 +2316,10 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
+              "    ROUND(",
+              "        DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100,",
+              "        2",
+              "    )",
               ")",
               ""
             ],
@@ -2324,7 +2339,10 @@
               ")    ",
               "",
               "return (",
-              "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
+              "    ROUND(",
+              "        DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100,",
+              "        2",
+              "    )",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2343,7 +2361,10 @@
               ")    ",
               "",
               "return (",
-              "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
+              "    ROUND(",
+              "        DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100,",
+              "        2",
+              "    )",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2360,7 +2381,10 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100",
+              "    ROUND(",
+              "        DIVIDE(a, [Antall personer 16 år og over med grunnskoleutdanning eller høyere]) * 100,",
+              "        2",
+              "    )",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2380,7 +2404,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Folketall]) * 100",
+              "    ROUND(DIVIDE(a, [Folketall]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2397,7 +2421,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Personer med eierstatus]) * 100",
+              "    ROUND(DIVIDE(a, [Personer med eierstatus]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2414,7 +2438,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Personer med eierstatus]) * 100",
+              "    ROUND(DIVIDE(a, [Personer med eierstatus]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2431,7 +2455,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Personer med eierstatus]) * 100",
+              "    ROUND(DIVIDE(a, [Personer med eierstatus]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2455,7 +2479,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 0-15 år], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 0-15 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -2488,7 +2512,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Folketall]) * 100",
+              "    ROUND(DIVIDE(a, [Folketall]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2507,7 +2531,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Folketall]) * 100",
+              "    ROUND(DIVIDE(a, [Folketall]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2528,26 +2552,6 @@
               ""
             ],
             "formatString": "#,0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
-          },
-          {
-            "name": "Andel medlemmer og tilhørige i DnK og tros- og livssynssamfunn utenfor (per 1.1)",
-            "expression": [
-              "",
-              "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"12026\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] in {\"Medlemmer og tilhørige i Dnk (antall)\",",
-              "        \"Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke (antall)\"})",
-              ")",
-              "",
-              "return (",
-              "    DIVIDE(a, [Folketall]) * 100",
-              ")"
-            ],
-            "formatString": "#,0.0",
-            "isHidden": true,
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
@@ -2694,7 +2698,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2716,7 +2720,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2738,7 +2742,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2760,7 +2764,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2782,7 +2786,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2805,7 +2809,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2827,7 +2831,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -3097,7 +3101,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_tretti_trettini, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_tretti_trettini, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3114,7 +3118,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_forti_fortini, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_forti_fortini, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3131,7 +3135,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_femti_femtini, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_femti_femtini, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3148,7 +3152,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_seksti_pluss, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_seksti_pluss, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3447,14 +3451,11 @@
             "expression": [
               "",
               "",
-              "var a = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"09418\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Siktede personer, bosted\")",
-              ")",
-              "",
-              "return (",
-              "    A",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"09418\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
+              "        \"Siktede personer, bosted\"",
+              "    )",
               ")"
             ],
             "formatString": "#,0",
@@ -3463,6 +3464,7 @@
           {
             "name": "Siktede personer 5-14 år",
             "expression": [
+              "",
               "",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-14\")",
@@ -3474,6 +3476,7 @@
             "name": "Siktede personer 15-17 år",
             "expression": [
               "",
+              "",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"15-17\")",
               ")"
@@ -3483,6 +3486,7 @@
           {
             "name": "Siktede personer 25-29 år",
             "expression": [
+              "",
               "",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"25-29\")",
@@ -3494,6 +3498,7 @@
             "name": "Siktede personer 30-39 år",
             "expression": [
               "",
+              "",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"30-39\")",
               ")"
@@ -3503,6 +3508,7 @@
           {
             "name": "Siktede personer 60-150 år",
             "expression": [
+              "",
               "",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"60-150\")",
@@ -3514,6 +3520,7 @@
             "name": "Siktede personer uoppgitt alder",
             "expression": [
               "",
+              "",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"160-991\")",
               ")"
@@ -3523,6 +3530,7 @@
           {
             "name": "Siktede personer i alt",
             "expression": [
+              "",
               "",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"0-991\")",
@@ -3634,6 +3642,7 @@
             "name": "Siktede personer 5 år+",
             "expression": [
               "",
+              "",
               "CALCULATE([Siktede personer], ",
               "    FILTER(ALL('Alder'[Dimensjonskode]), [Dimensjonskode] = \"5-151\")",
               ")"
@@ -3716,7 +3725,7 @@
               ")",
               "",
               "Return (",
-              "    DIVIDE([Siktede personer 18-24 år], befolkning) * 1000",
+              "    ROUND(DIVIDE([Siktede personer 18-24 år], befolkning) * 1000, 2)",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3741,7 +3750,7 @@
               ")",
               "",
               "Return (",
-              "    DIVIDE([Siktede personer 5-14 år], befolkning) * 1000",
+              "    ROUND(DIVIDE([Siktede personer 5-14 år], befolkning) * 1000, 2)",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3766,7 +3775,7 @@
               ")",
               "",
               "Return (",
-              "    DIVIDE([Siktede personer 15-17 år], befolkning) * 1000",
+              "    ROUND(DIVIDE([Siktede personer 15-17 år], befolkning) * 1000, 2)",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3791,7 +3800,7 @@
               ")",
               "",
               "Return (",
-              "    DIVIDE([Siktede personer 25-29 år], befolkning) * 1000",
+              "    ROUND(DIVIDE([Siktede personer 25-29 år], befolkning) * 1000, 2)",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3816,7 +3825,7 @@
               ")",
               "",
               "Return (",
-              "    DIVIDE([Siktede personer 30-39 år], befolkning) * 1000",
+              "    ROUND(DIVIDE([Siktede personer 30-39 år], befolkning) * 1000, 2)",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3841,7 +3850,7 @@
               ")",
               "",
               "Return (",
-              "    DIVIDE([Siktede personer 40-59 år], befolkning) * 1000",
+              "    ROUND(DIVIDE([Siktede personer 40-59 år], befolkning) * 1000, 2)",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3866,7 +3875,7 @@
               ")",
               "",
               "Return (",
-              "    DIVIDE([Siktede personer 60-150 år], befolkning) * 1000",
+              "    ROUND(DIVIDE([Siktede personer 60-150 år], befolkning) * 1000, 2)",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3891,7 +3900,7 @@
               ")",
               "",
               "Return (",
-              "    DIVIDE([Siktede personer i alt], befolkning) * 1000",
+              "    ROUND(DIVIDE([Siktede personer i alt], befolkning) * 1000, 2)",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3916,7 +3925,7 @@
               ")",
               "",
               "Return (",
-              "    DIVIDE([Siktede personer 5 år+], befolkning) * 1000",
+              "    ROUND(DIVIDE([Siktede personer 5 år+], befolkning) * 1000, 2)",
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
@@ -3925,11 +3934,13 @@
             "name": "Antall kommunestyremedlemmer",
             "expression": [
               "",
+              "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"04966\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Medlemmer\")",
               ")"
             ],
+            "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
@@ -3942,6 +3953,7 @@
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Valgte representanter\")",
               ")"
             ],
+            "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
@@ -3949,7 +3961,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 16-18 år], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 16-18 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -3961,7 +3973,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 19-34 år], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 19-34 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -3991,6 +4003,7 @@
               "[Valgte representanter Kristelig Folkeparti*] + [Valgte representanter Senterpartiet*] + ",
               "[Valgte representanter Sosialistisk Venstreparti*]"
             ],
+            "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
@@ -3998,7 +4011,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 35-66 år], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 35-66 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -4010,7 +4023,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 67 år og over], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 67 år og over], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -4146,9 +4159,9 @@
             "expression": [
               "",
               "",
-              "CALCULATE(sum('Alle Data'[Verdi]),",
-              "    filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
-              "    filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\")",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\")",
               ")"
             ],
             "formatString": "#,0",
