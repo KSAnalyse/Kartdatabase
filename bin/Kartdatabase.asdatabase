@@ -3038,7 +3038,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Gjennomsnittelig kvadratmeterpris (kr)],",
+              "CALCULATE([Gjennomsnittlig kvadratmeterpris (kr)],",
               "    FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Blokkleiligheter\")",
               ")"
             ],
@@ -3050,7 +3050,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Gjennomsnittelig kvadratmeterpris (kr)],",
+              "CALCULATE([Gjennomsnittlig kvadratmeterpris (kr)],",
               "    FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Eneboliger\")",
               ")"
             ],
@@ -3062,7 +3062,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Gjennomsnittelig kvadratmeterpris (kr)],",
+              "CALCULATE([Gjennomsnittlig kvadratmeterpris (kr)],",
               "    FILTER(ALL('Boligtype'[Dimensjonsnavn]), 'Boligtype'[Dimensjonsnavn] = \"Småhus\")",
               ")"
             ],
@@ -3080,7 +3080,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_atten_tjueni, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_atten_tjueni, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3159,7 +3159,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Politisk styring og kontrollvirksomhet, fylkeskommune\"",
               "    ),",
@@ -3176,23 +3176,12 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Administrasjon, fylkeskommune\"),",
               "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
               "    )",
-              ")",
-              "/*",
-              "CALCULATE(SUM('Alle Data'[Verdi]);",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]); [Tabellnummer]= \"12368\");",
-              "    FILTER(ALL('Variabel'[Variabelnavn]); [Variabelnavn] = \"Beløp (1000 kr)\");",
-              "    FILTER(ALL('Funksjon'[Dimensjonsnavn]); [Dimensjonsnavn] = ",
-              "        \"Administrasjon, fylkeskommune\"",
-              "    );",
-              "    FILTER(ALL('Art'[Dimensjonsnavn]); [Dimensjonsnavn] = ",
-              "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
-              "    )",
-              ")*/"
+              ")"
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
@@ -3202,7 +3191,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Eiendomsforvaltning, fylkeskommune\"),",
               "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
@@ -3219,7 +3208,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Fellesutgifter, fylkeskommune\"),",
               "    FILTER(ALL('Art'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Netto driftsutgifter på funksjon/tjenesteområde\"",
@@ -3234,7 +3223,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Fysisk planlegging, kulturminner, natur, nærmiljø, fylkeskommune\"",
               "    ),",
@@ -3251,7 +3240,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Kultur, fylkeskommune\"",
               "    ),",
@@ -3268,7 +3257,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Næringsforvaltning, fylkeskommune\"",
               "    ),",
@@ -3285,7 +3274,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Samferdsel, fylkeskommune\"",
               "    ),",
@@ -3302,7 +3291,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Tannhelse\"",
               "    ),",
@@ -3319,7 +3308,7 @@
             "expression": [
               "",
               "",
-              "CALCULATE([Samlede nettodriftsutgifter FK],",
+              "CALCULATE([Samlede netto driftsutgifter FK],",
               "    FILTER(ALL('Funksjon'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Videregående opplæring samlet\"",
               "    ),",
@@ -3332,10 +3321,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Inntekt etter skatt - alle husholdninger, median (kr)*",
+            "name": "Alle husholdninger*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle husholdninger\")    ",
               ")"
@@ -3344,10 +3334,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Inntekt etter skatt - aleneboende, median (kr)*",
+            "name": "Aleneboende*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Aleneboende\")    ",
               ")"
@@ -3356,10 +3347,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Inntekt etter skatt - enslig mor/far med barn 0-17 år, median (kr)*",
+            "name": "Enslig mor/far med barn 0-17 år*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Enslig mor/far med barn 0-17 år\"",
@@ -3370,10 +3362,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Inntekt etter skatt - par med barn 0-17 år, median (kr)*",
+            "name": "Par med barn 0-17 år*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Par med barn 0-17 år\"",
@@ -3384,10 +3377,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Inntekt etter skatt - par uten barn, median (kr)*",
+            "name": "Par uten barn, median*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Par uten barn\"",
@@ -3408,7 +3402,6 @@
               ")"
             ],
             "formatString": "#,0",
-            "isHidden": true,
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
@@ -3447,7 +3440,6 @@
               "[Andel netto driftsutgifter til sosialsektoren])"
             ],
             "formatString": "#,0.0",
-            "isHidden": true,
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
@@ -3544,6 +3536,7 @@
             "expression": [
               "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A800\")",
               ")"
             ],
@@ -3557,11 +3550,13 @@
               "",
               "var skatt_inntekt_formue =",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A870\")",
               ")",
               "",
               "var andre_skatter = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"877\")",
               ")",
               "",
@@ -3578,6 +3573,7 @@
               "",
               "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AG10\")",
               ")"
             ],
@@ -3590,6 +3586,7 @@
               "",
               "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A600\")",
               ")"
             ],
@@ -3603,21 +3600,25 @@
               "",
               "var andre_overforinger =",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD17\")",
               ")",
               "",
               "var andre_statlige_overforinger = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A810\")",
               ")",
               "",
               "var andre_salg_leieinntekter = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD34\")",
               ")",
               "",
               "var overforingsinntekter_motytelse_drift = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD48\")",
               ")",
               "",
@@ -4128,7 +4129,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
-            "name": "Samlede nettodriftsutgifter FK",
+            "name": "Samlede netto driftsutgifter FK",
             "expression": [
               "",
               "",
@@ -4141,7 +4142,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Gjennomsnittelig kvadratmeterpris (kr)",
+            "name": "Gjennomsnittlig kvadratmeterpris (kr)",
             "expression": [
               "",
               "",

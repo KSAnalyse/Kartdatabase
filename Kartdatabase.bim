@@ -3079,7 +3079,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_atten_tjueni, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_atten_tjueni, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3096,7 +3096,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_tretti_trettini, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_tretti_trettini, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3113,7 +3113,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_forti_fortini, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_forti_fortini, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3130,7 +3130,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_femti_femtini, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_femti_femtini, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3147,7 +3147,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(med_seksti_pluss, [Antall kommunestyremedlemmer]) * 100",
+              "    ROUND(DIVIDE(med_seksti_pluss, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3320,10 +3320,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Inntekt etter skatt - alle husholdninger, median (kr)*",
+            "name": "Alle husholdninger*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Alle husholdninger\")    ",
               ")"
@@ -3332,10 +3333,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Inntekt etter skatt - aleneboende, median (kr)*",
+            "name": "Aleneboende*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Aleneboende\")    ",
               ")"
@@ -3344,10 +3346,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Inntekt etter skatt - enslig mor/far med barn 0-17 år, median (kr)*",
+            "name": "Enslig mor/far med barn 0-17 år*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Enslig mor/far med barn 0-17 år\"",
@@ -3358,10 +3361,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Inntekt etter skatt - par med barn 0-17 år, median (kr)*",
+            "name": "Par med barn 0-17 år*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Par med barn 0-17 år\"",
@@ -3372,10 +3376,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Inntekt etter skatt - par uten barn, median (kr)*",
+            "name": "Par uten barn, median*",
             "expression": [
               "",
               "",
+              "/* Inntekt etter skatt median (kr) */",
               "CALCULATE([Inntekt etter skatt median (kr)],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Par uten barn\"",
@@ -3919,11 +3924,13 @@
             "name": "Antall kommunestyremedlemmer",
             "expression": [
               "",
+              "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"04966\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Medlemmer\")",
               ")"
             ],
+            "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
@@ -3936,6 +3943,7 @@
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Valgte representanter\")",
               ")"
             ],
+            "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
@@ -3985,6 +3993,7 @@
               "[Valgte representanter Kristelig Folkeparti*] + [Valgte representanter Senterpartiet*] + ",
               "[Valgte representanter Sosialistisk Venstreparti*]"
             ],
+            "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
