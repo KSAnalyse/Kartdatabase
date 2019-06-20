@@ -4158,9 +4158,9 @@
             "expression": [
               "",
               "",
-              "CALCULATE(sum('Alle Data'[Verdi]),",
-              "    filter(all('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
-              "    filter(all('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\")",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\")",
               ")"
             ],
             "formatString": "#,0",
