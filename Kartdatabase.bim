@@ -2697,7 +2697,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2719,7 +2719,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2741,7 +2741,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2763,7 +2763,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2785,7 +2785,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2808,7 +2808,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
@@ -2830,7 +2830,7 @@
               ")",
               "",
               "return (",
-              "    DIVIDE(a, [Samlede netto driftsutgifter]) * 100",
+              "    ROUND(DIVIDE(a, [Samlede netto driftsutgifter]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.0",
