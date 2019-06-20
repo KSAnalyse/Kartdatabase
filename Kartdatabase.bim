@@ -2454,7 +2454,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 0-15 år], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 0-15 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -3951,7 +3951,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 16-18 år], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 16-18 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -3963,7 +3963,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 19-34 år], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 19-34 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -4001,7 +4001,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 35-66 år], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 35-66 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -4013,7 +4013,7 @@
             "expression": [
               "",
               "",
-              "DIVIDE([Innbyggere 67 år og over], [Folketall]) * 100",
+              "ROUND(DIVIDE([Innbyggere 67 år og over], [Folketall]) * 100, 2)",
               "",
               ""
             ],
