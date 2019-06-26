@@ -2160,7 +2160,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
-            "name": "Andel som ikke er innvandrere og norskfødte med innvandrerforeldre",
+            "name": "Andel etnisk norske",
             "expression": [
               "",
               "",
@@ -2551,7 +2551,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke buddhisme",
+            "name": "Medlemmer i tros- og livssynssamfunn buddhisme",
             "expression": [
               "",
               "",
@@ -2566,7 +2566,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke islam",
+            "name": "Medlemmer i tros- og livssynssamfunn islam",
             "expression": [
               "",
               "",
