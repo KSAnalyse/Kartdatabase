@@ -1753,34 +1753,6 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Antall kvinner av befolkningen",
-            "description": "Innbyggere kvinner i alt",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Folketall],",
-              "    FILTER(ALL('Kjønn'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Kvinner\")",
-              ")",
-              ""
-            ],
-            "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
-          },
-          {
-            "name": "Antall menn av befolkningen",
-            "description": "Innbyggere menn i alt",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Folketall],",
-              "    FILTER(ALL('Kjønn'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Menn\")",
-              ")",
-              ""
-            ],
-            "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
-          },
-          {
             "name": "Andel kvinner av befolkningen",
             "description": "Andel kvinner av befolkningen",
             "expression": [
@@ -1805,7 +1777,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
-            "name": "Andel innvandrere og norskfødte med innvandrerforeldre av befolkningen",
+            "name": "Andel innvandrere og norskfødte med innvandrerforeldre",
             "expression": [
               "",
               "",
@@ -2149,7 +2121,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Andel innvandrere av befolkningen",
+            "name": "Andel innvandrere",
             "expression": [
               "",
               "",
@@ -2169,7 +2141,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
-            "name": "Andel norskfødte med innvandrerforeldre av befolkningen",
+            "name": "Andel norskfødte med innvandrerforeldre",
             "expression": [
               "",
               "",
@@ -2189,7 +2161,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
-            "name": "Andel av befolkningen som ikke er innvandrere og norskfødte med innvandrerforeldre",
+            "name": "Andel etnisk norske",
             "expression": [
               "",
               "",
@@ -2484,18 +2456,6 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
-            "name": "Andel av befolkningen 15 år eller yngre",
-            "expression": [
-              "",
-              "",
-              "ROUND(DIVIDE([Innbyggere 0-15 år], [Folketall]) * 100, 2)",
-              "",
-              ""
-            ],
-            "formatString": "0.0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
-          },
-          {
             "name": "Valgdeltakelse Stortingsvalg - prosent*",
             "expression": [
               "",
@@ -2592,7 +2552,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke buddhisme",
+            "name": "Medlemmer i tros- og livssynssamfunn buddhisme",
             "expression": [
               "",
               "",
@@ -2607,7 +2567,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke islam",
+            "name": "Medlemmer i tros- og livssynssamfunn islam",
             "expression": [
               "",
               "",
@@ -2952,101 +2912,6 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Valgdeltakelse"
           },
           {
-            "name": "Valgte representanter Arbeiderpartiet*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Valgte representanter*],",
-              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Arbeiderpartiet\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Valgte representanter Fremskrittspartiet*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Valgte representanter*],",
-              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Fremskrittspartiet\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Valgte representanter Høyre*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Valgte representanter*],",
-              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Høyre\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Valgte representanter Senterpartiet*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Valgte representanter*],",
-              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Senterpartiet\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Valgte representanter Sosialistisk Venstreparti*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Valgte representanter*],",
-              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Sosialistisk Venstreparti\")",
-              ")",
-              ""
-            ],
-            "formatString": "#,0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Valgte representanter Venstre*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Valgte representanter*],",
-              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Venstre\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Valgte representanter andre*",
-            "expression": [
-              "",
-              "",
-              "[Valgte representanter*] - [Valgte representanter sum utvalgte*]"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Valgte representanter Kristelig Folkeparti*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE([Valgte representanter*],",
-              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Kristelig Folkeparti\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
             "name": "Gjennomsnittlig kvadratmeterpris blokkleiligheter (kr)*",
             "expression": [
               "",
@@ -3094,74 +2959,6 @@
               "",
               "return (",
               "    ROUND(DIVIDE(med_atten_tjueni, [Antall kommunestyremedlemmer]) * 100, 2)",
-              ")"
-            ],
-            "formatString": "#,0.00",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Andel kommunestyremedlemmer 30-39 år",
-            "expression": [
-              "",
-              "",
-              "var med_tretti_trettini =",
-              "CALCULATE([Antall kommunestyremedlemmer],",
-              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"30-39 år\")",
-              ")",
-              "",
-              "return (",
-              "    ROUND(DIVIDE(med_tretti_trettini, [Antall kommunestyremedlemmer]) * 100, 2)",
-              ")"
-            ],
-            "formatString": "#,0.00",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Andel kommunestyremedlemmer 40-49 år",
-            "expression": [
-              "",
-              "",
-              "var med_forti_fortini =",
-              "CALCULATE([Antall kommunestyremedlemmer],",
-              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"40-49 år\")",
-              ")",
-              "",
-              "return (",
-              "    ROUND(DIVIDE(med_forti_fortini, [Antall kommunestyremedlemmer]) * 100, 2)",
-              ")"
-            ],
-            "formatString": "#,0.00",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Andel kommunestyremedlemmer 50-59 år",
-            "expression": [
-              "",
-              "",
-              "var med_femti_femtini =",
-              "CALCULATE([Antall kommunestyremedlemmer],",
-              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"50-59 år\")",
-              ")",
-              "",
-              "return (",
-              "    ROUND(DIVIDE(med_femti_femtini, [Antall kommunestyremedlemmer]) * 100, 2)",
-              ")"
-            ],
-            "formatString": "#,0.00",
-            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
-          },
-          {
-            "name": "Andel kommunestyremedlemmer 60 år eller eldre",
-            "expression": [
-              "",
-              "",
-              "var med_seksti_pluss =",
-              "CALCULATE([Antall kommunestyremedlemmer],",
-              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"60 år eller eldre\")",
-              ")",
-              "",
-              "return (",
-              "    ROUND(DIVIDE(med_seksti_pluss, [Antall kommunestyremedlemmer]) * 100, 2)",
               ")"
             ],
             "formatString": "#,0.00",
@@ -3334,6 +3131,289 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
+            "name": "Samlede netto driftsutgifter",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12364\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
+          },
+          {
+            "name": "Andel uføretrygdede av befolkningen 18-67 år*",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"ØOA01\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
+              "        \"Andel uføretrygdede av befolkningen 18-67 år\"",
+              "    )",
+              ")"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Uføretrygdede"
+          },
+          {
+            "name": "Netto driftsutgifter øvrige sektorer",
+            "expression": [
+              "",
+              "",
+              "100-",
+              "([Andel netto driftsutgifter til administrasjon]",
+              "+",
+              "[Andel netto driftsutgifter til barnehage]",
+              "+",
+              "[Andel netto driftsutgifter til barnevern]",
+              "+",
+              "[Andel netto driftsutgifter til eiendomsforvaltning]",
+              "+",
+              "[Andel netto driftsutgifter til grunnskole]",
+              "+",
+              "[Andel netto driftsutgifter til helse og omsorg]",
+              "+",
+              "[Andel netto driftsutgifter til sosialsektoren])"
+            ],
+            "formatString": "#,0.0",
+            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
+          },
+          {
+            "name": "Siktede personer",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"09418\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
+              "        \"Siktede personer, bosted\"",
+              "    )",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
+          },
+          {
+            "name": "Folketall",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"07459\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer\")",
+              ")",
+              ""
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
+          },
+          {
+            "name": "Antall kvinner av befolkningen",
+            "description": "Innbyggere kvinner i alt",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Folketall],",
+              "    FILTER(ALL('Kjønn'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Kvinner\")",
+              ")",
+              ""
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
+          },
+          {
+            "name": "Antall menn av befolkningen",
+            "description": "Innbyggere menn i alt",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Folketall],",
+              "    FILTER(ALL('Kjønn'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Menn\")",
+              ")",
+              ""
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
+          },
+          {
+            "name": "Andel av befolkningen 15 år eller yngre",
+            "expression": [
+              "",
+              "",
+              "ROUND(DIVIDE([Innbyggere 0-15 år], [Folketall]) * 100, 2)",
+              "",
+              ""
+            ],
+            "formatString": "0.0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
+          },
+          {
+            "name": "Representanter Arbeiderpartiet*",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Arbeiderpartiet\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Representanter Fremskrittspartiet*",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Fremskrittspartiet\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Representanter Høyre*",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Høyre\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Representanter Senterpartiet*",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Senterpartiet\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Representanter Sosialistisk Venstreparti*",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Sosialistisk Venstreparti\")",
+              ")",
+              ""
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Representanter Venstre*",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Venstre\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Representanter andre partier*",
+            "expression": [
+              "",
+              "",
+              "[Valgte representanter*] - [Representanter sum utvalgte*]"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Representanter Kristelig Folkeparti*",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Valgte representanter*],",
+              "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Kristelig Folkeparti\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Andel kommunestyremedlemmer 30-39 år",
+            "expression": [
+              "",
+              "",
+              "var med_tretti_trettini =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"30-39 år\")",
+              ")",
+              "",
+              "return (",
+              "    ROUND(DIVIDE(med_tretti_trettini, [Antall kommunestyremedlemmer]) * 100, 2)",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Andel kommunestyremedlemmer 40-49 år",
+            "expression": [
+              "",
+              "",
+              "var med_forti_fortini =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"40-49 år\")",
+              ")",
+              "",
+              "return (",
+              "    ROUND(DIVIDE(med_forti_fortini, [Antall kommunestyremedlemmer]) * 100, 2)",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Andel kommunestyremedlemmer 50-59 år",
+            "expression": [
+              "",
+              "",
+              "var med_femti_femtini =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"50-59 år\")",
+              ")",
+              "",
+              "return (",
+              "    ROUND(DIVIDE(med_femti_femtini, [Antall kommunestyremedlemmer]) * 100, 2)",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
+            "name": "Andel kommunestyremedlemmer 60 år eller eldre",
+            "expression": [
+              "",
+              "",
+              "var med_seksti_pluss =",
+              "CALCULATE([Antall kommunestyremedlemmer],",
+              "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"60 år eller eldre\")",
+              ")",
+              "",
+              "return (",
+              "    ROUND(DIVIDE(med_seksti_pluss, [Antall kommunestyremedlemmer]) * 100, 2)",
+              ")"
+            ],
+            "formatString": "#,0.00",
+            "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
+          },
+          {
             "name": "Alle husholdninger*",
             "expression": [
               "",
@@ -3407,72 +3487,6 @@
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
-          },
-          {
-            "name": "Samlede netto driftsutgifter",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"12364\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Beløp (1000 kr)\")",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
-          },
-          {
-            "name": "Andel uføretrygdede av befolkningen 18-67 år*",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"ØOA01\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
-              "        \"Andel uføretrygdede av befolkningen 18-67 år\"",
-              "    )",
-              ")"
-            ],
-            "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Uføretrygdede"
-          },
-          {
-            "name": "Netto driftsutgifter øvrige sektorer",
-            "expression": [
-              "",
-              "",
-              "100-",
-              "([Andel netto driftsutgifter til administrasjon]",
-              "+",
-              "[Andel netto driftsutgifter til barnehage]",
-              "+",
-              "[Andel netto driftsutgifter til barnevern]",
-              "+",
-              "[Andel netto driftsutgifter til eiendomsforvaltning]",
-              "+",
-              "[Andel netto driftsutgifter til grunnskole]",
-              "+",
-              "[Andel netto driftsutgifter til helse og omsorg]",
-              "+",
-              "[Andel netto driftsutgifter til sosialsektoren])"
-            ],
-            "formatString": "#,0.0",
-            "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
-          },
-          {
-            "name": "Siktede personer",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"09418\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
-              "        \"Siktede personer, bosted\"",
-              "    )",
-              ")"
-            ],
-            "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
           },
           {
             "name": "Siktede personer 5-14 år",
@@ -3703,20 +3717,6 @@
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Siktede personer"
-          },
-          {
-            "name": "Folketall",
-            "expression": [
-              "",
-              "",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"07459\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer\")",
-              ")",
-              ""
-            ],
-            "formatString": "#,0",
-            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
             "name": "Siktede personer per tusen 18-24",
@@ -4007,14 +4007,14 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere"
           },
           {
-            "name": "Valgte representanter sum utvalgte*",
+            "name": "Representanter sum utvalgte*",
             "expression": [
               "",
               "",
-              "[Valgte representanter Venstre*] + [Valgte representanter Arbeiderpartiet*] +",
-              "[Valgte representanter Fremskrittspartiet*] + [Valgte representanter Høyre*] + ",
-              "[Valgte representanter Kristelig Folkeparti*] + [Valgte representanter Senterpartiet*] + ",
-              "[Valgte representanter Sosialistisk Venstreparti*]"
+              "[Representanter Venstre*] + [Representanter Arbeiderpartiet*] +",
+              "[Representanter Fremskrittspartiet*] + [Representanter Høyre*] + ",
+              "[Representanter Kristelig Folkeparti*] + [Representanter Senterpartiet*] + ",
+              "[Representanter Sosialistisk Venstreparti*]"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
