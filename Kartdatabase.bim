@@ -1776,7 +1776,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
-            "name": "Andel innvandrere og norskfødte med innvandrerforeldre av befolkningen",
+            "name": "Andel innvandrere og norskfødte med innvandrerforeldre",
             "expression": [
               "",
               "",
@@ -2120,7 +2120,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Andel innvandrere av befolkningen",
+            "name": "Andel innvandrere",
             "expression": [
               "",
               "",
@@ -2140,7 +2140,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
-            "name": "Andel norskfødte med innvandrerforeldre av befolkningen",
+            "name": "Andel norskfødte med innvandrerforeldre",
             "expression": [
               "",
               "",
@@ -2160,7 +2160,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
-            "name": "Andel av befolkningen som ikke er innvandrere og norskfødte med innvandrerforeldre",
+            "name": "Andel som ikke er innvandrere og norskfødte med innvandrerforeldre",
             "expression": [
               "",
               "",
