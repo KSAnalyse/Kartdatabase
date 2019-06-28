@@ -1841,7 +1841,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Husholdninger"
           },
           {
-            "name": "Andel i par, gift*",
+            "name": "Andel i par, gift",
             "description": "Samlivsform personer 18 år og over - i par, gift",
             "expression": [
               "",
@@ -1856,7 +1856,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
-            "name": "Andel i par, samboende*",
+            "name": "Andel i par, samboende",
             "description": "Samlivsform personer 18 år og over - i par, samboende",
             "expression": [
               "",
@@ -1871,7 +1871,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
-            "name": "Andel ikke i par*",
+            "name": "Andel ikke i par",
             "description": "Samlivsform personer 18 år og over - ikke i par",
             "expression": [
               "",
@@ -1899,7 +1899,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Flytting"
           },
           {
-            "name": "Samlivsform andel personer 18 år og over - i par, gift*",
+            "name": "Samlivsform andel personer 18 år og over - i par, gift",
             "expression": [
               "",
               "",
@@ -1913,7 +1913,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
-            "name": "Samlivsform andel personer 18 år og over - i par, samboende*",
+            "name": "Samlivsform andel personer 18 år og over - i par, samboende",
             "expression": [
               "",
               "",
@@ -1927,7 +1927,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
-            "name": "Samlivsform andel personer 18 år og over - ikke i par*",
+            "name": "Samlivsform andel personer 18 år og over - ikke i par",
             "expression": [
               "",
               "",
@@ -2001,7 +2001,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
-            "name": "Sykefraværsprosent 4. kvartal*",
+            "name": "Sykefraværsprosent 4. kvartal",
             "expression": [
               "",
               "",
@@ -2014,7 +2014,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sykefravær"
           },
           {
-            "name": "Andel husholdninger med inntekt etter skatt 150 000 - 249 999 kr*",
+            "name": "Andel husholdninger med inntekt etter skatt 150 000 - 249 999 kr",
             "expression": [
               "",
               "",
@@ -2029,7 +2029,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Andel husholdninger med inntekt etter skatt 250 000 - 349 999 kr*",
+            "name": "Andel husholdninger med inntekt etter skatt 250 000 - 349 999 kr",
             "expression": [
               "",
               "",
@@ -2044,7 +2044,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Andel husholdninger med inntekt etter skatt 350 000 - 449 999 kr*",
+            "name": "Andel husholdninger med inntekt etter skatt 350 000 - 449 999 kr",
             "expression": [
               "",
               "",
@@ -2059,7 +2059,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Andel husholdninger med inntekt etter skatt 450 000 - 549 999 kr*",
+            "name": "Andel husholdninger med inntekt etter skatt 450 000 - 549 999 kr",
             "expression": [
               "",
               "",
@@ -2074,7 +2074,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Andel husholdninger med inntekt etter skatt 550 000 - 749 999 kr*",
+            "name": "Andel husholdninger med inntekt etter skatt 550 000 - 749 999 kr",
             "expression": [
               "",
               "",
@@ -2091,7 +2091,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Andel husholdninger med inntekt etter skatt 750 000 kr og over*",
+            "name": "Andel husholdninger med inntekt etter skatt 750 000 kr og over",
             "expression": [
               "",
               "",
@@ -2106,7 +2106,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Andel husholdninger med inntekt etter skatt under 150 000 kr*",
+            "name": "Andel husholdninger med inntekt etter skatt under 150 000 kr",
             "expression": [
               "",
               "",
@@ -2181,11 +2181,11 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innvandringskategori"
           },
           {
-            "name": "Sysselsatte 4. kvartal etter bosted 15-19 år",
+            "name": "Sysselsatte 15-19 år",
             "expression": [
               "",
               "",
-              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
+              "CALCULATE([Sysselsatte i alt],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"15-19 år\")",
               ")"
             ],
@@ -2193,11 +2193,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
-            "name": "Sysselsatte 4. kvartal etter bosted 20-24 år",
+            "name": "Sysselsatte 20-24 år",
             "expression": [
               "",
               "",
-              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
+              "CALCULATE([Sysselsatte i alt],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"20-24 år\")",
               ")"
             ],
@@ -2205,11 +2205,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
-            "name": "Sysselsatte 4. kvartal etter bosted 25-39 år",
+            "name": "Sysselsatte 25-39 år",
             "expression": [
               "",
               "",
-              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
+              "CALCULATE([Sysselsatte i alt],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"25-39 år\")",
               ")"
             ],
@@ -2217,11 +2217,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
-            "name": "Sysselsatte 4. kvartal etter bosted 40-54 år",
+            "name": "Sysselsatte 40-54 år",
             "expression": [
               "",
               "",
-              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
+              "CALCULATE([Sysselsatte i alt],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"40-54 år\")",
               ")"
             ],
@@ -2229,11 +2229,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
-            "name": "Sysselsatte 4. kvartal etter bosted 55-66 år",
+            "name": "Sysselsatte 55-66 år",
             "expression": [
               "",
               "",
-              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
+              "CALCULATE([Sysselsatte i alt],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"55-66 år\")",
               ")"
             ],
@@ -2241,11 +2241,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
-            "name": "Sysselsatte 4. kvartal etter bosted 67-74 år",
+            "name": "Sysselsatte 67-74 år",
             "expression": [
               "",
               "",
-              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
+              "CALCULATE([Sysselsatte i alt],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"67-74 år\")",
               ")"
             ],
@@ -2253,11 +2253,11 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
-            "name": "Sysselsatte 4. kvartal etter bosted 15-74 år",
+            "name": "Sysselsatte 15-74 år",
             "expression": [
               "",
               "",
-              "CALCULATE([Sysselsatte 4. kvartal etter bosted],",
+              "CALCULATE([Sysselsatte i alt],",
               "    FILTER(ALL('Alder'[Dimensjonsnavn]), [Dimensjonsnavn] = \"15-74 år\")",
               ")"
             ],
@@ -2456,7 +2456,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
-            "name": "Valgdeltakelse Stortingsvalg - prosent*",
+            "name": "Valgdeltakelse Stortingsvalg - prosent",
             "expression": [
               "",
               "",
@@ -2492,16 +2492,8 @@
             "expression": [
               "",
               "",
-              "var a = ",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"12026\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
-              "        \"Medlemmer og tilhørige i Dnk (antall)\")",
-              ")",
-              "",
-              "return (",
-              "    ROUND(DIVIDE(a, [Folketall]) * 100, 2)",
-              ")"
+              "ROUND(DIVIDE([Medlemmer og tilhørige i Den norske kirke], [Folketall]) * 100, 2)",
+              ""
             ],
             "formatString": "#,0.0",
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
@@ -2538,7 +2530,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke annen religion",
+            "name": "Medlemmer i andre trossamfunn utenfor Den norske kirke",
             "expression": [
               "",
               "",
@@ -2552,7 +2544,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn buddhisme",
+            "name": "Medlemmer i buddhistiske trossamfunn",
             "expression": [
               "",
               "",
@@ -2567,7 +2559,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn islam",
+            "name": "Medlemmer i islamske trossamfunn",
             "expression": [
               "",
               "",
@@ -2581,7 +2573,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke kristendom",
+            "name": "Medlemmer i kristne trossamfunn utenfor Den norske kirke",
             "expression": [
               "",
               "",
@@ -2595,7 +2587,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Medlemmer i tros- og livssynssamfunn utenfor Den norske kirke livssyn",
+            "name": "Medlemmer i andre livssynssamfunn",
             "expression": [
               "",
               "",
@@ -2609,7 +2601,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           },
           {
-            "name": "Kvadratmeterpris (kr) brukte eneboliger*",
+            "name": "Kvadratmeterpris (kr) brukte eneboliger",
             "expression": [
               "",
               "",
@@ -2623,7 +2615,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
-            "name": "Kvadratmeterpris (kr) nye eneboliger*",
+            "name": "Kvadratmeterpris (kr) nye eneboliger",
             "expression": [
               "",
               "",
@@ -2637,7 +2629,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
-            "name": "Alle lovbruddsgrupper per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "name": "Alle lovbruddsgrupper",
             "expression": [
               "",
               "",
@@ -2807,7 +2799,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
-            "name": "Annet lovbrudd per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "name": "Annet lovbrudd",
             "expression": [
               "",
               "",
@@ -2823,7 +2815,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
           },
           {
-            "name": "Eiendomstyveri per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "name": "Eiendomstyveri",
             "expression": [
               "",
               "",
@@ -2838,7 +2830,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
           },
           {
-            "name": "Ordens- og integritetskrenkelse per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "name": "Ordens- og integritetskrenkelse",
             "expression": [
               "",
               "",
@@ -2854,7 +2846,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
           },
           {
-            "name": "Rusmiddellovbrudd per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "name": "Rusmiddellovbrudd",
             "expression": [
               "",
               "",
@@ -2869,7 +2861,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
           },
           {
-            "name": "Trafikkovertredelse per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "name": "Trafikkovertredelse",
             "expression": [
               "",
               "",
@@ -2884,7 +2876,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
           },
           {
-            "name": "Vold og mishandling per 1 000 innbyggere (årlig gjennomsnitt)*",
+            "name": "Vold og mishandling",
             "expression": [
               "",
               "",
@@ -2899,7 +2891,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Anmeldte lovbrudd"
           },
           {
-            "name": "Valgdeltakelse kommunestyre- og fylkestingsvalg - prosent*",
+            "name": "Valgdeltakelse kommunestyre- og fylkestingsvalg - prosent",
             "expression": [
               "",
               "",
@@ -2912,7 +2904,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Valgdeltakelse"
           },
           {
-            "name": "Gjennomsnittlig kvadratmeterpris blokkleiligheter (kr)*",
+            "name": "Gjennomsnittlig kvadratmeterpris blokkleiligheter (kr)",
             "expression": [
               "",
               "",
@@ -2924,7 +2916,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Gjennomsnittlig kvadratmeterpris eneboliger (kr)*",
+            "name": "Gjennomsnittlig kvadratmeterpris eneboliger (kr)",
             "expression": [
               "",
               "",
@@ -2936,7 +2928,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Gjennomsnittlig kvadratmeterpris småhus (kr)*",
+            "name": "Gjennomsnittlig kvadratmeterpris småhus (kr)",
             "expression": [
               "",
               "",
@@ -3144,7 +3136,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Kommuneøkonomi"
           },
           {
-            "name": "Andel uføretrygdede av befolkningen 18-67 år*",
+            "name": "Andel uføretrygdede av befolkningen 18-67 år",
             "expression": [
               "",
               "",
@@ -3251,11 +3243,11 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Representanter Arbeiderpartiet*",
+            "name": "Representanter Arbeiderpartiet",
             "expression": [
               "",
               "",
-              "CALCULATE([Valgte representanter*],",
+              "CALCULATE([Valgte representanter],",
               "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Arbeiderpartiet\")",
               ")"
             ],
@@ -3263,11 +3255,11 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Fremskrittspartiet*",
+            "name": "Representanter Fremskrittspartiet",
             "expression": [
               "",
               "",
-              "CALCULATE([Valgte representanter*],",
+              "CALCULATE([Valgte representanter],",
               "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Fremskrittspartiet\")",
               ")"
             ],
@@ -3275,11 +3267,11 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Høyre*",
+            "name": "Representanter Høyre",
             "expression": [
               "",
               "",
-              "CALCULATE([Valgte representanter*],",
+              "CALCULATE([Valgte representanter],",
               "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Høyre\")",
               ")"
             ],
@@ -3287,11 +3279,11 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Senterpartiet*",
+            "name": "Representanter Senterpartiet",
             "expression": [
               "",
               "",
-              "CALCULATE([Valgte representanter*],",
+              "CALCULATE([Valgte representanter],",
               "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Senterpartiet\")",
               ")"
             ],
@@ -3299,11 +3291,11 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Sosialistisk Venstreparti*",
+            "name": "Representanter Sosialistisk Venstreparti",
             "expression": [
               "",
               "",
-              "CALCULATE([Valgte representanter*],",
+              "CALCULATE([Valgte representanter],",
               "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Sosialistisk Venstreparti\")",
               ")",
               ""
@@ -3312,11 +3304,11 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Venstre*",
+            "name": "Representanter Venstre",
             "expression": [
               "",
               "",
-              "CALCULATE([Valgte representanter*],",
+              "CALCULATE([Valgte representanter],",
               "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Venstre\")",
               ")"
             ],
@@ -3324,21 +3316,21 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter andre partier*",
+            "name": "Representanter andre partier",
             "expression": [
               "",
               "",
-              "[Valgte representanter*] - [Representanter sum utvalgte*]"
+              "[Valgte representanter] - [Representanter sum utvalgte]"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Kristelig Folkeparti*",
+            "name": "Representanter Kristelig Folkeparti",
             "expression": [
               "",
               "",
-              "CALCULATE([Valgte representanter*],",
+              "CALCULATE([Valgte representanter],",
               "    FILTER(ALL('Politisk parti'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Kristelig Folkeparti\")",
               ")"
             ],
@@ -3414,7 +3406,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Alle husholdninger*",
+            "name": "Alle husholdninger",
             "expression": [
               "",
               "",
@@ -3429,7 +3421,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Aleneboende*",
+            "name": "Aleneboende",
             "expression": [
               "",
               "",
@@ -3444,7 +3436,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Enslig mor/far med barn 0-17 år*",
+            "name": "Enslig mor/far med barn 0-17 år",
             "expression": [
               "",
               "",
@@ -3459,7 +3451,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Par med barn 0-17 år*",
+            "name": "Par med barn 0-17 år",
             "expression": [
               "",
               "",
@@ -3474,7 +3466,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Inntekt etter skatt"
           },
           {
-            "name": "Par uten barn, median*",
+            "name": "Par uten barn, median",
             "expression": [
               "",
               "",
@@ -3616,7 +3608,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Beløp på utvalgte sektorer"
           },
           {
-            "name": "Brukerbetaling (Gebyrer og egenandeler*)",
+            "name": "Brukerbetaling (Gebyrer og egenandeler)",
             "expression": [
               "",
               "",
@@ -3957,7 +3949,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Valgte representanter*",
+            "name": "Valgte representanter",
             "expression": [
               "",
               "",
@@ -4007,14 +3999,14 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere"
           },
           {
-            "name": "Representanter sum utvalgte*",
+            "name": "Representanter sum utvalgte",
             "expression": [
               "",
               "",
-              "[Representanter Venstre*] + [Representanter Arbeiderpartiet*] +",
-              "[Representanter Fremskrittspartiet*] + [Representanter Høyre*] + ",
-              "[Representanter Kristelig Folkeparti*] + [Representanter Senterpartiet*] + ",
-              "[Representanter Sosialistisk Venstreparti*]"
+              "[Representanter Venstre] + [Representanter Arbeiderpartiet] +",
+              "[Representanter Fremskrittspartiet] + [Representanter Høyre] + ",
+              "[Representanter Kristelig Folkeparti] + [Representanter Senterpartiet] + ",
+              "[Representanter Sosialistisk Venstreparti]"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
@@ -4057,7 +4049,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Virksomheter"
           },
           {
-            "name": "Sysselsatte 4. kvartal etter bosted",
+            "name": "Sysselsatte i alt",
             "expression": [
               "",
               "",
@@ -4213,6 +4205,20 @@
             ],
             "formatString": "#,0",
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Eiendomsskatt"
+          },
+          {
+            "name": "Medlemmer og tilhørige i Den norske kirke",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"12026\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
+              "        \"Medlemmer og tilhørige i Dnk (antall)\")",
+              ")"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
           }
         ],
         "annotations": [
