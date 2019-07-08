@@ -2264,7 +2264,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Sysselsatte"
           },
           {
-            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - grunnskolenivå",
+            "name": "Grunnskole",
             "expression": [
               "",
               "",
@@ -2284,7 +2284,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
-            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - fagskolenivå",
+            "name": "Fagskole",
             "expression": [
               "",
               "",
@@ -2305,7 +2305,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
-            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - universitets- og høgskolenivå, kort",
+            "name": "Universitets- og høyskole, kort utdanning",
             "expression": [
               "",
               "",
@@ -2327,7 +2327,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
-            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - universitets- og høgskolenivå, lang",
+            "name": "Universitets- og høyskole, lang utdanning",
             "expression": [
               "",
               "",
@@ -2349,7 +2349,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Utdanningsnivå"
           },
           {
-            "name": "Høyeste fullførte utdanningsnivå andel personer 16 år og over - videregående skolenivå",
+            "name": "Videregående",
             "expression": [
               "",
               "",
