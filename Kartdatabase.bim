@@ -1930,15 +1930,10 @@
             "expression": [
               "",
               "",
-              "var a =",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"06096\"),",
               "    FILTER(ALL('Samlivsform'[Dimensjonsnavn]), [Dimensjonsnavn] = \"Ikke i par\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Personer (prosent)\")",
-              ")",
-              "",
-              "return (",
-              "    a",
               ")"
             ],
             "formatString": "#,0.0",
