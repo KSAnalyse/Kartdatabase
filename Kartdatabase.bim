@@ -1752,7 +1752,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Andel kvinner av befolkningen",
+            "name": "Andel kvinner",
             "description": "Andel kvinner av befolkningen",
             "expression": [
               "",
@@ -1764,7 +1764,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
-            "name": "Andel menn av befolkningen",
+            "name": "Andel menn",
             "description": "Andel menn av befolkningen",
             "expression": [
               "",
@@ -1898,7 +1898,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Flytting"
           },
           {
-            "name": "Samlivsform andel personer 18 år og over - i par, gift",
+            "name": "I par, gift",
             "expression": [
               "",
               "",
@@ -1912,7 +1912,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
-            "name": "Samlivsform andel personer 18 år og over - i par, samboende",
+            "name": "I par, samboende",
             "expression": [
               "",
               "",
@@ -1926,7 +1926,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Samlivsform"
           },
           {
-            "name": "Samlivsform andel personer 18 år og over - ikke i par",
+            "name": "Ikke i par",
             "expression": [
               "",
               "",
@@ -2903,7 +2903,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Valgdeltakelse"
           },
           {
-            "name": "Gjennomsnittlig kvadratmeterpris blokkleiligheter (kr)",
+            "name": "Blokkleiligheter",
             "expression": [
               "",
               "",
@@ -2915,7 +2915,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Gjennomsnittlig kvadratmeterpris eneboliger (kr)",
+            "name": "Eneboliger",
             "expression": [
               "",
               "",
@@ -2927,7 +2927,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Gjennomsnittlig kvadratmeterpris småhus (kr)",
+            "name": "Småhus",
             "expression": [
               "",
               "",
@@ -2939,7 +2939,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Andel kommunestyremedlemmer 18-29 år",
+            "name": "Andel 18-29 år",
             "expression": [
               "",
               "",
@@ -2956,7 +2956,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Netto driftsutgifter politisk styring og kontrollvirksomhet (FK)",
+            "name": "Politisk styring og kontrollvirksomhet",
             "expression": [
               "",
               "",
@@ -2973,7 +2973,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Netto driftsutgifter administrasjon (FK)",
+            "name": "Administrasjon",
             "expression": [
               "",
               "",
@@ -2988,7 +2988,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Netto driftsutgifter eiendomsforvaltning (FK)",
+            "name": "Eiendomsforvaltning",
             "expression": [
               "",
               "",
@@ -3005,7 +3005,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Netto driftsutgifter Fellesutgifter (FK)",
+            "name": "Fellesutgifter",
             "expression": [
               "",
               "",
@@ -3020,7 +3020,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Netto driftsutgifter fysisk planlegging, kulturminner, natur, nærmiljø, fylkeskommune (FK)",
+            "name": "Fysisk planlegging, kulturminner, natur, nærmiljø, fylkeskommune",
             "expression": [
               "",
               "",
@@ -3037,7 +3037,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Netto driftsutgifter kultur (FK)",
+            "name": "Kultur",
             "expression": [
               "",
               "",
@@ -3054,7 +3054,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Netto driftsutgifter næringsforvaltning (FK)",
+            "name": "Næringsforvaltning",
             "expression": [
               "",
               "",
@@ -3071,7 +3071,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Netto driftsutgifter samferdsel (FK)",
+            "name": "Samferdsel",
             "expression": [
               "",
               "",
@@ -3088,7 +3088,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Netto driftsutgifter tannhelse (FK)",
+            "name": "Tannhelse",
             "expression": [
               "",
               "",
@@ -3105,7 +3105,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Fylkeskommunal økonomi"
           },
           {
-            "name": "Netto driftsutgifter videregående opplæring samlet (FK)",
+            "name": "Videregående opplæring samlet",
             "expression": [
               "",
               "",
@@ -3242,7 +3242,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Representanter Arbeiderpartiet",
+            "name": "Arbeiderpartiet",
             "expression": [
               "",
               "",
@@ -3254,7 +3254,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Fremskrittspartiet",
+            "name": "Fremskrittspartiet",
             "expression": [
               "",
               "",
@@ -3266,7 +3266,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Høyre",
+            "name": "Høyre",
             "expression": [
               "",
               "",
@@ -3278,7 +3278,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Senterpartiet",
+            "name": "Senterpartiet",
             "expression": [
               "",
               "",
@@ -3290,7 +3290,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Sosialistisk Venstreparti",
+            "name": "Sosialistisk Venstreparti",
             "expression": [
               "",
               "",
@@ -3303,7 +3303,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Venstre",
+            "name": "Venstre",
             "expression": [
               "",
               "",
@@ -3315,17 +3315,17 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter andre partier",
+            "name": "Andre partier",
             "expression": [
               "",
               "",
-              "[Valgte representanter] - [Representanter sum utvalgte]"
+              "[Valgte representanter] - [Sum utvalgte]"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Representanter Kristelig Folkeparti",
+            "name": "Kristelig Folkeparti",
             "expression": [
               "",
               "",
@@ -3337,7 +3337,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Andel kommunestyremedlemmer 30-39 år",
+            "name": "Andel 30-39 år",
             "expression": [
               "",
               "",
@@ -3354,7 +3354,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Andel kommunestyremedlemmer 40-49 år",
+            "name": "Andel 40-49 år",
             "expression": [
               "",
               "",
@@ -3371,7 +3371,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Andel kommunestyremedlemmer 50-59 år",
+            "name": "Andel 50-59 år",
             "expression": [
               "",
               "",
@@ -3388,7 +3388,7 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Andel kommunestyremedlemmer 60 år eller eldre",
+            "name": "Andel 60 år eller eldre",
             "expression": [
               "",
               "",
@@ -3998,14 +3998,14 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere"
           },
           {
-            "name": "Representanter sum utvalgte",
+            "name": "Sum utvalgte",
             "expression": [
               "",
               "",
-              "[Representanter Venstre] + [Representanter Arbeiderpartiet] +",
-              "[Representanter Fremskrittspartiet] + [Representanter Høyre] + ",
-              "[Representanter Kristelig Folkeparti] + [Representanter Senterpartiet] + ",
-              "[Representanter Sosialistisk Venstreparti]"
+              "[Venstre] + [Arbeiderpartiet] +",
+              "[Fremskrittspartiet] + [Høyre] + ",
+              "[Kristelig Folkeparti] + [Senterpartiet] + ",
+              "[Sosialistisk Venstreparti]"
             ],
             "formatString": "#,0",
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
