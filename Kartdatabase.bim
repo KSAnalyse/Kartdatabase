@@ -2623,7 +2623,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Bolig"
           },
           {
-            "name": "Alle lovbruddsgrupper",
+            "name": "Antall lovbrudd",
             "expression": [
               "",
               "",
@@ -3405,7 +3405,7 @@
               "",
               "",
               "/* Inntekt etter skatt median (kr) */",
-              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "CALCULATE([Medianinntekt etter skatt],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Alle husholdninger\"",
               "    )    ",
@@ -3420,7 +3420,7 @@
               "",
               "",
               "/* Inntekt etter skatt median (kr) */",
-              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "CALCULATE([Medianinntekt etter skatt],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Aleneboende\"",
               "    )    ",
@@ -3435,7 +3435,7 @@
               "",
               "",
               "/* Inntekt etter skatt median (kr) */",
-              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "CALCULATE([Medianinntekt etter skatt],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Enslig mor/far med barn 0-17 år\"",
               "    )    ",
@@ -3450,7 +3450,7 @@
               "",
               "",
               "/* Inntekt etter skatt median (kr) */",
-              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "CALCULATE([Medianinntekt etter skatt],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Par med barn 0-17 år\"",
               "    )    ",
@@ -3465,7 +3465,7 @@
               "",
               "",
               "/* Inntekt etter skatt median (kr) */",
-              "CALCULATE([Inntekt etter skatt median (kr)],",
+              "CALCULATE([Medianinntekt etter skatt],",
               "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
               "        \"Par uten barn\"",
               "    )    ",
@@ -4171,7 +4171,7 @@
             "displayFolder": "ØKONOMI OG ARBEIDSLIV;Selveierbolig"
           },
           {
-            "name": "Inntekt etter skatt median (kr)",
+            "name": "Medianinntekt etter skatt",
             "expression": [
               "",
               "",
