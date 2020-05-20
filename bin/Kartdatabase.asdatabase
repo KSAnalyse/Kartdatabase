@@ -257,7 +257,6 @@
           {
             "name": "Kode",
             "dataType": "string",
-            "isHidden": true,
             "sourceColumn": "Kode",
             "sourceProviderType": "Char"
           },
@@ -370,6 +369,7 @@
           {
             "name": "Sivilstand",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Sivilstand"
           }
         ],
@@ -1636,7 +1636,7 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Areal"
           },
           {
-            "name": "Innbyggere 0-15 år",
+            "name": "Innbyggere 0-19 år",
             "description": "Antall innbyggere 0-15 år",
             "expression": [
               "",
@@ -1645,14 +1645,14 @@
               "    FILTER(ALL('Alder'[Dimensjonskode]), ",
               "        IF(ISERROR(VALUE([Dimensjonskode])), ",
               "            BLANK(), ",
-              "            VALUE([Dimensjonskode]) >= 0 && VALUE([Dimensjonskode]) <= 15))",
+              "            VALUE([Dimensjonskode]) >= 0 && VALUE([Dimensjonskode]) <= 19))",
               ")"
             ],
             "formatString": "#,0",
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Innbyggere 16-18 år",
+            "name": "Innbyggere 20-39 år",
             "description": "Innbyggere 16-18 år",
             "expression": [
               "",
@@ -1661,14 +1661,14 @@
               "    FILTER(ALL('Alder'[Dimensjonskode]), ",
               "        IF(ISERROR(VALUE([Dimensjonskode])), ",
               "            BLANK(), ",
-              "            VALUE([Dimensjonskode]) >= 16 && VALUE([Dimensjonskode]) <= 18))",
+              "            VALUE([Dimensjonskode]) >= 20 && VALUE([Dimensjonskode]) <= 39))",
               ")"
             ],
             "formatString": "#,0",
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Innbyggere 19-34 år",
+            "name": "Innbyggere 40-59 år",
             "description": "Innbyggere 19-34 år",
             "expression": [
               "",
@@ -1677,14 +1677,14 @@
               "    FILTER(ALL('Alder'[Dimensjonskode]), ",
               "        IF(ISERROR(VALUE([Dimensjonskode])), ",
               "            BLANK(), ",
-              "            VALUE([Dimensjonskode]) >= 19 && VALUE([Dimensjonskode]) <= 34))",
+              "            VALUE([Dimensjonskode]) >= 40 && VALUE([Dimensjonskode]) <= 59))",
               ")"
             ],
             "formatString": "#,0",
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Innbyggere 35-66 år",
+            "name": "Innbyggere 60-79 år",
             "description": "Innbyggere 35-66 år",
             "expression": [
               "",
@@ -1693,14 +1693,14 @@
               "    FILTER(ALL('Alder'[Dimensjonskode]), ",
               "        IF(ISERROR(VALUE([Dimensjonskode])), ",
               "            BLANK(), ",
-              "            VALUE([Dimensjonskode]) >= 35 && VALUE([Dimensjonskode]) <= 66))",
+              "            VALUE([Dimensjonskode]) >= 60 && VALUE([Dimensjonskode]) <= 79))",
               ")"
             ],
             "formatString": "#,0",
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Innbyggere 67 år og over",
+            "name": "Innbyggere 80 år og over",
             "description": "Innbyggere 67 år og over",
             "expression": [
               "",
@@ -1710,7 +1710,7 @@
               "    FILTER(ALL('Alder'[Dimensjonskode]), ",
               "        IF(ISERROR(VALUE([Dimensjonskode])), ",
               "            BLANK(), ",
-              "            VALUE([Dimensjonskode]) >= 67 && VALUE([Dimensjonskode]) <= 104)",
+              "            VALUE([Dimensjonskode]) >= 80 && VALUE([Dimensjonskode]) <= 104)",
               "        || [Dimensjonskode] = \"105+\"",
               "    )",
               ")"
@@ -2860,8 +2860,15 @@
               "/* Hvis sammenslåingen har skjedd etter valgte_aar 1, ellers 0 */",
               "var skalnullesut =",
               "CALCULATE([Er regionen sammenslått],",
-              "    FILTER(ALL('Sammenslåtte Regioner'[GyldigFraDato]), ",
-              "        IF(YEAR([GyldigFraDato]) > valgte_aar, 1, 0)",
+              "    FILTER(ALL('Sammenslåtte Regioner'[GyldigFraDato]),",
+              "        IF(",
+              "            OR(",
+              "                IF(AND(YEAR([GyldigFraDato]) = 2020, YEAR([GyldigFraDato]) - 1 > valgte_aar), 1, 0),",
+              "                IF(AND(YEAR([GyldigFraDato]) <> 2020, YEAR([GyldigFraDato]) > valgte_aar), 1, 0)",
+              "            ), ",
+              "            1, ",
+              "            0",
+              "        )",
               "    )",
               ")",
               "",
@@ -3109,10 +3116,30 @@
             "expression": [
               "",
               "",
+              "var valgte_region = SELECTEDVALUE('Alle Data'[Kode])",
+              "",
+              "var valgte_aar = SELECTEDVALUE('År'[År])",
+              "",
+              "var andelufor =",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"ØOA01\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
               "        \"Andel uføretrygdede av befolkningen 18-67 år\"",
+              "    )",
+              ")",
+              "",
+              "var skalnullesut =",
+              "CALCULATE([Er regionen sammenslått],",
+              "    FILTER(ALL('Region'[Kode]), [Kode] = valgte_region),",
+              "    FILTER(ALL('Sammenslåtte Regioner'[GyldigFraDato]), ",
+              "        IF(YEAR([GyldigFraDato]) > valgte_aar, 1, 0)",
+              "    )",
+              ")",
+              "",
+              "return (",
+              "    ROUND(",
+              "        IF(skalnullesut, 0, andelufor),",
+              "        2",
               "    )",
               ")"
             ],
@@ -3200,11 +3227,11 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter kjønn"
           },
           {
-            "name": "Andel av befolkningen 15 år eller yngre",
+            "name": "Andel av befolkningen 19 år eller yngre",
             "expression": [
               "",
               "",
-              "ROUND(DIVIDE([Innbyggere 0-15 år], [Folketall]) * 100, 2)",
+              "ROUND(DIVIDE([Innbyggere 0-19 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -3931,11 +3958,11 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Andel av befolkningen 16-18 år",
+            "name": "Andel av befolkningen 20-39 år",
             "expression": [
               "",
               "",
-              "ROUND(DIVIDE([Innbyggere 16-18 år], [Folketall]) * 100, 2)",
+              "ROUND(DIVIDE([Innbyggere 20-39 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -3943,11 +3970,11 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Andel av befolkningen 19-34 år",
+            "name": "Andel av befolkningen 40-59 år",
             "expression": [
               "",
               "",
-              "ROUND(DIVIDE([Innbyggere 19-34 år], [Folketall]) * 100, 2)",
+              "ROUND(DIVIDE([Innbyggere 40-59 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -3981,11 +4008,11 @@
             "displayFolder": "DEMOKRATI OG POLITIKK;Kommunestyrerepresentanter"
           },
           {
-            "name": "Andel av befolkningen 35-66 år",
+            "name": "Andel av befolkningen 60-79 år",
             "expression": [
               "",
               "",
-              "ROUND(DIVIDE([Innbyggere 35-66 år], [Folketall]) * 100, 2)",
+              "ROUND(DIVIDE([Innbyggere 60-79 år], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -3993,11 +4020,11 @@
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Innbyggere etter alder"
           },
           {
-            "name": "Andel av befolkningen 67 år og over",
+            "name": "Andel av befolkningen 80 år og over",
             "expression": [
               "",
               "",
-              "ROUND(DIVIDE([Innbyggere 67 år og over], [Folketall]) * 100, 2)",
+              "ROUND(DIVIDE([Innbyggere 80 år og over], [Folketall]) * 100, 2)",
               "",
               ""
             ],
@@ -4137,9 +4164,27 @@
             "expression": [
               "",
               "",
+              "var valgte_aar = SELECTEDVALUE('År'[År])",
+              "",
+              "var valgte_region = SELECTEDVALUE('Region'[Kode])",
+              "",
+              "var kvmpris = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL('Tabeller'[Tabellnummer]), 'Tabeller'[Tabellnummer] = \"06035\"),",
               "    FILTER(ALL('Variabel'[Variabelnavn]), 'Variabel'[Variabelnavn] = \"Gjennomsnittlig kvadratmeterpris (kr)\")",
+              ")",
+              "",
+              "/* Hvis sammenslåingen har skjedd etter valgte_aar 1, ellers 0 */",
+              "var skalnullesut =",
+              "CALCULATE([Er regionen sammenslått],",
+              "    FILTER(ALL('Region'[Kode]), [Kode] = valgte_region),",
+              "    FILTER(ALL('Sammenslåtte Regioner'[GyldigFraDato]), ",
+              "        IF(YEAR([GyldigFraDato]) > valgte_aar, 1, 0)",
+              "    )",
+              ")",
+              "",
+              "return (",
+              "    IF(skalnullesut, 0, kvmpris)",
               ")"
             ],
             "formatString": "#,0",
@@ -4206,163 +4251,6 @@
             ],
             "formatString": "#,0",
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Tro og livssyn"
-          },
-          {
-            "name": "Konstant",
-            "expression": [
-              "",
-              "510000",
-              "/*",
-              "var maks_aar = ",
-              "CALCULATE(MAX('Alle Data'[År]);",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]); [Tabellnummer] = \"06944\");",
-              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]); [Dimensjonsnavn] = ",
-              "        \"Alle husholdninger\"",
-              "    );",
-              "    ALL('Region'[Kode]);",
-              "    ALL('År'[År])",
-              ")",
-              "",
-              "var landet_tabell =",
-              "SUMX(CALCULATETABLE('Alle Data';",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]); [Tabellnummer] = \"06944\");",
-              "    FILTER(ALL('Variabel'[Variabelnavn]); [Variabelnavn] = ",
-              "        \"Inntekt etter skatt, median (kr)\"",
-              "    );",
-              "    FILTER(ALL('År'[År]); 'År'[År] = maks_aar);",
-              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]); [Dimensjonsnavn] = ",
-              "        \"Alle husholdninger\"",
-              "    );",
-              "    FILTER(ALL('Region'[Kode]); [Kode] = \"0\")",
-              "); [Verdi]",
-              ")",
-              "    ",
-              "",
-              "var siste_landet =",
-              "CALCULATE(SUM('Alle Data'[Verdi]);",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]); [Tabellnummer] = \"06944\");",
-              "    FILTER(ALL('Variabel'[Variabelnavn]); [Variabelnavn] = ",
-              "        \"Inntekt etter skatt, median (kr)\"",
-              "    );",
-              "    FILTER(ALL('År'[År]); 'År'[År] = maks_aar);",
-              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]); [Dimensjonsnavn] = ",
-              "        \"Alle husholdninger\"",
-              "    );",
-              "    FILTER(ALL('Region'[Kode]); [Kode] = \"0\")",
-              ")",
-              "",
-              "var ellers =",
-              "CALCULATE(SUM('Alle Data'[Verdi]);",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]); [Tabellnummer] = \"06944\");",
-              "    FILTER(ALL('Variabel'[Variabelnavn]); [Variabelnavn] = ",
-              "        \"Inntekt etter skatt, median (kr)\"",
-              "    );",
-              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]); [Dimensjonsnavn] = ",
-              "        \"Alle husholdninger\"",
-              "    )",
-              ")",
-              "",
-              "return (",
-              "    landet_tabell",
-              ")",
-              "*/"
-            ],
-            "displayFolder": "Testing"
-          },
-          {
-            "name": "Forholdstall valgte region",
-            "expression": [
-              "",
-              "var siste_aar = ",
-              "CALCULATE(MAX('Alle Data'[År]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"06944\"),",
-              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
-              "        \"Alle husholdninger\"",
-              "    ),",
-              "    ALL('År'[År])",
-              ")",
-              "",
-              "var valgte_region = SELECTEDVALUE('Region'[Kode])",
-              "",
-              "var siste_region =",
-              "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"06944\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
-              "        \"Inntekt etter skatt, median (kr)\"",
-              "    ),",
-              "    FILTER(ALL('År'[År]), 'År'[År] = siste_aar),",
-              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
-              "        \"Alle husholdninger\"",
-              "    ),",
-              "    FILTER(ALL('Region'[Kode]), [Kode] = valgte_region)",
-              ")",
-              "",
-              "return (",
-              "    DIVIDE([Konstant], siste_region)",
-              ")"
-            ],
-            "displayFolder": "Testing"
-          },
-          {
-            "name": "Landet valgte år dividert forholdstall",
-            "expression": [
-              "",
-              "",
-              "var valgte_aar = SELECTEDVALUE('År'[År])",
-              "",
-              "var valgte_regioner = SELECTEDVALUE('Region'[Kode])",
-              "",
-              "/* Teller antall rader som finnes med den valgte regionen og det valgte året */",
-              "var antallRader = CALCULATE(DISTINCTCOUNT('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"06944\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
-              "        \"Inntekt etter skatt, median (kr)\"",
-              "    ),",
-              "    FILTER(ALL('Region'[Kode]), 'Region'[Kode] = valgte_regioner),",
-              "    FILTER(ALL('År'[År]), 'År'[År] = valgte_aar),",
-              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
-              "        \"Alle husholdninger\"",
-              "    )",
-              ")",
-              "",
-              "var test = CALCULATETABLE('Alle Data',",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"06944\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
-              "        \"Inntekt etter skatt, median (kr)\"",
-              "    ),",
-              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
-              "        \"Alle husholdninger\"",
-              "    ),",
-              "    FILTER(ALL('År'[År]), [År] = valgte_aar),",
-              "    ALL('Region'[Kode])",
-              "    )",
-              "",
-              "var test2 = CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    'Region'[Kode]=\"0\",",
-              "    'Variabel'[Variabelnavn] = ",
-              "        \"Inntekt etter skatt, median (kr)\",",
-              "    'Husholdningstype'[Dimensjonsnavn] = \"Alle husholdninger\"",
-              "    ",
-              ")",
-              "",
-              "/* Medianinntekt landet valgte år */",
-              "var a = CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer] = \"06944\"),",
-              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = ",
-              "        \"Inntekt etter skatt, median (kr)\"",
-              "    ),",
-              "    FILTER(ALL('Husholdningstype'[Dimensjonsnavn]), [Dimensjonsnavn] = ",
-              "        \"Alle husholdninger\"",
-              "    ),",
-              "    FILTER(ALL('År'[År]), [År] = valgte_aar),",
-              "    FILTER(ALL('Region'[Kode]), [Kode] = \"0\")",
-              ")",
-              "",
-              "return (",
-              "    DIVIDE(a, [Forholdstall valgte region])",
-              ")"
-            ],
-            "displayFolder": "Testing"
           },
           {
             "name": "Er regionen sammenslått",
@@ -4435,6 +4323,41 @@
               ")"
             ],
             "displayFolder": "BEFOLKNING OG DEMOGRAFI;Sivilstand"
+          },
+          {
+            "name": "Innbyggere 18-67 år",
+            "expression": [
+              "",
+              "",
+              "CALCULATE([Folketall],",
+              "    FILTER(ALL('Alder'[Dimensjonskode]), ",
+              "        IF(ISERROR(VALUE([Dimensjonskode])), ",
+              "            BLANK(), ",
+              "            VALUE([Dimensjonskode]) >= 18 && VALUE([Dimensjonskode]) <= 67))",
+              ")"
+            ]
+          },
+          {
+            "name": "Innflytting",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"09588\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Innflytting\")",
+              ")"
+            ]
+          },
+          {
+            "name": "Utflytting",
+            "expression": [
+              "",
+              "",
+              "CALCULATE(SUM('Alle Data'[Verdi]),",
+              "    FILTER(ALL('Tabeller'[Tabellnummer]), [Tabellnummer]= \"09588\"),",
+              "    FILTER(ALL('Variabel'[Variabelnavn]), [Variabelnavn] = \"Utflytting\")",
+              ")"
+            ]
           }
         ],
         "annotations": [
@@ -5756,6 +5679,93 @@
               "  <IsSortDescending>false</IsSortDescending>",
               "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
             ]
+          }
+        ]
+      },
+      {
+        "name": "Regionsendringer",
+        "columns": [
+          {
+            "name": "gammeltKommunenummer",
+            "dataType": "string",
+            "sourceColumn": "gammeltKommunenummer",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "gammeltNavn",
+            "dataType": "string",
+            "sourceColumn": "gammeltNavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "nyttKommunenummer",
+            "dataType": "string",
+            "sourceColumn": "nyttKommunenummer",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "nyttNavn",
+            "dataType": "string",
+            "sourceColumn": "nyttNavn",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "endringsDato",
+            "dataType": "dateTime",
+            "sourceColumn": "endringsDato",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Regionsendringer",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Regionsendringer].* FROM [dbo].[Regionsendringer] ",
+              "dataSource": "KS-SQL2018;Reporting_Kart"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Regionsendringer].* FROM [dbo].[Regionsendringer] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Regionsendringer"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "CalculatedTable 1",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "gammeltKommunenummer",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Regionsendringer[gammeltKommunenummer]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "CALCULATETABLE(",
+                "    VALUES(Regionsendringer[gammeltKommunenummer]),",
+                "    FILTER(ALL(Regionsendringer[nyttKommunenummer]), [nyttKommunenummer] = \"3014\")",
+                ")"
+              ]
+            }
           }
         ]
       }
