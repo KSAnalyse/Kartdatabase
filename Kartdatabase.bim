@@ -5952,6 +5952,28 @@
         "toColumn": "Dimensjonskode"
       }
     ],
+    "roles": [
+      {
+        "name": "API",
+        "modelPermission": "read",
+        "members": [
+          {
+            "memberName": "IUSR",
+            "memberId": "S-1-5-17"
+          }
+        ]
+      },
+      {
+        "name": "Brukere",
+        "modelPermission": "read",
+        "members": [
+          {
+            "memberName": "I04\\VK.DB.VK-SXD0E-002_Kart.DBO",
+            "memberId": "S-1-5-21-2036031588-730629661-1306914269-1033619"
+          }
+        ]
+      }
+    ],
     "annotations": [
       {
         "name": "ClientCompatibilityLevel",
