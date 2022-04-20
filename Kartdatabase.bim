@@ -2405,7 +2405,7 @@
               "var valgdeltakelse = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
               "    FILTER(ALL(Tabeller[Tabellnummer]), [Tabellnummer] = \"08243\"),",
-              "    FILTER(ALL(Variabel[Variabelnavn]), [Variabelnavn] = \"Valgdeltakelse\")",
+              "    FILTER(ALL(Variabel[Variabelnavn]), [Variabelnavn] = \"Valdeltaking\")",
               ")",
               "",
               "/* Hvis sammenslåingen har skjedd etter valgte_aar 1, ellers 0 */",
