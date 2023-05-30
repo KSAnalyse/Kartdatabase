@@ -3613,7 +3613,7 @@
               "",
               "",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"13551\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A600\")",
               ")"
             ],
