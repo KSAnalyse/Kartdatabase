@@ -3627,25 +3627,25 @@
               "",
               "var andre_overforinger =",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"13551\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD17\")",
               ")",
               "",
               "var andre_statlige_overforinger = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"13551\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"A810\")",
               ")",
               "",
               "var andre_salg_leieinntekter = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"13551\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD34\")",
               ")",
               "",
               "var overforingsinntekter_motytelse_drift = ",
               "CALCULATE(SUM('Alle Data'[Verdi]),",
-              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"12328\"),",
+              "    FILTER(ALL('Alle Data'[Tabell]), [Tabell] = \"13551\"),",
               "    FILTER(ALL('Art'[Dimensjonskode]), [Dimensjonskode] = \"AGD48\")",
               ")",
               "",
@@ -5958,7 +5958,7 @@
         "modelPermission": "read",
         "members": [
           {
-            "memberName": "IUSR",
+            "memberName": "NT AUTHORITY\\IUSR",
             "memberId": "S-1-5-17"
           }
         ]
